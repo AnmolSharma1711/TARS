@@ -1,9 +1,11 @@
 import { useState } from 'react';
-import Navigation from './components/Navigation';
+import SidebarNavigation from './components/SidebarNavigation';
 import HomePage from './pages/HomePage';
 import TeamPage from './pages/TeamPage';
 import ProjectsPage from './pages/ProjectsPage';
 import EventsPage from './pages/EventsPage';
+import { ShootingStars } from './components/ui/shooting-stars';
+import { StarsBackground } from './components/ui/stars-background';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -25,7 +27,9 @@ function App() {
 
   return (
     <div className="app">
-      <Navigation currentPage={currentPage} onNavigate={setCurrentPage} />
+      <ShootingStars />
+      <StarsBackground />
+      <SidebarNavigation currentPage={currentPage} onNavigate={setCurrentPage} />
       <main className="main-content">
         {renderPage()}
       </main>
