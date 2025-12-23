@@ -20,7 +20,7 @@ function Header({ onNavigate, currentPage }) {
     <>
       {/* Mobile Menu Button with Logo */}
       <button 
-        className="mobile-menu-button"
+        className={`mobile-menu-button ${isSidebarOpen ? 'hidden' : ''}`}
         onClick={toggleSidebar}
         aria-label="Toggle menu"
         onMouseEnter={() => setIsLogoHovered(true)}

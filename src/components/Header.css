@@ -16,6 +16,8 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   padding: 0;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .mobile-menu-button:hover {
@@ -23,6 +25,12 @@
   border-color: rgba(6, 182, 212, 0.6);
   box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
   transform: scale(1.05);
+}
+
+/* Hide mobile button when sidebar is open */
+.mobile-menu-button.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media (min-width: 768px) {
@@ -221,8 +229,8 @@
 /* Logo Container with animated lines */
 .logo-container {
   position: relative;
-  width: 60px;
-  height: 60px;
+  width: 75px;
+  height: 75px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -230,8 +238,8 @@
 
 @media (min-width: 768px) {
   .logo-container {
-    width: 70px;
-    height: 70px;
+    width: 85px;
+    height: 85px;
   }
 }
 
@@ -301,8 +309,8 @@
 
 /* Logo Image */
 .header-logo-img {
-  width: 45px;
-  height: 45px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(6, 182, 212, 0.3);
@@ -313,8 +321,8 @@
 
 @media (min-width: 768px) {
   .header-logo-img {
-    width: 50px;
-    height: 50px;
+    width: 65px;
+    height: 65px;
   }
 }
 
