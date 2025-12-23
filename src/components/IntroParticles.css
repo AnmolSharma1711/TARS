@@ -1,0 +1,8 @@
+.intro-particles{position:absolute;inset:0;pointer-events:none;z-index:15;overflow:hidden}
+.particle{position:absolute;border-radius:9999px;background:rgba(255,255,255,0.9);box-shadow:0 0 6px rgba(255,255,255,0.6)}
+.particle{animation:particleFloat var(--floatDur,28s) ease-in-out infinite,particleBlink var(--blinkDur,3.2s) ease-in-out infinite}
+.particle.streak{width:120px;height:2px;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(34,211,238,0.9),rgba(255,255,255,0));box-shadow:none;border-radius:2px;filter:drop-shadow(0 0 6px rgba(34,211,238,0.7));animation:streakMove var(--streakDur,8s) linear infinite}
+
+@keyframes particleFloat{0%{transform:translate3d(0,0,0)}25%{transform:translate3d(20px,10px,0)}50%{transform:translate3d(0,25px,0)}75%{transform:translate3d(-15px,10px,0)}100%{transform:translate3d(0,0,0)}}
+@keyframes particleBlink{0%,100%{opacity:0.2}50%{opacity:0.9}}
+@keyframes streakMove{0%{transform:translateX(-20vw)}100%{transform:translateX(120vw)}}
