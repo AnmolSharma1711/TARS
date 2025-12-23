@@ -3,25 +3,162 @@ import './Header.css'
 
 function Header({ onNavigate, currentPage }) {
   const [isLogoHovered, setIsLogoHovered] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSidebarHovered, setIsSidebarHovered] = useState(false);
   
   const handleNavClick = (e, page) => {
     e.preventDefault();
     onNavigate(page);
+    setIsSidebarOpen(false); // Close sidebar on mobile after navigation
+  };
+  
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
   };
 
   return (
     <>
-      <header className="header">
+      {/* Mobile Menu Button with Logo */}
+      <button 
+        className="mobile-menu-button"
+        onClick={toggleSidebar}
+        aria-label="Toggle menu"
+        onMouseEnter={() => setIsLogoHovered(true)}
+        onMouseLeave={() => setIsLogoHovered(false)}
+      >
+        <div className="mobile-logo-container">
+          {/* Animated Lines around the circle */}
+          <svg className={`mobile-logo-lines ${isLogoHovered || isSidebarOpen ? 'active' : ''}`} viewBox="0 0 100 100">
+            {/* Outer circle border */}
+            <circle cx="50" cy="50" r="48" fill="none" stroke="rgba(6, 182, 212, 0.2)" strokeWidth="0.5"/>
+            
+            {/* Top line */}
+            <line 
+              x1="50" y1="2" x2="50" y2="15" 
+              className="line line-1"
+              stroke="url(#gradient1-mobile)" 
+              strokeWidth="2.5" 
+              strokeLinecap="round"
+            />
+            
+            {/* Right line */}
+            <line 
+              x1="98" y1="50" x2="85" y2="50" 
+              className="line line-2"
+              stroke="url(#gradient2-mobile)" 
+              strokeWidth="2.5" 
+              strokeLinecap="round"
+            />
+            
+            {/* Bottom line */}
+            <line 
+              x1="50" y1="98" x2="50" y2="85" 
+              className="line line-3"
+              stroke="url(#gradient3-mobile)" 
+              strokeWidth="2.5" 
+              strokeLinecap="round"
+            />
+            
+            {/* Left line */}
+            <line 
+              x1="2" y1="50" x2="15" y2="50" 
+              className="line line-4"
+              stroke="url(#gradient4-mobile)" 
+              strokeWidth="2.5" 
+              strokeLinecap="round"
+            />
+            
+            {/* Diagonal lines */}
+            <line 
+              x1="15" y1="15" x2="23" y2="23" 
+              className="line line-5"
+              stroke="url(#gradient5-mobile)" 
+              strokeWidth="2" 
+              strokeLinecap="round"
+            />
+            <line 
+              x1="85" y1="15" x2="77" y2="23" 
+              className="line line-6"
+              stroke="url(#gradient6-mobile)" 
+              strokeWidth="2" 
+              strokeLinecap="round"
+            />
+            <line 
+              x1="85" y1="85" x2="77" y2="77" 
+              className="line line-7"
+              stroke="url(#gradient7-mobile)" 
+              strokeWidth="2" 
+              strokeLinecap="round"
+            />
+            <line 
+              x1="15" y1="85" x2="23" y2="77" 
+              className="line line-8"
+              stroke="url(#gradient8-mobile)" 
+              strokeWidth="2" 
+              strokeLinecap="round"
+            />
+            
+            {/* Gradients */}
+            <defs>
+              <linearGradient id="gradient1-mobile" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#06b6d4" stopOpacity="1" />
+                <stop offset="100%" stopColor="#ffffff" stopOpacity="0.9" />
+              </linearGradient>
+              <linearGradient id="gradient2-mobile" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#ffffff" stopOpacity="0.9" />
+                <stop offset="100%" stopColor="#06b6d4" stopOpacity="1" />
+              </linearGradient>
+              <linearGradient id="gradient3-mobile" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#06b6d4" stopOpacity="1" />
+                <stop offset="100%" stopColor="#ffffff" stopOpacity="0.9" />
+              </linearGradient>
+              <linearGradient id="gradient4-mobile" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#ffffff" stopOpacity="0.9" />
+                <stop offset="100%" stopColor="#06b6d4" stopOpacity="1" />
+              </linearGradient>
+              <linearGradient id="gradient5-mobile">
+                <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.8" />
+                <stop offset="100%" stopColor="#ffffff" stopOpacity="0.7" />
+              </linearGradient>
+              <linearGradient id="gradient6-mobile">
+                <stop offset="0%" stopColor="#ffffff" stopOpacity="0.7" />
+                <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.8" />
+              </linearGradient>
+              <linearGradient id="gradient7-mobile">
+                <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.8" />
+                <stop offset="100%" stopColor="#ffffff" stopOpacity="0.7" />
+              </linearGradient>
+              <linearGradient id="gradient8-mobile">
+                <stop offset="0%" stopColor="#ffffff" stopOpacity="0.7" />
+                <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.8" />
+              </linearGradient>
+            </defs>
+          </svg>
+          
+          {/* Logo image in center */}
+          <img src="/TARS_Logo.jpeg" alt="TARS Logo" className="mobile-logo-img" />
+        </div>
+      </button>
+      
+      {/* Overlay for mobile */}
+      {isSidebarOpen && (
+        <div 
+          className="sidebar-overlay" 
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
+      
+      <header 
+        className={`header ${isSidebarOpen ? 'open' : ''}`}
+        onMouseEnter={() => setIsSidebarHovered(true)}
+        onMouseLeave={() => setIsSidebarHovered(false)}
+      >
         <nav className="header-nav">
           {/* Logo at top */}
-          <div 
-            className="header-logo"
-            onMouseEnter={() => setIsLogoHovered(true)}
-            onMouseLeave={() => setIsLogoHovered(false)}
-          >
+          <div className="header-logo">
             <div className="logo-container">
               {/* Animated Lines around the circle */}
-              <svg className={`logo-lines ${isLogoHovered ? 'active' : ''}`} viewBox="0 0 100 100">
+              <svg className={`logo-lines ${isSidebarHovered || isLogoHovered ? 'active' : ''}`} viewBox="0 0 100 100">
                 {/* Outer circle border */}
                 <circle cx="50" cy="50" r="48" fill="none" stroke="rgba(6, 182, 212, 0.2)" strokeWidth="0.5"/>
                 
