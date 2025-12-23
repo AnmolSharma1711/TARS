@@ -59,21 +59,117 @@
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
+.header-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Logo Container with animated lines */
+.logo-container {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .logo-container {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* SVG Lines around logo */
+.logo-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  filter: drop-shadow(0 0 4px rgba(6, 182, 212, 0.6));
+  transition: filter 0.3s ease;
+}
+
+.logo-lines.active {
+  filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.9)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.5));
+}
+
+/* Individual line animations */
+.logo-lines .line {
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform-origin: center;
+}
+
+/* Main lines rotate 90 degrees on hover */
+.logo-lines.active .line-1 {
+  transform: rotate(90deg);
+  transform-origin: 50px 50px;
+}
+
+.logo-lines.active .line-2 {
+  transform: rotate(90deg);
+  transform-origin: 50px 50px;
+}
+
+.logo-lines.active .line-3 {
+  transform: rotate(90deg);
+  transform-origin: 50px 50px;
+}
+
+.logo-lines.active .line-4 {
+  transform: rotate(90deg);
+  transform-origin: 50px 50px;
+}
+
+/* Diagonal lines rotate 45 degrees for the "lock opening" effect */
+.logo-lines.active .line-5 {
+  transform: rotate(45deg);
+  transform-origin: 50px 50px;
+}
+
+.logo-lines.active .line-6 {
+  transform: rotate(-45deg);
+  transform-origin: 50px 50px;
+}
+
+.logo-lines.active .line-7 {
+  transform: rotate(45deg);
+  transform-origin: 50px 50px;
+}
+
+.logo-lines.active .line-8 {
+  transform: rotate(-45deg);
+  transform-origin: 50px 50px;
+}
+
+/* Logo Image */
 .header-logo-img {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   object-fit: cover;
-  border: none;
+  border: 2px solid rgba(6, 182, 212, 0.3);
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
 }
 
 @media (min-width: 768px) {
   .header-logo-img {
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
   }
+}
+
+.header-logo:hover .header-logo-img {
+  border-color: rgba(6, 182, 212, 0.8);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.5), 0 0 25px rgba(255, 255, 255, 0.2);
 }
 
 .header-menu {
