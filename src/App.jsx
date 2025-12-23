@@ -35,11 +35,11 @@ function App() {
             <SpaceScene />
           </div>
           
-          {/* Vertical Header */}
+          {/* Sidebar Navigation */}
           <Header onNavigate={setCurrentPage} currentPage={currentPage} />
           
-          {/* Content with left margin for sidebar */}
-          <div className="relative z-10 ml-0 md:ml-20">
+          {/* Main content with sidebar offset */}
+          <div className="relative z-10 ml-[55px] md:ml-[70px] transition-all duration-300">
             {currentPage === 'home' && <Hero />}
             {currentPage === 'about' && <FeatureCards />}
             {currentPage === 'team' && <TeamCard />}

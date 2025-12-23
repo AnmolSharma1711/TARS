@@ -1,8 +1,14 @@
 /* ===== TEAM SECTION ===== */
 .team-section {
-  padding: 5rem 1.5rem;
+  padding: 3rem 1rem;
   max-width: 80rem;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .team-section {
+    padding: 5rem 1.5rem;
+  }
 }
 
 .team-container {
@@ -10,46 +16,95 @@
 }
 
 .team-title {
-  font-size: 3rem;
+  font-size: 1.75rem;
   font-weight: bold;
   text-align: center;
   margin-bottom: 1rem;
   letter-spacing: 0.025em;
 }
 
+@media (min-width: 640px) {
+  .team-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .team-title {
+    font-size: 3rem;
+  }
+}
+
 .team-description {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   text-align: center;
   color: #bae6fd;
   margin-bottom: 1rem;
 }
 
+@media (min-width: 640px) {
+  .team-description {
+    font-size: 1.2rem;
+  }
+}
+
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-  margin-top: 3rem;
-  padding: 2rem 0;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 1rem 0;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   justify-items: center;
 }
 
+@media (min-width: 640px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+    padding: 2rem 0;
+  }
+}
+
 .team-card {
   width: 100%;
-  max-width: 340px;
+  max-width: 240px;
   margin: 0 auto;
-  border-radius: 20px;
+  border-radius: 14px;
   background: rgba(15, 23, 42, 0.6);
   backdrop-filter: blur(8px);
-  padding: 5px;
+  padding: 4px;
   overflow: hidden;
   box-shadow: 0 7px 20px rgba(6, 182, 212, 0.2);
   border: 1px solid rgba(6, 182, 212, 0.3);
   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   aspect-ratio: 9 / 16;
-  min-height: 480px;
+  min-height: 350px;
+}
+
+@media (min-width: 640px) {
+  .team-card {
+    max-width: 280px;
+    min-height: 390px;
+    border-radius: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .team-card {
+    max-width: 310px;
+    min-height: 440px;
+  }
 }
 
 .team-card:hover {
@@ -100,21 +155,35 @@
   position: relative;
   z-index: 2;
   display: flex;
-  gap: 15px;
-  padding: 15px;
+  gap: 10px;
+  padding: 12px;
+}
+
+@media (min-width: 640px) {
+  .team-social-media {
+    gap: 12px;
+    padding: 15px;
+  }
 }
 
 .team-social-media a {
   text-decoration: none;
   background: transparent;
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
   border: 2px solid transparent;
+}
+
+@media (min-width: 640px) {
+  .team-social-media a {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .team-social-media a:hover {

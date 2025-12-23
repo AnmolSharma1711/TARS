@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: true,
+    host: true, // This enables network access and shows IP address
     port: 5173,
     strictPort: false,
     open: false,
@@ -25,14 +25,5 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'three', '@react-three/fiber', '@react-three/drei'],
-    esbuildOptions: {
-      target: 'esnext',
-    },
-  },
-  esbuild: {
-    target: 'esnext',
-    supported: {
-      'top-level-await': true,
-    },
   },
 })

@@ -3,19 +3,38 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 1.5rem;
+  padding: 0 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .hero {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 0 2rem;
+  }
 }
 
 .hero-content {
   text-align: center;
   max-width: 56rem;
+  width: 100%;
 }
 
 .hero-title {
-  font-size: 4.5rem;
+  font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
   letter-spacing: -0.025em;
+}
+
+@media (min-width: 640px) {
+  .hero-title {
+    font-size: 4.5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -38,32 +57,52 @@
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: #22d3ee;
-  margin-bottom: 3rem;
-  letter-spacing: 0.2em;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   text-shadow: 0 0 10px rgba(34, 211, 238, 0.3);
+}
+
+@media (min-width: 640px) {
+  .hero-subtitle {
+    font-size: 1.25rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 2rem;
+  }
 }
 
 @media (min-width: 768px) {
   .hero-subtitle {
     font-size: 1.875rem;
+    margin-bottom: 3rem;
   }
 }
 
 .hero-description {
-  font-size: 1.125rem;
+  font-size: 0.9rem;
   color: #bae6fd;
-  margin-bottom: 3rem;
-  line-height: 1.75;
+  margin-bottom: 2rem;
+  line-height: 1.6;
   font-weight: 300;
+  padding: 0 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .hero-description {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+  }
 }
 
 @media (min-width: 768px) {
   .hero-description {
     font-size: 1.25rem;
+    margin-bottom: 3rem;
+    padding: 0;
   }
 }
 
@@ -81,19 +120,27 @@
 }
 
 .hero-button-primary {
-  padding: 0.75rem 2rem;
+  padding: 0.625rem 1.25rem;
   background-color: transparent;
   border: 1px solid rgba(6, 182, 212, 0.5);
   border-radius: 9999px;
   font-weight: 600;
-  font-size: 0.875rem;
-  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #22d3ee;
   cursor: pointer;
   transition: all 0.3s;
   position: relative;
   overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .hero-button-primary {
+    padding: 0.75rem 2rem;
+    font-size: 0.875rem;
+    letter-spacing: 0.2em;
+  }
 }
 
 .hero-button-primary::before {
@@ -119,15 +166,22 @@
 }
 
 .hero-button-secondary {
-  padding: 1rem 2rem;
+  padding: 0.625rem 1.25rem;
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 9999px;
   font-weight: 600;
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   background: transparent;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s;
+}
+
+@media (min-width: 640px) {
+  .hero-button-secondary {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+  }
 }
 
 .hero-button-secondary:hover {

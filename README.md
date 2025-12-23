@@ -4,14 +4,8 @@
 A modern, high-performance React application featuring 3D graphics, animations, and a clean modular architecture. Built with React 18, Vite 6, Three.js, and Tailwind CSS.
 
 ## 📋 Prerequisites
-- **Node.js**: v22.21.1 or higher (Required)
-- **npm**: v10.9.2 or higher
-
-**Important:** This project requires Node.js v22. Use the `.nvmrc` file:
-```bash
-nvm use  # Automatically uses version from .nvmrc
-node --version  # Verify: should show v22.x.x
-```
+- **Node.js**: v22.x or higher (LTS)
+- **npm**: v10.x or higher
 
 ## 🛠️ Tech Stack
 - **Framework**: React 18.3

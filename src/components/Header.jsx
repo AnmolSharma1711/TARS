@@ -8,15 +8,17 @@ function Header({ onNavigate, currentPage }) {
   };
 
   return (
-    <header className="header">
-      <nav className="header-nav">
-        {/* Logo at top */}
-        <div className="header-logo">
-          <span className="text-gradient glow">TARS</span>
-        </div>
-        
-        {/* Vertical menu */}
-        <ul className="header-menu">
+    <>
+      <header className="header">
+        <nav className="header-nav">
+          {/* Logo at top */}
+          <div className="header-logo">
+            <img src="/TARS_Logo.jpeg" alt="TARS Logo" className="header-logo-img" />
+            <span className="text-gradient glow">TARS</span>
+          </div>
+          
+          {/* Vertical menu */}
+          <ul className="header-menu">
           <li>
             <a 
               href="#home" 
@@ -72,6 +74,14 @@ function Header({ onNavigate, currentPage }) {
         </ul>
       </nav>
     </header>
+    
+    {/* GLA Logo in top right corner - only on home page */}
+    {currentPage === 'home' && (
+      <div className="gla-logo-container">
+        <img src="/GLA_Logo.png" alt="GLA Logo" className="gla-logo" />
+      </div>
+    )}
+    </>
   )
 }
 
