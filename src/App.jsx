@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { IntroSequence } from './components/IntroSequence'
 import Header from './components/Header'
-import Hero from './components/Hero'
+import HomePage from './pages/HomePage'
 import About from './components/About'
 import Footer from './components/Footer'
 import SpaceScene from './components/SpaceScene'
@@ -22,10 +22,10 @@ function App() {
   };
 
   return (
-    <div className="relative w-full min-h-screen overflow-hidden">
+    <div className="relative w-full min-h-screen overflow-x-hidden">
       {/* Main Content */}
       {!showIntro && (
-        <div className="relative min-h-screen bg-slate-950 text-white overflow-hidden">
+        <div className="relative min-h-screen bg-slate-950 text-white overflow-x-hidden">
           {/* Background Gradient & Grid */}
           <div className="fixed inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-slate-900 via-slate-950 to-black z-0" />
           <div className="fixed inset-0 z-0 opacity-10 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:40px_40px]" />
@@ -39,8 +39,8 @@ function App() {
           <Header onNavigate={setCurrentPage} currentPage={currentPage} />
           
           {/* Main content with sidebar offset */}
-          <div className="relative z-10 ml-[55px] md:ml-[70px] transition-all duration-300">
-            {currentPage === 'home' && <Hero />}
+          <div className="relative z-10 ml-[55px] md:ml-[70px] transition-all duration-300 overflow-visible">
+            {currentPage === 'home' && <HomePage />}
             {currentPage === 'about' && <FeatureCards />}
             {currentPage === 'team' && <TeamCard />}
             {currentPage === 'events' && <EventCards />}
