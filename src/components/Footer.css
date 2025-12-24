@@ -3,15 +3,18 @@
   backdrop-filter: blur(8px);
   border-top: 1px solid rgba(6, 182, 212, 0.2);
   padding: 1.5rem 0;
-  margin-left: -55px;
-  width: calc(100vw - 0px);
+  margin: 0;
+  width: 100vw;
   position: relative;
-  left: 0;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow-x: hidden;
 }
 
 @media (min-width: 768px) {
   .footer {
-    margin-left: -70px;
     padding: 2rem 0;
   }
 }
@@ -20,11 +23,19 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .footer-container {
+    padding: 0 1.5rem;
+  }
 }
 
 @media (min-width: 768px) {
   .footer-container {
-    padding: 0 1.5rem;
+    padding: 0 2rem;
   }
 }
 
@@ -50,7 +61,25 @@
 .footer-copyright p {
   color: #94a3b8;
   font-weight: 300;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media (min-width: 640px) {
+  .footer-copyright p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-copyright p {
+    text-align: left;
+  }
 }
 
 .footer-pages {

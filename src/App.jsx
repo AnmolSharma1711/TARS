@@ -39,7 +39,7 @@ function App() {
           <Header onNavigate={setCurrentPage} currentPage={currentPage} />
           
           {/* Main content with sidebar offset */}
-          <div className="relative z-10 ml-0 md:ml-[70px] transition-all duration-300 overflow-visible">
+          <div className="relative z-10 overflow-visible">
             {currentPage === 'home' && <HomePage />}
             {currentPage === 'about' && <FeatureCards />}
             {currentPage === 'team' && <TeamCard />}
