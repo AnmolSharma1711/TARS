@@ -56,9 +56,9 @@ export const coreCouncilData = {
       name: 'Kushal Soni',
       role: 'IoT Lead',
       subtitle: '',
-      image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=300',
-      linkedin: 'https://linkedin.com',
-      github: 'https://github.com',
+      image: '/Council_Member/Kushal_Soni.jpeg',
+      linkedin: 'https://www.linkedin.com/in/soni-kushal/',
+      github: 'https://github.com/kushal-soni01',
     },
     {
       id: 17,
@@ -89,12 +89,12 @@ export const coreCouncilData = {
     },
     {
       id: 20,
-      name: 'Rudraksh',
+      name: 'Rudraksha Sharma',
       role: 'Aeromodelling Lead',
       subtitle: '',
-      image: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=300',
-      linkedin: 'https://linkedin.com',
-      github: 'https://github.com',
+      image: '/Council_Member/Rudraksha.jpeg',
+      linkedin: 'https://www.linkedin.com/in/mr-rudraksha/',
+      github: 'https://github.com/rudraksha-sh',
     }
   ]
 };
