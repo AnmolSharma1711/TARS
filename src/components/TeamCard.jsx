@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './TeamCard.css'
 import { mentorsData } from '../data/mentorsData'
 import { coreCouncilData } from '../data/councilData'
@@ -13,6 +13,20 @@ function TeamCard() {
   const closePopup = () => {
     setSelectedMentor(null);
   };
+
+  // Lock body scroll when popup is open
+  useEffect(() => {
+    if (selectedMentor) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedMentor]);
 
   const renderCard = (member, isMentor = false) => (
     <div 
