@@ -69,7 +69,6 @@ function CircularCarousel() {
                   <div className="card-logo">
                     <img src={card.image} alt="TARS Logo" />
                   </div>
-                  <div className="card-icon">{card.icon}</div>
                 </div>
                 <div className="card-text">
                   <h3 className="card-title">{card.title}</h3>

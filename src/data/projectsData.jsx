@@ -29,7 +29,7 @@ export const projectsData = [
     id: 2,
     category: "Web Development",
     title: "Azure Certification Quiz App",
-    developer: "Anmol Sharma",
+    developer: "Anmol Sharma, Keerti, Kushal Soni, Utkarsh Agrawal",
     description: "A clean and lightweight Quiz App using React + TypeScript, designed to help students prepare for Microsoft Azure certification exams. Includes comprehensive question banks for AZ-900 (Azure Fundamentals) and AI-900 (Azure AI Fundamentals) with structured JSON database.",
     technologies: "React, TypeScript, JSON, Vercel",
     image: "/accomplishments/azure-cert-app.jpg",

@@ -2,10 +2,9 @@ import React, { useState } from 'react'
 import { IntroSequence } from './components/IntroSequence'
 import Header from './components/Header'
 import HomePage from './pages/HomePage'
-import About from './components/About'
+import AboutPage from './pages/AboutPage'
 import Footer from './components/Footer'
 import SpaceScene from './components/SpaceScene'
-import FeatureCards from './components/FeatureCards'
 import TeamCard from './components/TeamCard'
 import EventCards from './components/EventCards'
 import ProjectsPage from './pages/ProjectsPage'
@@ -42,7 +41,7 @@ function App() {
           {/* Main content with sidebar offset */}
           <div className="relative z-10 overflow-visible">
             {currentPage === 'home' && <HomePage />}
-            {currentPage === 'about' && <FeatureCards />}
+            {currentPage === 'about' && <AboutPage />}
             {currentPage === 'projects' && <ProjectsPage />}
             {currentPage === 'team' && <TeamCard />}
             {currentPage === 'events' && <EventCards />}
