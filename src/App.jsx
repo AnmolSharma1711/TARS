@@ -8,6 +8,7 @@ import SpaceScene from './components/SpaceScene'
 import FeatureCards from './components/FeatureCards'
 import TeamCard from './components/TeamCard'
 import EventCards from './components/EventCards'
+import ProjectsPage from './pages/ProjectsPage'
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
@@ -42,6 +43,7 @@ function App() {
           <div className="relative z-10 overflow-visible">
             {currentPage === 'home' && <HomePage />}
             {currentPage === 'about' && <FeatureCards />}
+            {currentPage === 'projects' && <ProjectsPage />}
             {currentPage === 'team' && <TeamCard />}
             {currentPage === 'events' && <EventCards />}
             
