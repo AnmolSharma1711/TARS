@@ -7,7 +7,7 @@ export const patronData = {
   name: 'Dr. Gaurav',
   role: 'Patron',
   subtitle: '',
-  image: 'public/Mentors/Gaurav_Sir.jpeg',
+  image: '/public/Mentors/Gaurav_Sir.jpeg',
   linkedin: 'https://linkedin.com',
   github: 'https://github.com',
   bio: 'Dr. Mitchell is the distinguished patron of TARS, providing invaluable guidance and support to help the society achieve its goals. With over 20 years of experience in academia and research, she has been instrumental in shaping the vision and direction of our organization.',
