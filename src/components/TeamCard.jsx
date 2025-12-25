@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './TeamCard.css'
-import { mentorsData } from '../data/mentorsData'
+import { patronData, mentorsData } from '../data/mentorsData'
 import { coreCouncilData } from '../data/councilData'
 
 function TeamCard() {
@@ -91,6 +91,13 @@ function TeamCard() {
         
         {/* Mentors Section */}
         <div className="mentors-section">
+          {/* Patron - 1 card centered */}
+          <h3 className="section-subtitle">Patron</h3>
+          <div className="patron-row">
+            {renderCard(patronData, true)}
+          </div>
+
+          {/* Mentors - 2 cards */}
           <h3 className="section-subtitle">Faculty Mentors</h3>
           <div className="mentors-grid">
             {mentorsData.map((mentor) => renderCard(mentor, true))}

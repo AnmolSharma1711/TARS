@@ -1,23 +1,26 @@
 // Mentors Data - Faculty members who guide TARS
 // These cards will show a detailed popup when clicked
 
+// Patron - 1 card displayed at the top
+export const patronData = {
+  id: 1,
+  name: 'Dr. Sarah Mitchell',
+  role: 'Patron',
+  subtitle: '',
+  image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300',
+  linkedin: 'https://linkedin.com',
+  github: 'https://github.com',
+  bio: 'Dr. Mitchell is the distinguished patron of TARS, providing invaluable guidance and support to help the society achieve its goals. With over 20 years of experience in academia and research, she has been instrumental in shaping the vision and direction of our organization.',
+  expertise: ['Academic Leadership', 'Strategic Planning', 'Research Mentorship'],
+  email: 'sarah.mitchell@example.com'
+};
+
+// Mentors - 2 cards displayed below patron
 export const mentorsData = [
-  {
-    id: 1,
-    name: 'Dr. Sarah Mitchell',
-    role: 'Faculty Mentor',
-    subtitle: 'AI & ML',
-    image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300',
-    linkedin: 'https://linkedin.com',
-    github: 'https://github.com',
-    bio: 'Dr. Mitchell specializes in Artificial Intelligence and Machine Learning with over 15 years of research experience.',
-    expertise: ['Machine Learning', 'Neural Networks', 'Computer Vision'],
-    email: 'sarah.mitchell@example.com'
-  },
   {
     id: 2,
     name: 'Prof. James Anderson',
-    role: 'Technical Advisor',
+    role: 'Faculty Mentor',
     subtitle: 'Robotics',
     image: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=300',
     linkedin: 'https://linkedin.com',
@@ -29,7 +32,7 @@ export const mentorsData = [
   {
     id: 3,
     name: 'Dr. Emily Chen',
-    role: 'Research Guide',
+    role: 'Faculty Mentor',
     subtitle: 'IoT & Systems',
     image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=300',
     linkedin: 'https://linkedin.com',
