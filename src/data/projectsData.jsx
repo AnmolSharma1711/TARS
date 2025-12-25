@@ -45,7 +45,7 @@ export const projectsData = [
     title: "Autonomous Car",
     developer: "TARS Team",
     description: "An advanced autonomous vehicle project currently under development. This project aims to create a self-driving car with intelligent navigation, obstacle detection, and path planning capabilities. Stay tuned for more updates as we progress in building this cutting-edge autonomous system.",
-    technologies: "Computer Vision, LiDAR, ROS, Deep Learning, Sensor Fusion",
+    technologies: "Computer Vision, Ultrasonic, Deep Learning, Sensor Fusion",
     image: "/accomplishments/auto2.jpg",
     additionalImages: [
       "/accomplishments/auto1.jpg",
