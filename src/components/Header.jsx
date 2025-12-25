@@ -155,7 +155,10 @@ function Header({ onNavigate, currentPage }) {
       >
         <nav className="header-nav">
           {/* Logo at top */}
-          <div className="header-logo">
+          <div 
+            className="header-logo"
+            onClick={() => setIsSidebarOpen(false)}
+          >
             <div className="logo-container">
               {/* Animated Lines around the circle */}
               <svg className={`logo-lines ${isSidebarHovered || isLogoHovered ? 'active' : ''}`} viewBox="0 0 100 100">
