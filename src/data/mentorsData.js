@@ -9,9 +9,8 @@ export const patronData = {
   subtitle: '',
   image: '/Mentors/Gaurav_Sir.jpeg',
   linkedin: 'https://www.linkedin.com/in/dr-gourav-bathla-b2155913/',
-  bio: 'Dr. Mitchell is the distinguished patron of TARS, providing invaluable guidance and support to help the society achieve its goals. With over 20 years of experience in academia and research, she has been instrumental in shaping the vision and direction of our organization.',
-  expertise: ['Academic Leadership', 'Strategic Planning', 'Research Mentorship'],
-  email: 'sarah.mitchell@example.com'
+  bio: 'Dr. Gourav Bathla serves as the distinguished patron of TARS, providing visionary leadership and strategic direction to the society. With extensive experience in computer science and engineering education, he has been instrumental in fostering an environment of innovation and research excellence. His commitment to advancing technology education has empowered countless students to pursue cutting-edge projects in automation, AI, and robotics.',
+  expertise: ['Academic Leadership', 'Innovation Strategy', 'Technology Education', 'Research Guidance']
 };
 
 // Mentors - 2 cards displayed below patron
@@ -20,22 +19,18 @@ export const mentorsData = [
     id: 2,
     name: 'Dr. Saurabh Tewari',
     role: 'Faculty Mentor',
-    subtitle: 'IoT & Systems',
     image: '/Mentors/Saurabh_Sir.jpeg',
     linkedin: 'https://www.linkedin.com/in/dr-saurabh-tewari-106597a3/',
-    bio: 'Professor Anderson is an expert in Robotics and Automation with numerous publications in international journals.',
-    expertise: ['Robotics', 'Automation', 'Control Systems'],
-    email: 'james.anderson@example.com'
+    bio: 'Dr. Saurabh Tewari is a dedicated faculty mentor specializing in robotics, automation, and intelligent systems. His expertise in control systems and mechatronics has guided numerous student projects to successful completion. He actively encourages hands-on learning and practical implementation, helping students bridge theoretical concepts with real-world applications in autonomous systems and industrial automation.',
+    expertise: ['Robotics', 'Automation', 'Control Systems', 'Mechatronics']
   },
   {
     id: 3,
     name: 'Dr. Shivanshu Upadhyay',
     role: 'Faculty Mentor',
-    subtitle: 'Robotics',
     image: '/Mentors/Shivanshu_Sir.jpeg',
     linkedin: 'https://www.linkedin.com/in/shivanshu-upadhyay-752588201/',
-    bio: 'Dr. Chen focuses on Internet of Things and Embedded Systems, bridging the gap between theory and practice.',
-    expertise: ['IoT', 'Embedded Systems', 'Sensor Networks'],
-    email: 'emily.chen@example.com'
+    bio: 'Dr. Shivanshu Upadhyay brings extensive knowledge in IoT, embedded systems, and sensor networks to TARS. His passion for emerging technologies and practical problem-solving has inspired students to develop innovative IoT solutions for smart cities and industrial applications. He emphasizes project-based learning and encourages students to explore the intersection of hardware and software in creating connected intelligent systems.',
+    expertise: ['IoT', 'Embedded Systems', 'Sensor Networks', 'Smart Systems']
   }
 ];
