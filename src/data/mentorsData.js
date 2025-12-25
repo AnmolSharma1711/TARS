@@ -19,10 +19,10 @@ export const patronData = {
 export const mentorsData = [
   {
     id: 2,
-    name: 'Prof. James Anderson',
+    name: 'Dr. Saurabh Tewari',
     role: 'Faculty Mentor',
     subtitle: 'Robotics',
-    image: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=300',
+    image: '/public/Mentors/Saurabh_Sir.jpeg',
     linkedin: 'https://linkedin.com',
     github: 'https://github.com',
     bio: 'Professor Anderson is an expert in Robotics and Automation with numerous publications in international journals.',
