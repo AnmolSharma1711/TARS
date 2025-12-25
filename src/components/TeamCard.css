@@ -362,6 +362,7 @@
   grid-template-columns: 1fr;
   gap: 2rem;
   max-width: 1200px;
+  justify-items: center;
 }
 
 @media (min-width: 640px) {
@@ -375,6 +376,12 @@
   .team-heads-row {
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
+  }
+  
+  /* Center the last item if it's alone in the row */
+  .team-heads-row .team-card:last-child:nth-child(3n+1) {
+    grid-column: 1 / -1;
+    justify-self: center;
   }
 }
 
