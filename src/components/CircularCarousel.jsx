@@ -63,11 +63,17 @@ function CircularCarousel() {
             {displayCards.map((card, index) => (
               <div 
                 key={`${card.id}-${index}`} 
-                className="circular-card"
-                style={{ backgroundImage: `url(${card.image})` }}
+                className="circular-card-wrapper"
               >
-                <div className="circular-card-overlay">
-                  <p className="circular-card-subtitle">{card.subtitle}</p>
+                <div className="circular-card">
+                  <div className="card-logo">
+                    <img src={card.image} alt="TARS Logo" />
+                  </div>
+                  <div className="card-icon">{card.icon}</div>
+                </div>
+                <div className="card-text">
+                  <h3 className="card-title">{card.title}</h3>
+                  <p className="card-subtitle">{card.subtitle}</p>
                 </div>
               </div>
             ))}

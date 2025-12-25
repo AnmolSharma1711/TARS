@@ -92,7 +92,7 @@
 
 .carousel-track {
   display: flex;
-  gap: 1.5rem;
+  gap: 3rem;
   width: fit-content;
   padding: 1.5rem 0;
   min-width: 100%;
@@ -118,14 +118,14 @@
 
 @media (min-width: 640px) {
   .carousel-track {
-    gap: 2rem;
+    gap: 3.5rem;
     padding: 2rem 0;
   }
 }
 
 @media (min-width: 768px) {
   .carousel-track {
-    gap: 2.5rem;
+    gap: 4rem;
   }
   
   .carousel-track.animated {
@@ -135,36 +135,46 @@
 
 @media (min-width: 1024px) {
   .carousel-track {
-    gap: 3rem;
+    gap: 5rem;
   }
 }
 
 @media (min-width: 1280px) {
   .carousel-track {
-    gap: 4rem;
+    gap: 6rem;
   }
 }
 
-.circular-card {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.circular-card-wrapper {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.circular-card {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   position: relative;
-  transition: transform 0.3s ease;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: visible;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(34, 211, 238, 0.05));
+  border: 2px solid rgba(6, 182, 212, 0.3);
+  box-shadow: 0 8px 32px rgba(6, 182, 212, 0.2);
+  backdrop-filter: blur(10px);
 }
 
 .circular-card:hover {
   transform: scale(1.1);
   z-index: 10;
+  box-shadow: 0 12px 48px rgba(6, 182, 212, 0.4);
+  border-color: rgba(6, 182, 212, 0.6);
 }
 
 .circular-card:hover ~ .circular-card,
@@ -215,66 +225,65 @@
   }
 }
 
-.circular-card::before {
-  content: '';
+.card-logo {
+  width: 60%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.card-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(6, 182, 212, 0.3));
+}
+
+.card-icon {
+  font-size: 2.5rem;
   position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #22d3ee, #06b6d4);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: -1;
-}
-
-.circular-card:hover::before {
-  opacity: 0.3;
-}
-
-.circular-card-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: transparent;
-  padding: 1.5rem 1rem 1rem 1rem;
-  text-align: center;
-  border-radius: 0 0 50% 50%;
-}
-
-.circular-card-subtitle {
-  font-size: 0.625rem;
-  color: #f8fafc;
-  margin: 0;
-  line-height: 1.3;
-  font-weight: 500;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
-  padding: 0 0.25rem;
-}
-
-@media (min-width: 480px) {
-  .circular-card-subtitle {
-    font-size: 0.65rem;
-  }
-}
-
-@media (min-width: 640px) {
-  .circular-card-subtitle {
-    font-size: 0.7rem;
-    padding: 0 0.5rem;
-  }
+  bottom: 5%;
+  filter: drop-shadow(0 4px 8px rgba(6, 182, 212, 0.6));
 }
 
 @media (min-width: 768px) {
-  .circular-card-subtitle {
-    font-size: 0.75rem;
+  .card-icon {
+    font-size: 3rem;
   }
 }
 
-@media (min-width: 1024px) {
-  .circular-card-subtitle {
-    font-size: 0.8rem;
+.card-text {
+  text-align: center;
+  max-width: 180px;
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #22d3ee;
+  margin: 0 0 0.25rem 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .card-title {
+    font-size: 1.25rem;
+  }
+}
+
+.card-subtitle {
+  font-size: 0.875rem;
+  color: #cbd5e1;
+  margin: 0;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .card-subtitle {
+    font-size: 0.9375rem;
   }
 }
 
