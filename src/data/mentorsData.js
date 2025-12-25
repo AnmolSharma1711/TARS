@@ -33,7 +33,7 @@ export const mentorsData = [
     role: 'Faculty Mentor',
     subtitle: 'Robotics',
     image: '/Mentors/Shivanshu_Sir.jpeg',
-    linkedin: 'linkedin.com/in/shivanshu-upadhyay-752588201',
+    linkedin: 'https://www.linkedin.com/in/shivanshu-upadhyay-752588201/',
     bio: 'Dr. Chen focuses on Internet of Things and Embedded Systems, bridging the gap between theory and practice.',
     expertise: ['IoT', 'Embedded Systems', 'Sensor Networks'],
     email: 'emily.chen@example.com'
