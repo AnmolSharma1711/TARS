@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import './CircularCarousel.css';
 import { carouselCards } from '../data/carouselData';
@@ -63,16 +64,11 @@ function CircularCarousel() {
             {displayCards.map((card, index) => (
               <div 
                 key={`${card.id}-${index}`} 
-                className="circular-card-wrapper"
+                className="circular-card"
+                style={{ backgroundImage: `url(${card.image})` }}
               >
-                <div className="circular-card">
-                  <div className="card-logo">
-                    <img src={card.image} alt="TARS Logo" />
-                  </div>
-                </div>
-                <div className="card-text">
-                  <h3 className="card-title">{card.title}</h3>
-                  <p className="card-subtitle">{card.subtitle}</p>
+                <div className="circular-card-overlay">
+                  <p className="circular-card-subtitle">{card.subtitle}</p>
                 </div>
               </div>
             ))}
