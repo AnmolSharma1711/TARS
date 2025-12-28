@@ -33,6 +33,16 @@ function Hero() {
           <button className="hero-button-secondary">
             Our Research
           </button>
+          
+          <a 
+            href="https://tars-sage.vercel.app/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hero-button-portal"
+          >
+            <span className="portal-icon">🚀</span>
+            Members Portal
+          </a>
         </div>
 
         <div className="mt-12 max-w-4xl mx-auto">
