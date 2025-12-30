@@ -8,6 +8,7 @@ import SpaceScene from './components/SpaceScene'
 import TeamCard from './components/TeamCard'
 import EventCards from './components/EventCards'
 import ProjectsPage from './pages/ProjectsPage'
+import SponsorsPage from './pages/SponsorsPage'
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
@@ -43,6 +44,7 @@ function App() {
             {currentPage === 'home' && <HomePage />}
             {currentPage === 'about' && <AboutPage />}
             {currentPage === 'projects' && <ProjectsPage />}
+            {currentPage === 'sponsors' && <SponsorsPage />}
             {currentPage === 'team' && <TeamCard />}
             {currentPage === 'events' && <EventCards />}
             

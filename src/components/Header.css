@@ -186,7 +186,8 @@
   }
   
   .header:hover {
-    width: 180px;
+    /* expand to fit the visible text content (adjusts to longest label) */
+    width: max-content;
     background: transparent;
   }
 }
@@ -204,8 +205,9 @@
 
 @media (min-width: 768px) {
   .header-nav {
-    padding: 2rem 0;
+    padding: 2rem 0 2rem 1rem;
     gap: 3rem;
+    align-items: flex-start; /* ensure items align to left when expanded */
   }
 }
 
@@ -342,18 +344,18 @@
   gap: 1.5rem;
   list-style: none;
   flex: 1;
-  width: 100%;
+  width: auto;
   padding: 0;
   margin: 0;
-  align-items: stretch;
+  align-items: flex-start;
 }
 
 .header-menu li {
-  width: 100%;
+  width: auto;
 }
 
 .header-menu li a {
-  display: flex;
+  display: inline-flex; /* size to content so background/boundary follow text length */
   align-items: center;
   gap: 1rem;
   padding: 0.875rem 1.25rem;
@@ -363,7 +365,7 @@
   position: relative;
   white-space: nowrap;
   overflow: visible;
-  width: 100%;
+  width: auto;
   box-sizing: border-box;
   border-radius: 0.5rem;
 }
@@ -448,6 +450,74 @@
   .header:hover .header-text {
     opacity: 1;
     transform: translateX(0);
+  }
+
+  /* Collapsed (desktop) state: compact icon highlight and hide full-item background */
+  .header:not(.open):not(:hover) .header-menu li a {
+    justify-content: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    width: 70px; /* match collapsed sidebar width */
+    background-color: transparent !important; /* prevent full-width background */
+  }
+
+  .header:not(.open):not(:hover) .header-menu li a .header-text {
+    display: none;
+  }
+
+  /* Small rounded block behind the icon to indicate hover/active in collapsed state
+     Default (other icons): fully transparent and no blur. Active/hover shows a subtle
+     solid background but no blur/shadow. */
+  .header:not(.open):not(:hover) .header-menu li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border-radius: 8px;
+    z-index: 0;
+    transition: background-color 0.18s ease;
+    box-shadow: none;
+  }
+
+  .header:not(.open):not(:hover) .header-menu li a .header-icon,
+  .header:not(.open):not(:hover) .header-menu li a .header-text {
+    position: relative;
+    z-index: 1;
+  }
+
+  .header:not(.open):not(:hover) .header-menu li a:hover::after,
+  .header:not(.open):not(:hover) .header-menu li a.active::after {
+    background: rgba(6, 182, 212, 0.12);
+    box-shadow: none;
+  }
+
+  /* Prevent the left accent bar from expanding in collapsed state */
+  .header:not(.open):not(:hover) .header-menu li a::before {
+    display: none;
+  }
+
+  /* When expanded (hover/open), restore normal full-width behavior */
+  .header:hover .header-menu li a,
+  .header.open .header-menu li a {
+    justify-content: flex-start;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: auto;
+  }
+
+  .header:hover .header-menu li a::after,
+  .header.open .header-menu li a::after {
+    left: 0;
+    top: 0;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    background: rgba(6, 182, 212, 0.14);
   }
 }
 

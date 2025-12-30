@@ -291,6 +291,19 @@ function Header({ onNavigate, currentPage }) {
           </li>
           <li>
             <a 
+              href="#sponsors" 
+              title="Sponsors"
+              className={currentPage === 'sponsors' ? 'active' : ''}
+              onClick={(e) => handleNavClick(e, 'sponsors')}
+            >
+              <svg className="header-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.966a1 1 0 00.95.69h4.17c.969 0 1.371 1.24.588 1.81l-3.375 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118L12 18.347l-3.375 2.455c-.785.57-1.84-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L4.633 9.393c-.783-.57-.38-1.81.588-1.81h4.17a1 1 0 00.95-.69L11.049 2.927z" />
+              </svg>
+              <span className="header-text">Sponsors</span>
+            </a>
+          </li>
+          <li>
+            <a 
               href="#about" 
               title="About"
               className={currentPage === 'about' ? 'active' : ''}

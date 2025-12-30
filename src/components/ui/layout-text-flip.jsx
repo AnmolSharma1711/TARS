@@ -12,6 +12,18 @@ export const LayoutTextFlip = ({ text, words, className }) => {
     return () => clearInterval(interval);
   }, [words.length]);
 
+  // Split word and emoji
+  const getCurrentContent = () => {
+    const current = words[currentWordIndex];
+    const parts = current.split(' ');
+    if (parts.length === 2) {
+      return { word: parts[0], emoji: parts[1] };
+    }
+    return { word: current, emoji: '' };
+  };
+
+  const { word, emoji } = getCurrentContent();
+
   return (
     <div className={`flex items-center justify-center ${className || ""}`}>
       <span className="text-4xl md:text-6xl font-bold text-white">
@@ -25,13 +37,16 @@ export const LayoutTextFlip = ({ text, words, className }) => {
             animate={{ rotateX: 0, opacity: 1 }}
             exit={{ rotateX: -90, opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="inline-block text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
+            className="inline-block text-4xl md:text-6xl font-bold"
             style={{
               transformStyle: "preserve-3d",
               transformOrigin: "center center",
             }}
           >
-            {words[currentWordIndex]}
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              {word}
+            </span>
+            {emoji && <span className="ml-1">{emoji}</span>}
           </motion.span>
         </AnimatePresence>
       </div>
