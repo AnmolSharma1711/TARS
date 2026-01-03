@@ -52,5 +52,24 @@ export const projectsData = [
       "/accomplishments/auto3.jpg"
     ],
   },
+  {
+    id: 4,
+    category: "Browser Extension",
+    title: "FormSaathi",
+    developer: "Anmol Sharma, Akshat Gupta, Madhav Garg",
+    description: "An AI-powered browser extension designed to help educationally backward people fill forms and use browsers efficiently. FormSaathi understands input fields and explains them in the user's language, making digital forms accessible to everyone. The extension bridges the digital divide by providing real-time, language-specific assistance for form filling.",
+    technologies: "Azure AI Foundry, GPT-4o-mini, Node.js, Express, Browser Extension Manifest",
+    image: "/accomplishments/form1.png",
+    additionalImages: [
+      "/accomplishments/form2.png",
+      "/accomplishments/form3.png",
+      "/accomplishments/form4.png",
+      "/accomplishments/form5.png",
+      "/accomplishments/form6.png"
+    ],
+    links: {
+      github: "https://github.com/AnmolSharma1711/TARS"
+    },
+  },
 ];
 
