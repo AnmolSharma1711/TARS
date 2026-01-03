@@ -71,22 +71,22 @@ const Sponsors = () => {
             <div className="p-6 bg-transparent border-r-2 border-sky-500/25">
               <h3 className="text-sm font-semibold text-sky-300 uppercase tracking-wider">Benefits Category</h3>
             </div>
-            <div className="p-4 sm:p-6 text-center bg-transparent">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-transparent mb-3 shadow-none mx-auto">
-                <Sparkles className="w-6 h-6 text-sky-300" />
+            <div className="p-4 sm:p-6 text-center bg-gradient-to-br from-purple-900/40 to-purple-700/30 border-2 border-purple-400/50">
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-purple-500/30 mb-3 shadow-lg shadow-purple-500/50 mx-auto">
+                <Sparkles className="w-6 h-6 text-purple-200" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-cyan-100 mb-2">PLATINUM</h3>
-              <p className="text-lg sm:text-2xl font-extrabold text-cyan-100">₹5,00,000</p>
+              <h3 className="text-xl sm:text-2xl font-bold text-purple-100 mb-2">PLATINUM</h3>
+              <p className="text-lg sm:text-2xl font-extrabold text-purple-200">₹5,00,000</p>
             </div>
-            <div className="p-4 sm:p-6 text-center bg-transparent">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-transparent mb-3 shadow-none mx-auto">
-                <Sparkles className="w-6 h-6 text-sky-300" />
+            <div className="p-4 sm:p-6 text-center bg-gradient-to-br from-yellow-700/40 to-amber-600/30 border-2 border-yellow-400/50">
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-yellow-500/40 mb-3 shadow-lg shadow-yellow-500/50 mx-auto">
+                <Sparkles className="w-6 h-6 text-yellow-200" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-cyan-100 mb-2">GOLD</h3>
-              <p className="text-lg sm:text-2xl font-extrabold text-cyan-100">₹3,00,000</p>
+              <h3 className="text-xl sm:text-2xl font-bold text-yellow-100 mb-2">GOLD</h3>
+              <p className="text-lg sm:text-2xl font-extrabold text-yellow-200">₹3,00,000</p>
             </div>
-            <div className="p-4 sm:p-6 text-center bg-transparent">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-transparent mb-3 shadow-none mx-auto">
+            <div className="p-4 sm:p-6 text-center bg-gradient-to-br from-slate-700/40 to-slate-600/30 border-2 border-slate-400/50">
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-slate-500/40 mb-3 shadow-lg shadow-slate-500/40 mx-auto">
                 <Sparkles className="w-6 h-6 text-slate-300" />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-slate-200 mb-2">SILVER</h3>
@@ -103,18 +103,18 @@ const Sponsors = () => {
                 </div>
                 <div className="bg-transparent p-4 sm:p-6">
                   <div className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-300 flex items-center justify-center mt-0.5">
+                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center mt-0.5 shadow-md shadow-purple-500/50">
                       <Check className="w-3 h-3 text-white" />
                     </div>
-                    <p className="text-cyan-100 text-sm leading-relaxed break-words whitespace-normal">{benefit.platinum}</p>
+                    <p className="text-purple-100 text-sm leading-relaxed break-words whitespace-normal">{benefit.platinum}</p>
                   </div>
                 </div>
                 <div className="bg-transparent p-4 sm:p-6">
                   <div className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-cyan-300 to-cyan-200 flex items-center justify-center mt-0.5">
+                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center mt-0.5 shadow-md shadow-yellow-500/50">
                       <Check className="w-3 h-3 text-white" />
                     </div>
-                    <p className="text-cyan-100 text-sm leading-relaxed break-words whitespace-normal">{benefit.gold}</p>
+                    <p className="text-yellow-100 text-sm leading-relaxed break-words whitespace-normal">{benefit.gold}</p>
                   </div>
                 </div>
                 <div className="bg-transparent p-4 sm:p-6">
@@ -145,7 +145,7 @@ const Sponsors = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-sky-500 text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-sky-400/40 transition-all duration-300 transform hover:scale-105">
-              Schedule a Call
+              Contact Us
             </button>
             <button className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-xl border-2 border-sky-400/20 hover:bg-white/20 transition-all duration-300">
               Download Brochure
