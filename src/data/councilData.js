@@ -27,7 +27,7 @@ export const coreCouncilData = {
       name: 'Keerti',
       role: 'Secretary',
       subtitle: '',
-      image: '/Council_Member/Keerti.png',
+      image: '/Council_Member/Keerti.jpeg',
       linkedin: 'http://www.linkedin.com/in/keerti-yaduvanshi-4813b9280',
       github: 'https://github.com/Keerti-12',
     }
@@ -38,7 +38,7 @@ export const coreCouncilData = {
       name: 'Anmol Sharma',
       role: 'AIML Lead',
       subtitle: '',
-      image: '/Council_Member/Anmol_Sharma.jpg',
+      image: '/Council_Member/Anmol_Sharma.jpeg',
       linkedin: 'https://www.linkedin.com/in/anmol-sharma-26a67b324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       github: 'https://github.com/AnmolSharma1711',
     },
