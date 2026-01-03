@@ -1,46 +1,8 @@
 import React, { useState } from 'react';
 import { Sparkles, Check, X } from 'lucide-react';
+import { sponsorBenefits } from '../data/sponsorsData';
 
-const Sponsors = () => {
-  const benefits = [
-    {
-      category: 'BRAND VISIBILITY & RECOGNITION',
-      platinum: 'Title-level branding across all event creatives, official website, certificates, merchandise, and backdrops',
-      gold: 'Co-branding on event creatives, website, certificates, and selected offline materials',
-      silver: 'Logo mention on sponsor section of creatives and certificates'
-    },
-    {
-      category: 'DIGITAL & SOCIAL MEDIA PROMOTION',
-      platinum: 'Dedicated promotional content, collaborative posts, reels, and recurring mentions across all official platforms',
-      gold: 'Scheduled promotional posts and story mentions during campaign period',
-      silver: 'Inclusion in sponsor acknowledgement posts'
-    },
-    {
-      category: 'STAGE & EVENT EXPOSURE',
-      platinum: 'Formal recognition during opening, key sessions, and closing ceremonies with opportunity to address the audience',
-      gold: 'Recognition during opening or closing session',
-      silver: 'Verbal acknowledgement during the event'
-    },
-    {
-      category: 'COMMUNITY & TALENT ACCESS',
-      platinum: 'Direct interaction with participants, access to resumes/profiles, and facilitated networking sessions',
-      gold: 'Access to participant interaction through structured networking or forms',
-      silver: 'QR-based connection point allowing participants to voluntarily reach the sponsor'
-    },
-    {
-      category: 'TECHNICAL COLLABORATION',
-      platinum: 'Collaboration with student teams on non-commercial projects such as websites, prototypes, demos, or experimental builds',
-      gold: 'Participation in limited student-led project collaborations',
-      silver: null
-    },
-    {
-      category: 'LONG-TERM PARTNERSHIP & CONTINUITY',
-      platinum: 'Featured as an official long-term partner with priority inclusion in future initiatives and campaigns',
-      gold: 'Priority consideration for upcoming events and collaborations',
-      silver: 'Listed as supporting partner for the current initiative'
-    }
-  ];
-
+const Sponsors = ({ onNavigate }) => {
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Subtle accent blobs to match site cyan/aqua theme */}
@@ -96,7 +58,7 @@ const Sponsors = () => {
 
           {/* Table Body */}
           <div className="divide-y divide-white/6">
-            {benefits.map((benefit, index) => (
+            {sponsorBenefits.map((benefit, index) => (
               <div key={index} className="grid grid-cols-1 md:grid-cols-4 gap-px bg-transparent hover:bg-[rgba(255,255,255,0.02)] transition-colors">
                 <div className="bg-transparent p-4 sm:p-6 border-r-2 border-sky-500/20">
                   <h4 className="font-bold text-sky-300 text-sm uppercase tracking-wide">{benefit.category}</h4>
@@ -144,7 +106,7 @@ const Sponsors = () => {
             Let's discuss how we can create a partnership that drives value for both our communities
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-sky-500 text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-sky-400/40 transition-all duration-300 transform hover:scale-105">
+            <button onClick={() => onNavigate?.('contact')} className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-sky-500 text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-sky-400/40 transition-all duration-300 transform hover:scale-105">
               Contact Us
             </button>
             <button className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-xl border-2 border-sky-400/20 hover:bg-white/20 transition-all duration-300">

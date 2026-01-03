@@ -26,8 +26,11 @@ function Hero() {
         </p>
         
         <div className="hero-buttons">
-          <button className="hero-button-primary">
-            Explore Technology
+          <button 
+            className="hero-button-primary"
+            onClick={() => window.open('https://tars-sage.vercel.app/', '_blank')}
+          >
+            Member Portal
           </button>
           
           <button className="hero-button-secondary">

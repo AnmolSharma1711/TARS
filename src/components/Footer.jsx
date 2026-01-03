@@ -1,7 +1,7 @@
 import React from 'react'
 import './Footer.css'
 
-function Footer() {
+function Footer({ onNavigate }) {
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -15,7 +15,7 @@ function Footer() {
           
           {/* Contact Icons */}
           <div className="footer-social">
-            <a href="s.tarsclubgla@gmail.com" title="Email" aria-label="Email">
+            <a href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('contact'); }} title="Email" aria-label="Email" style={{cursor: 'pointer'}}>
               <svg className="footer-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>

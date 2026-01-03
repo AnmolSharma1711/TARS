@@ -1,8 +1,8 @@
 import React from 'react';
 import Sponsors from '../components/Sponsors';
 
-const SponsorsPage = () => {
-  return <Sponsors />;
+const SponsorsPage = ({ onNavigate }) => {
+  return <Sponsors onNavigate={onNavigate} />;
 };
 
 export default SponsorsPage;
