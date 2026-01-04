@@ -31,9 +31,9 @@ function TeamCard() {
   const renderCard = (member, isMentor = false) => (
     <div 
       key={member.id} 
-      className={`team-card ${isMentor ? 'mentor-card' : 'council-card'}`}
-      onClick={isMentor ? () => handleMentorClick(member) : undefined}
-      style={{ cursor: isMentor ? 'pointer' : 'default' }}
+      className="team-card mentor-card"
+      onClick={() => handleMentorClick(member)}
+      style={{ cursor: 'pointer' }}
     >
       <div className="team-card-top">
         <div className="team-profile-image">
@@ -55,7 +55,7 @@ function TeamCard() {
               </svg>
             </a>
           )}
-          {member.github && !isMentor && (
+          {member.github && (
             <a
               href={member.github}
               target="_blank"
@@ -94,13 +94,13 @@ function TeamCard() {
           {/* Patron - 1 card centered */}
           <h3 className="section-subtitle">Patron</h3>
           <div className="patron-row">
-            {renderCard(patronData, true)}
+            {renderCard(patronData)}
           </div>
 
           {/* Mentors - 2 cards */}
           <h3 className="section-subtitle">Faculty Mentors</h3>
           <div className="mentors-grid">
-            {mentorsData.map((mentor) => renderCard(mentor, true))}
+            {mentorsData.map((mentor) => renderCard(mentor))}
           </div>
         </div>
 
@@ -110,17 +110,17 @@ function TeamCard() {
           
           {/* President */}
           <div className="council-row president-row">
-            {renderCard(coreCouncilData.president, false)}
+            {renderCard(coreCouncilData.president)}
           </div>
 
           {/* Vice President & Secretary */}
           <div className="council-row vp-secretary-row">
-            {coreCouncilData.vicePresidentAndSecretary.map((member) => renderCard(member, false))}
+            {coreCouncilData.vicePresidentAndSecretary.map((member) => renderCard(member))}
           </div>
 
           {/* Team Heads */}
           <div className="council-row team-heads-row">
-            {coreCouncilData.teamHeads.map((member) => renderCard(member, false))}
+            {coreCouncilData.teamHeads.map((member) => renderCard(member))}
           </div>
         </div>
       </div>
@@ -149,24 +149,30 @@ function TeamCard() {
               </div>
               
               <div className="popup-body">
-                <div className="popup-section">
-                  <h4>About</h4>
-                  <p>{selectedMentor.bio}</p>
-                </div>
-                
-                <div className="popup-section">
-                  <h4>Areas of Expertise</h4>
-                  <div className="expertise-tags">
-                    {selectedMentor.expertise.map((skill, index) => (
-                      <span key={index} className="expertise-tag">{skill}</span>
-                    ))}
+                {selectedMentor.bio && (
+                  <div className="popup-section">
+                    <h4>About</h4>
+                    <p>{selectedMentor.bio}</p>
                   </div>
-                </div>
+                )}
                 
-                <div className="popup-section">
-                  <h4>Contact</h4>
-                  <p className="popup-email">{selectedMentor.email}</p>
-                </div>
+                {selectedMentor.expertise && selectedMentor.expertise.length > 0 && (
+                  <div className="popup-section">
+                    <h4>Areas of Expertise</h4>
+                    <div className="expertise-tags">
+                      {selectedMentor.expertise.map((skill, index) => (
+                        <span key={index} className="expertise-tag">{skill}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                {selectedMentor.email && (
+                  <div className="popup-section">
+                    <h4>Contact</h4>
+                    <p className="popup-email">{selectedMentor.email}</p>
+                  </div>
+                )}
                 
                 <div className="popup-social">
                   {selectedMentor.linkedin && (
@@ -177,6 +183,14 @@ function TeamCard() {
                         <circle cx="4" cy="4" r="2"></circle>
                       </svg>
                       LinkedIn
+                    </a>
+                  )}
+                  {selectedMentor.github && (
+                    <a href={selectedMentor.github} target="_blank" rel="noopener noreferrer">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                      </svg>
+                      GitHub
                     </a>
                   )}
                 </div>
