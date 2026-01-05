@@ -42,7 +42,7 @@ export const externalMentorData = {
   role: 'External Mentor',
   subtitle: '',
   image: '/Mentors/Vaibhav_Sir.png',
-  linkedin: '',
+  linkedin: 'https://www.linkedin.com/in/vaibhav-singh-2241b6192/',
   bio: 'Mr. Vaibhav Kumar serves as an external mentor to TARS, bringing valuable industry insights and practical expertise. His guidance helps bridge the gap between academic learning and industry requirements, enabling students to develop skills that are directly applicable in professional environments.',
   expertise: ['Industry Practices', 'Professional Development', 'Technical Guidance', 'Mentorship']
 };

@@ -45,8 +45,8 @@ export const coreCouncilData = {
       role: 'AIML Lead',
       subtitle: '',
       image: '/Council_Member/Amrita.png',
-      linkedin: '',
-      github: '',
+      linkedin: 'https://www.linkedin.com/in/amrita-singh-308333326/',
+      github: 'https://github.com/Amritasingh600',
       bio: 'As AIML Lead, Amrita drives artificial intelligence and machine learning initiatives at TARS. She guides team members in developing cutting-edge AI projects, organizing workshops on neural networks and deep learning, and promoting research in emerging AI technologies.',
       expertise: ['Machine Learning', 'Deep Learning', 'Neural Networks', 'Python', 'Data Science']
     },
