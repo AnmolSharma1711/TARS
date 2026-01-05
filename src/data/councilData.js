@@ -41,14 +41,25 @@ export const coreCouncilData = {
   teamHeads: [
     {
       id: 14,
-      name: 'Anmol Sharma',
+      name: 'Amrita',
       role: 'AIML Lead',
+      subtitle: '',
+      image: '/Council_Member/Amrita.png',
+      linkedin: '',
+      github: '',
+      bio: 'As AIML Lead, Amrita drives artificial intelligence and machine learning initiatives at TARS. She guides team members in developing cutting-edge AI projects, organizing workshops on neural networks and deep learning, and promoting research in emerging AI technologies.',
+      expertise: ['Machine Learning', 'Deep Learning', 'Neural Networks', 'Python', 'Data Science']
+    },
+    {
+      id: 21,
+      name: 'Anmol Sharma',
+      role: 'Synergy',
       subtitle: '',
       image: '/Council_Member/Anmol_Sharma.jpeg',
       linkedin: 'https://www.linkedin.com/in/anmol-sharma-26a67b324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       github: 'https://github.com/AnmolSharma1711',
-      bio: 'As AIML Lead, Anmol drives artificial intelligence and machine learning initiatives at TARS. He guides team members in developing cutting-edge AI projects, organizing workshops on neural networks and deep learning, and promoting research in emerging AI technologies.',
-      expertise: ['Machine Learning', 'Deep Learning', 'Neural Networks', 'Python', 'Data Science']
+      bio: 'As Synergy Lead, Anmol works to foster collaboration and coordination between different teams within TARS. He ensures smooth communication, facilitates cross-functional projects, and helps create synergistic partnerships that amplify the impact of collective efforts.',
+      expertise: ['Team Collaboration', 'Cross-functional Coordination', 'Project Integration', 'Communication', 'Partnership Building']
     },
     {
       id: 15,
