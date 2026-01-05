@@ -34,3 +34,15 @@ export const mentorsData = [
     expertise: ['IoT', 'Embedded Systems', 'Sensor Networks', 'Smart Systems']
   }
 ];
+
+// External Mentor - 1 card displayed below faculty mentors
+export const externalMentorData = {
+  id: 4,
+  name: 'Mr. Vaibhav Kumar',
+  role: 'External Mentor',
+  subtitle: '',
+  image: '/Mentors/Vaibhav_Sir.png',
+  linkedin: '',
+  bio: 'Mr. Vaibhav Kumar serves as an external mentor to TARS, bringing valuable industry insights and practical expertise. His guidance helps bridge the gap between academic learning and industry requirements, enabling students to develop skills that are directly applicable in professional environments.',
+  expertise: ['Industry Practices', 'Professional Development', 'Technical Guidance', 'Mentorship']
+};
