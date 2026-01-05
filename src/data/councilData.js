@@ -6,7 +6,7 @@ export const coreCouncilData = {
   president: {
     id: 11,
     name: 'Devansh Kumar Dhangar',
-    role: 'President',
+    role: 'President\nCybersecurity Lead',
     subtitle: '',
     image: '/Council_Member/Devansh_Kumar_Dhangar.jpg',
     linkedin: 'https://www.linkedin.com/in/devansh-kumar-dhangar-837b55223?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
@@ -18,7 +18,7 @@ export const coreCouncilData = {
     {
       id: 12,
       name: 'Akshat Gupta',
-      role: 'Vice President',
+      role: 'Vice President\nIoT Lead',
       subtitle: '',
       image: '/Council_Member/Akshat_Gupta.jpeg',
       linkedin: 'https://www.linkedin.com/in/akshat-gupta-88b129325',
@@ -29,12 +29,12 @@ export const coreCouncilData = {
     {
       id: 13,
       name: 'Keerti',
-      role: 'Secretary',
+      role: 'Secretary\nOperations Lead',
       subtitle: '',
       image: '/Council_Member/Keerti.jpeg',
       linkedin: 'http://www.linkedin.com/in/keerti-yaduvanshi-4813b9280',
       github: 'https://github.com/Keerti-12',
-      bio: 'As Secretary of TARS, Keerti manages the administrative operations and ensures effective communication across the society. She maintains documentation, coordinates meetings, and handles outreach activities while supporting the technical teams in their initiatives.',
+      bio: 'As Secretary and Operations Lead of TARS, Keerti manages the administrative operations and ensures effective communication across the society. She maintains documentation, coordinates meetings, and handles outreach activities while supporting the technical teams in their initiatives.',
       expertise: ['Administration', 'Communication', 'Documentation', 'Team Coordination']
     }
   ],
@@ -75,12 +75,12 @@ export const coreCouncilData = {
     {
       id: 16,
       name: 'Kushal Soni',
-      role: 'IoT Lead',
+      role: 'Competitive Programming Lead',
       subtitle: '',
       image: '/Council_Member/Kushal_Soni.jpeg',
       linkedin: 'https://www.linkedin.com/in/soni-kushal/',
       github: 'https://github.com/kushal-soni01',
-      bio: 'As IoT Lead, Kushal spearheads Internet of Things projects and smart automation systems. He mentors students in embedded systems, sensor integration, and cloud connectivity, developing innovative solutions for smart homes and industrial automation.',
+      bio: 'As Competitive Programming Lead, Kushal spearheads Internet of Things projects and smart automation systems. He mentors students in embedded systems, sensor integration, and cloud connectivity, developing innovative solutions for smart homes and industrial automation.',
       expertise: ['IoT', 'Embedded Systems', 'Arduino', 'Raspberry Pi', 'Sensor Networks', 'Smart Automation']
     },
     {

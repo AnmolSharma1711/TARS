@@ -237,6 +237,7 @@
   font-weight: bold;
   display: block;
   color: #22d3ee;
+  white-space: pre-line;
 }
 
 .team-role-small {
