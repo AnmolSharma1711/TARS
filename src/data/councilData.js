@@ -6,7 +6,7 @@ export const coreCouncilData = {
   president: {
     id: 11,
     name: 'Devansh Kumar Dhangar',
-    role: 'President',
+    role: 'President\nCybersecurity Lead',
     subtitle: '',
     image: '/Council_Member/Devansh_Kumar_Dhangar.jpg',
     linkedin: 'https://www.linkedin.com/in/devansh-kumar-dhangar-837b55223?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
@@ -18,7 +18,7 @@ export const coreCouncilData = {
     {
       id: 12,
       name: 'Akshat Gupta',
-      role: 'Vice President',
+      role: 'Vice President\nIoT Lead',
       subtitle: '',
       image: '/Council_Member/Akshat_Gupta.jpeg',
       linkedin: 'https://www.linkedin.com/in/akshat-gupta-88b129325',
@@ -29,26 +29,37 @@ export const coreCouncilData = {
     {
       id: 13,
       name: 'Keerti',
-      role: 'Secretary',
+      role: 'Secretary\nOperations Lead',
       subtitle: '',
       image: '/Council_Member/Keerti.jpeg',
       linkedin: 'http://www.linkedin.com/in/keerti-yaduvanshi-4813b9280',
       github: 'https://github.com/Keerti-12',
-      bio: 'As Secretary of STAR, Keerti manages the administrative operations and ensures effective communication across the society. She maintains documentation, coordinates meetings, and handles outreach activities while supporting the technical teams in their initiatives.',
+      bio: 'As Secretary and Operations Lead of TARS, Keerti manages the administrative operations and ensures effective communication across the society. She maintains documentation, coordinates meetings, and handles outreach activities while supporting the technical teams in their initiatives.',
       expertise: ['Administration', 'Communication', 'Documentation', 'Team Coordination']
     }
   ],
   teamHeads: [
     {
       id: 14,
-      name: 'Anmol Sharma',
+      name: 'Amrita',
       role: 'AIML Lead',
+      subtitle: '',
+      image: '/Council_Member/Amrita.png',
+      linkedin: 'https://www.linkedin.com/in/amrita-singh-308333326/',
+      github: 'https://github.com/Amritasingh600',
+      bio: 'As AIML Lead, Amrita drives artificial intelligence and machine learning initiatives at TARS. She guides team members in developing cutting-edge AI projects, organizing workshops on neural networks and deep learning, and promoting research in emerging AI technologies.',
+      expertise: ['Machine Learning', 'Deep Learning', 'Neural Networks', 'Python', 'Data Science']
+    },
+    {
+      id: 21,
+      name: 'Anmol Sharma',
+      role: 'Synergy',
       subtitle: '',
       image: '/Council_Member/Anmol_Sharma.jpeg',
       linkedin: 'https://www.linkedin.com/in/anmol-sharma-26a67b324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       github: 'https://github.com/AnmolSharma1711',
-      bio: 'As AIML Lead, Anmol drives artificial intelligence and machine learning initiatives at STAR. He guides team members in developing cutting-edge AI projects, organizing workshops on neural networks and deep learning, and promoting research in emerging AI technologies.',
-      expertise: ['Machine Learning', 'Deep Learning', 'Neural Networks', 'Python', 'Data Science']
+      bio: 'As Synergy Lead, Anmol works to foster collaboration and coordination between different teams within TARS. He ensures smooth communication, facilitates cross-functional projects, and helps create synergistic partnerships that amplify the impact of collective efforts.',
+      expertise: ['Team Collaboration', 'Cross-functional Coordination', 'Project Integration', 'Communication', 'Partnership Building']
     },
     {
       id: 15,
@@ -64,12 +75,12 @@ export const coreCouncilData = {
     {
       id: 16,
       name: 'Kushal Soni',
-      role: 'IoT Lead',
+      role: 'Competitive Programming Lead',
       subtitle: '',
       image: '/Council_Member/Kushal_Soni.jpeg',
       linkedin: 'https://www.linkedin.com/in/soni-kushal/',
       github: 'https://github.com/kushal-soni01',
-      bio: 'As IoT Lead, Kushal spearheads Internet of Things projects and smart automation systems. He mentors students in embedded systems, sensor integration, and cloud connectivity, developing innovative solutions for smart homes and industrial automation.',
+      bio: 'As Competitive Programming Lead, Kushal spearheads Internet of Things projects and smart automation systems. He mentors students in embedded systems, sensor integration, and cloud connectivity, developing innovative solutions for smart homes and industrial automation.',
       expertise: ['IoT', 'Embedded Systems', 'Arduino', 'Raspberry Pi', 'Sensor Networks', 'Smart Automation']
     },
     {

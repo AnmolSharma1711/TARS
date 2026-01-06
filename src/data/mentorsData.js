@@ -34,3 +34,15 @@ export const mentorsData = [
     expertise: ['IoT', 'Embedded Systems', 'Sensor Networks', 'Smart Systems']
   }
 ];
+
+// External Mentor - 1 card displayed below faculty mentors
+export const externalMentorData = {
+  id: 4,
+  name: 'Mr. Vaibhav Pratap Singh',
+  role: 'External Mentor',
+  subtitle: '',
+  image: '/Mentors/Vaibhav_Sir.png',
+  linkedin: 'https://www.linkedin.com/in/vaibhav-singh-2241b6192/',
+  bio: 'Mr. Vaibhav Pratap Singh serves as an external mentor to TARS, bringing valuable industry insights and practical expertise. His guidance helps bridge the gap between academic learning and industry requirements, enabling students to develop skills that are directly applicable in professional environments.',
+  expertise: ['Industry Practices', 'Professional Development', 'Technical Guidance', 'Mentorship']
+};

@@ -237,6 +237,7 @@
   font-weight: bold;
   display: block;
   color: #22d3ee;
+  white-space: pre-line;
 }
 
 .team-role-small {
@@ -315,6 +316,14 @@
   .mentors-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* External Mentor - 1 card centered */
+.external-mentor-row {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto 3rem;
+  max-width: 420px;
 }
 
 .mentor-card {
