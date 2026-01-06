@@ -9,7 +9,7 @@ function Footer({ onNavigate }) {
           {/* Copyright Section */}
           <div className="footer-copyright">
             <p>
-              © 2025 TARS. Technology and Automation Research Society.
+              © 2025 STAR. Society of Technology and Automation Research.
             </p>
           </div>
           

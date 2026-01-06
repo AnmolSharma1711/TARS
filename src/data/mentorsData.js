@@ -1,4 +1,4 @@
-// Mentors Data - Faculty members who guide TARS
+// Mentors Data - Faculty members who guide STAR
 // These cards will show a detailed popup when clicked
 
 // Patron - 1 card displayed at the top
@@ -9,7 +9,7 @@ export const patronData = {
   subtitle: '',
   image: '/Mentors/Gaurav_Sir.jpeg',
   linkedin: 'https://www.linkedin.com/in/dr-gourav-bathla-b2155913/',
-  bio: 'Dr. Gourav Bathla serves as the distinguished patron of TARS, providing visionary leadership and strategic direction to the society. With extensive experience in computer science and engineering education, he has been instrumental in fostering an environment of innovation and research excellence. His commitment to advancing technology education has empowered countless students to pursue cutting-edge projects in automation, AI, and robotics.',
+  bio: 'Dr. Gourav Bathla serves as the distinguished patron of STAR, providing visionary leadership and strategic direction to the society. With extensive experience in computer science and engineering education, he has been instrumental in fostering an environment of innovation and research excellence. His commitment to advancing technology education has empowered countless students to pursue cutting-edge projects in automation, AI, and robotics.',
   expertise: ['Academic Leadership', 'Innovation Strategy', 'Technology Education', 'Research Guidance']
 };
 
@@ -30,7 +30,7 @@ export const mentorsData = [
     role: 'Faculty Mentor',
     image: '/Mentors/Shivanshu_Sir.jpeg',
     linkedin: 'https://www.linkedin.com/in/shivanshu-upadhyay-752588201/',
-    bio: 'Dr. Shivanshu Upadhyay brings extensive knowledge in IoT, embedded systems, and sensor networks to TARS. His passion for emerging technologies and practical problem-solving has inspired students to develop innovative IoT solutions for smart cities and industrial applications. He emphasizes project-based learning and encourages students to explore the intersection of hardware and software in creating connected intelligent systems.',
+    bio: 'Dr. Shivanshu Upadhyay brings extensive knowledge in IoT, embedded systems, and sensor networks to STAR. His passion for emerging technologies and practical problem-solving has inspired students to develop innovative IoT solutions for smart cities and industrial applications. He emphasizes project-based learning and encourages students to explore the intersection of hardware and software in creating connected intelligent systems.',
     expertise: ['IoT', 'Embedded Systems', 'Sensor Networks', 'Smart Systems']
   }
 ];

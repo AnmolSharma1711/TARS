@@ -4,34 +4,34 @@ export const carouselCards = [
     title: 'Innovation',
     subtitle: 'Pioneering new technologies',
     icon: '💡',
-    image: '/TARS_Logo.jpeg'
+    image: '/STAR_Logo.png'
   },
   {
     id: 2,
     title: 'Collaboration',
     subtitle: 'Working together for success',
     icon: '🤝',
-    image: '/TARS_Logo.jpeg'
+    image: '/STAR_Logo.png'
   },
   {
     id: 3,
     title: 'Excellence',
     subtitle: 'Striving for the best',
     icon: '⭐',
-    image: '/TARS_Logo.jpeg'
+    image: '/STAR_Logo.png'
   },
   {
     id: 4,
     title: 'Growth',
     subtitle: 'Continuous improvement',
     icon: '📈',
-    image: '/TARS_Logo.jpeg'
+    image: '/STAR_Logo.png'
   },
   {
     id: 5,
     title: 'Vision',
     subtitle: 'Looking towards the future',
     icon: '🔭',
-    image: '/TARS_Logo.jpeg'
+    image: '/STAR_Logo.png'
   }
 ];

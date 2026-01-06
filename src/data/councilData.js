@@ -11,7 +11,7 @@ export const coreCouncilData = {
     image: '/Council_Member/Devansh_Kumar_Dhangar.jpg',
     linkedin: 'https://www.linkedin.com/in/devansh-kumar-dhangar-837b55223?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     github: 'https://github.com/Roccodevil',
-    bio: 'As President of TARS, Devansh leads the society with vision and dedication, driving innovation and collaboration across all technical domains. He oversees strategic initiatives, coordinates between different teams, and ensures that TARS continues to push the boundaries of technology and automation.',
+    bio: 'As President of STAR, Devansh leads the society with vision and dedication, driving innovation and collaboration across all technical domains. He oversees strategic initiatives, coordinates between different teams, and ensures that STAR continues to push the boundaries of technology and automation.',
     expertise: ['Leadership', 'Project Management', 'Strategic Planning', 'Team Coordination']
   },
   vicePresidentAndSecretary: [
@@ -23,7 +23,7 @@ export const coreCouncilData = {
       image: '/Council_Member/Akshat_Gupta.jpeg',
       linkedin: 'https://www.linkedin.com/in/akshat-gupta-88b129325',
       github: 'https://github.com/akshat-gupta-111',
-      bio: 'As Vice President of TARS, Akshat plays a crucial role in supporting the society\'s mission and coordinating various technical initiatives. He works closely with team leads to ensure smooth execution of projects and events while fostering a culture of innovation and learning.',
+      bio: 'As Vice President of STAR, Akshat plays a crucial role in supporting the society\'s mission and coordinating various technical initiatives. He works closely with team leads to ensure smooth execution of projects and events while fostering a culture of innovation and learning.',
       expertise: ['Technical Coordination', 'Event Management', 'Problem Solving', 'Student Mentorship']
     },
     {
@@ -34,7 +34,7 @@ export const coreCouncilData = {
       image: '/Council_Member/Keerti.jpeg',
       linkedin: 'http://www.linkedin.com/in/keerti-yaduvanshi-4813b9280',
       github: 'https://github.com/Keerti-12',
-      bio: 'As Secretary of TARS, Keerti manages the administrative operations and ensures effective communication across the society. She maintains documentation, coordinates meetings, and handles outreach activities while supporting the technical teams in their initiatives.',
+      bio: 'As Secretary of STAR, Keerti manages the administrative operations and ensures effective communication across the society. She maintains documentation, coordinates meetings, and handles outreach activities while supporting the technical teams in their initiatives.',
       expertise: ['Administration', 'Communication', 'Documentation', 'Team Coordination']
     }
   ],
@@ -47,7 +47,7 @@ export const coreCouncilData = {
       image: '/Council_Member/Anmol_Sharma.jpeg',
       linkedin: 'https://www.linkedin.com/in/anmol-sharma-26a67b324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       github: 'https://github.com/AnmolSharma1711',
-      bio: 'As AIML Lead, Anmol drives artificial intelligence and machine learning initiatives at TARS. He guides team members in developing cutting-edge AI projects, organizing workshops on neural networks and deep learning, and promoting research in emerging AI technologies.',
+      bio: 'As AIML Lead, Anmol drives artificial intelligence and machine learning initiatives at STAR. He guides team members in developing cutting-edge AI projects, organizing workshops on neural networks and deep learning, and promoting research in emerging AI technologies.',
       expertise: ['Machine Learning', 'Deep Learning', 'Neural Networks', 'Python', 'Data Science']
     },
     {
@@ -91,7 +91,7 @@ export const coreCouncilData = {
       image: '/Council_Member/Madhav_Garg.png',
       linkedin: 'https://www.linkedin.com/in/madhav-garg-625402307?utm_source=share_via&utm_content=profile&utm_medium=member_android',
       github: 'https://github.com/Madhav2005-Garg',
-      bio: 'As R&D Lead, Madhav contributes to cutting-edge research initiatives and technical innovation at TARS. He collaborates on experimental projects, explores emerging technologies, and helps translate research concepts into practical applications.',
+      bio: 'As R&D Lead, Madhav contributes to cutting-edge research initiatives and technical innovation at STAR. He collaborates on experimental projects, explores emerging technologies, and helps translate research concepts into practical applications.',
       expertise: ['Research Methodologies', 'Technology Innovation', 'Algorithm Development', 'Data Analysis', 'Technical Documentation']
     },
     {
@@ -102,7 +102,7 @@ export const coreCouncilData = {
       image: '/Council_Member/Kushagra_Agrawal.jpeg',
       linkedin: 'http://www.linkedin.com/in/kushagra-agrawal-87b193326',
       github: 'https://github.com/Kushagra-SethG',
-      bio: 'As Outreach Lead, Kushagra manages external communications, partnerships, and community engagement for TARS. He coordinates with industry partners, organizes collaborative events, and promotes the society\'s achievements across various platforms.',
+      bio: 'As Outreach Lead, Kushagra manages external communications, partnerships, and community engagement for STAR. He coordinates with industry partners, organizes collaborative events, and promotes the society\'s achievements across various platforms.',
       expertise: ['Public Relations', 'Partnership Management', 'Community Building', 'Social Media', 'Event Marketing']
     },
     {

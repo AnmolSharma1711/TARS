@@ -136,7 +136,7 @@ function Header({ onNavigate, currentPage }) {
           </svg>
           
           {/* Logo image in center */}
-          <img src="/TARS_Logo.jpeg" alt="TARS Logo" className="mobile-logo-img" />
+          <img src="/STAR_Logo.png" alt="STAR Logo" className="mobile-logo-img" />
         </div>
       </button>
       
@@ -269,9 +269,9 @@ function Header({ onNavigate, currentPage }) {
               </svg>
               
               {/* Logo image in center */}
-              <img src="/TARS_Logo.jpeg" alt="TARS Logo" className="header-logo-img" />
+              <img src="/STAR_Logo.png" alt="STAR Logo" className="header-logo-img" />
             </div>
-            <span className="text-gradient glow">TARS</span>
+            <span className="text-gradient glow">STAR</span>
           </div>
           
           {/* Vertical menu */}
