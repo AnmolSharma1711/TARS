@@ -86,7 +86,7 @@ function TeamCard() {
     <section id="team" className="team-section">
       <div className="team-container">
         <h2 className="team-title text-gradient">Our Team</h2>
-        <p className="team-description">Meet the brilliant minds behind TARS</p>
+        <p className="team-description">Meet the brilliant minds behind STAR</p>
         <div className="title-underline"></div>
         
         {/* Mentors Section */}

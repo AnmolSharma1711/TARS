@@ -12,12 +12,12 @@ function Hero() {
       <div className="hero-content">
         <h1 className="hero-title hero-title-animation">
           <span className="text-gradient glow">
-            TARS
+            STAR
           </span>
         </h1>
         
         <p className="hero-subtitle">
-          Technology and Automation Research Society
+          Society of Technology and Automation Research
         </p>
         
         <p className="hero-description">

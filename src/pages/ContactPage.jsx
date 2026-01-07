@@ -4,7 +4,6 @@ import { Mail, MapPin, Phone, Send, User, MessageSquare, CheckCircle } from 'luc
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     subject: '',
     message: ''
   });
@@ -20,13 +19,13 @@ const ContactPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    const emailBody = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+    const emailBody = `Name: ${formData.name}\n\nMessage:\n${formData.message}`;
     const mailtoLink = `mailto:s.tarsclubgla@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
     
     window.location.href = mailtoLink;
     
     setTimeout(() => {
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      setFormData({ name: '', subject: '', message: '' });
       setShowSuccess(true);
       setTimeout(() => setShowSuccess(false), 5000);
     }, 500);
@@ -134,25 +133,6 @@ const ContactPage = () => {
                   required
                   className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
                   placeholder="John Doe"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                  <div className="flex items-center gap-2">
-                    <Mail className="w-4 h-4" />
-                    Email Address
-                  </div>
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
-                  placeholder="john@example.com"
                 />
               </div>
 

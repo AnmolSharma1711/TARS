@@ -120,9 +120,9 @@ export function IntroSequence({ onComplete }) {
         {/* Central Content */}
         <div className="intro-central-content">
             <h1 className="glitch-title">
-                <span className="glitch-layer">TARS</span>
-                <span className="glitch-red">TARS</span>
-                <span className="glitch-blue">TARS</span>
+                <span className="glitch-layer">STAR</span>
+                <span className="glitch-red">STAR</span>
+                <span className="glitch-blue">STAR</span>
             </h1>
             
             <div className="h-20 w-full max-w-md flex flex-col items-center justify-center relative">

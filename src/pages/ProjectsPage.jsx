@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { CardBody, CardContainer, CardItem } from "../components/ui/3d-card";
-import { projectsData } from "../data/projectsData.jsx";
+import { projectsData } from "../data/projectsData.js";
 import { motion, AnimatePresence } from "framer-motion";
 
 function ProjectsPage() {
@@ -13,7 +13,7 @@ function ProjectsPage() {
           Our Accomplishments
         </h2>
         <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl">
-          Explore the innovative accomplishments and cutting-edge technologies we're working on at TARS.
+          Explore the innovative accomplishments and cutting-edge technologies we're working on at STAR.
         </p>
       </div>
 
@@ -39,7 +39,7 @@ function ProjectsPage() {
                   src={project.image}
                   height="1000"
                   width="1000"
-                  className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  className="h-60 w-full object-contain rounded-xl group-hover/card:shadow-xl"
                   alt={project.title}
                 />
               </CardItem>
@@ -95,7 +95,7 @@ function ProjectsPage() {
               <img
                 src={selectedProject.image}
                 alt={selectedProject.title}
-                className="w-full h-64 object-cover rounded-xl mb-6"
+                className="w-full h-64 object-contain rounded-xl mb-6"
               />
 
               {selectedProject.additionalImages && selectedProject.additionalImages.length > 0 && (

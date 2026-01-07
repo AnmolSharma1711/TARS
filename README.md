@@ -1,4 +1,4 @@
-# TARS Website - Project Structure
+# STAR Website - Project Structure
 
 ## 🚀 Overview
 A modern, high-performance React application featuring 3D graphics, animations, and a clean modular architecture. Built with React 18, Vite 6, Three.js, and Tailwind CSS.
