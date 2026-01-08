@@ -9,7 +9,7 @@ export const patronData = {
   subtitle: 'The Foundation',
   image: '/Mentors/Gaurav_Sir.png',
   linkedin: 'https://www.linkedin.com/in/dr-gourav-bathla-b2155913/',
-  bio: 'Dr. Gourav Bathla serves as the distinguished patron of STAR, providing visionary leadership and strategic direction to the society. With extensive experience in computer science and engineering education, he has been instrumental in fostering an environment of innovation and research excellence. His commitment to advancing technology education has empowered countless students to pursue cutting-edge projects in automation, AI, and robotics.',
+  bio: "Dr. Gourav Bathla serves as 'The Foundation' of STAR, providing the bedrock of stability and visionary leadership required for high-reaching ambitions. He lays the structural groundwork for innovation, deeper research, and academic excellence, ensuring that the society's core principles and strategic direction remain unshakable amidst the evolving landscape of technology.",
   expertise: ['Academic Leadership', 'Innovation Strategy', 'Technology Education', 'Research Guidance']
 };
 
@@ -22,7 +22,7 @@ export const mentorsData = [
     subtitle: 'The Supernova',
     image: '/Mentors/Saurabh_Sir.png',
     linkedin: 'https://www.linkedin.com/in/dr-saurabh-tewari-106597a3/',
-    bio: 'Dr. Saurabh Tewari is a dedicated faculty mentor specializing in robotics, automation, and intelligent systems. His expertise in control systems and mechatronics has guided numerous student projects to successful completion. He actively encourages hands-on learning and practical implementation, helping students bridge theoretical concepts with real-world applications in autonomous systems and industrial automation.',
+    bio: "Radiating intense energy and insight, Dr. Saurabh Tewari embodies 'The Supernova'. His mentorship explodes with transformative ideas that reshape our understanding of robotics and automation. He creates the heavy elements of knowledge necessary for complex creations, guiding students to outshine conventional approaches and burst forth with brilliant, practical solutions.",
     expertise: ['Robotics', 'Automation', 'Control Systems', 'Mechatronics']
   },
   {
@@ -32,7 +32,7 @@ export const mentorsData = [
     subtitle: 'The Cosmic Anchor',
     image: '/Mentors/Shivanshu_Sir.png',
     linkedin: 'https://www.linkedin.com/in/shivanshu-upadhyay-752588201/',
-    bio: 'Dr. Shivanshu Upadhyay brings extensive knowledge in IoT, embedded systems, and sensor networks to STAR. His passion for emerging technologies and practical problem-solving has inspired students to develop innovative IoT solutions for smart cities and industrial applications. He emphasizes project-based learning and encourages students to explore the intersection of hardware and software in creating connected intelligent systems.',
+    bio: "In the vast and sometimes chaotic universe of emerging tech, Dr. Shivanshu Upadhyay acts as 'The Cosmic Anchor'. He grounds our ambitious IoT and embedded systems projects with reality and precision. His guidance ensures that while student creativity reaches for the stars, the technical execution remains firmly planted on functional, reliable ground.",
     expertise: ['IoT', 'Embedded Systems', 'Sensor Networks', 'Smart Systems']
   }
 ];
@@ -45,6 +45,6 @@ export const externalMentorData = {
   subtitle: 'The Interstellar Link',
   image: '/Mentors/Vaibhav_Sir.png',
   linkedin: 'https://www.linkedin.com/in/vaibhav-singh-2241b6192/',
-  bio: 'Mr. Vaibhav Pratap Singh serves as an external mentor to TARS, bringing valuable industry insights and practical expertise. His guidance helps bridge the gap between academic learning and industry requirements, enabling students to develop skills that are directly applicable in professional environments.',
+  bio: "Acting as 'The Interstellar Link', Mr. Vaibhav Pratap Singh bridges the gap between the academic galaxy and the vast universe of industry. He facilitates the transmission of professional wisdom and real-world opportunities, connecting our internal potential with external market realities to prepare students for their future voyages.",
   expertise: ['Industry Practices', 'Professional Development', 'Technical Guidance', 'Mentorship']
 };
