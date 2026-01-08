@@ -130,21 +130,21 @@ export const coreCouncilData = {
     {
       id: 22,
       name: 'Pranav Jain',
-      role: 'Team Head',
+      role: 'DevOps Lead',
       subtitle: '',
       image: '/Council_Member/Pranav_Jain.png',
-      linkedin: '',
-      github: '',
+      linkedin: 'https://www.linkedin.com/in/pranavjain2310/',
+      github: 'https://github.com/PranavJa1n',
       bio: 'As a Team Head at TARS, Pranav contributes to the society\'s technical initiatives and helps drive innovation in various projects. He works closely with team members to foster a collaborative environment and ensure successful project delivery.',
       expertise: ['Technical Leadership', 'Project Management', 'Team Coordination', 'Innovation']
     },
     {
       id: 23,
       name: 'Kshitij Singh',
-      role: 'Team Head',
+      role: 'Data Lead',
       subtitle: '',
       image: '/Council_Member/Kshitij_Singh.png',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/kshitij-singh-829576324/',
       github: '',
       bio: 'As a Team Head at TARS, Kshitij plays a key role in leading technical projects and mentoring team members. He brings technical expertise and leadership skills to help advance the society\'s mission in technology and automation.',
       expertise: ['Technical Leadership', 'Team Development', 'Project Execution', 'Mentorship']

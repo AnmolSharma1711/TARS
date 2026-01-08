@@ -10,11 +10,13 @@ function Hero() {
   return (
     <section id="home" className="hero">
       <div className="hero-content">
-        <h1 className="hero-title hero-title-animation">
-          <span className="text-gradient glow">
-            STAR
-          </span>
-        </h1>
+        <div className="hero-title hero-title-animation">
+          <img 
+            src="/Star Logo.png" 
+            alt="STAR Logo" 
+            className="hero-logo"
+          />
+        </div>
         
         <p className="hero-subtitle">
           Society of Technology and Automation Research
