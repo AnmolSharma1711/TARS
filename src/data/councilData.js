@@ -145,7 +145,7 @@ export const coreCouncilData = {
       subtitle: '',
       image: '/Council_Member/Kshitij_Singh.png',
       linkedin: 'https://www.linkedin.com/in/kshitij-singh-829576324/',
-      github: '',
+      github: 'https://github.com/kshitijp30',
       bio: 'As a Team Head at TARS, Kshitij plays a key role in leading technical projects and mentoring team members. He brings technical expertise and leadership skills to help advance the society\'s mission in technology and automation.',
       expertise: ['Technical Leadership', 'Team Development', 'Project Execution', 'Mentorship']
     }
