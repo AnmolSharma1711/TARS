@@ -12,7 +12,7 @@ export const coreCouncilData = {
     linkedin: 'https://www.linkedin.com/in/devansh-kumar-dhangar-837b55223?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     github: 'https://github.com/Roccodevil',
     bio: "As 'The Guardian Star', Devansh shines the brightest, protecting the vision and integrity of STAR. Leading with the vigilance of a celestial guardian, he oversees the Cybersecurity domain and the entire council, ensuring our trajectory remains true and our systems secure against the void. He drives innovation while maintaining the structural integrity of the society.",
-    expertise: ['Leadership', 'Project Management', 'Strategic Planning', 'Cybersecurity', 'Microcontrollers', 'IoT', 'Deep Learning']
+    expertise: ['Leadership', 'Agentic AI', 'Strategic Planning', 'Cybersecurity', 'Microcontrollers', 'IoT', 'Deep Learning','Langchain-Langgraph',' RAG','LLMs']
   },
   vicePresidentAndSecretary: [
     {
@@ -136,7 +136,7 @@ export const coreCouncilData = {
       linkedin: 'https://www.linkedin.com/in/pranavjain2310/',
       github: 'https://github.com/PranavJa1n',
       bio: "Residing in 'The Stratosphere', Pranav operates above the cloud layer. As DevOps Lead, he maintains the high-altitude infrastructure that supports our deployments, ensuring a stable and scalable environment where development meets operations in the upper atmosphere.",
-      expertise: ['AWS', 'Azure', 'CI/CD Pipelines', 'Containerization', 'Cloud Infrastructure', 'Python', 'Java', 'Machine Learning', 'Data Science']
+      expertise: ['AWS', 'Azure', 'CI/CD Pipelines', 'Containerization', 'Cloud Infrastructure', 'Python', 'Container Orchestration' , 'Backend Development']
     },
     {
       id: 23,
@@ -147,7 +147,7 @@ export const coreCouncilData = {
       linkedin: 'https://www.linkedin.com/in/kshitij-singh-829576324/',
       github: 'https://github.com/kshitijp30',
       bio: "Digging deep as 'The Bitminer', Kshitij unearths value from mountains of raw information. As Data Lead, he extracts the precious insights hidden within the bedrock of datasets, refining raw binary into the gold of actionable intelligence for the society's growth.",
-      expertise: ['Web Development', 'Data Analysis', 'Machine Learning', 'Python', 'JavaScript', 'Azure', 'Data Science']
+      expertise: ['Web Development', 'Data Analysis', 'Machine Learning', 'Python', 'JavaScript', 'Azure', 'Data Science', 'Figma']
     }
   ]
 };
