@@ -12,7 +12,7 @@ export const coreCouncilData = {
     linkedin: 'https://www.linkedin.com/in/devansh-kumar-dhangar-837b55223?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     github: 'https://github.com/Roccodevil',
     bio: "As 'The Guardian Star', Devansh shines the brightest, protecting the vision and integrity of STAR. Leading with the vigilance of a celestial guardian, he oversees the Cybersecurity domain and the entire council, ensuring our trajectory remains true and our systems secure against the void. He drives innovation while maintaining the structural integrity of the society.",
-    expertise: ['Leadership', 'Project Management', 'Strategic Planning', 'Team Coordination']
+    expertise: ['Leadership', 'Project Management', 'Strategic Planning', 'Cybersecurity', 'Microcontrollers', 'IoT', 'Deep Learning']
   },
   vicePresidentAndSecretary: [
     {
@@ -24,7 +24,7 @@ export const coreCouncilData = {
       linkedin: 'https://www.linkedin.com/in/akshat-gupta-88b129325',
       github: 'https://github.com/akshat-gupta-111',
       bio: "Identifying as 'The Nexus Prime', Akshat operates at the central junction of hardware and intelligence. As Vice President and IoT Lead, he connects disparate devices and ideas into a cohesive network, functioning as the primary hub where innovation and execution converge to support the society's mission.",
-      expertise: ['Technical Coordination', 'Event Management', 'Problem Solving', 'Student Mentorship']
+      expertise: ['IoT', 'Circuit Design', 'Embedded Systems', 'Microcontrollers', 'Python', 'Data Science', 'Machine Learning', 'Full Stack Development', 'Azure', 'Java']
     },
     {
       id: 13,
@@ -35,7 +35,7 @@ export const coreCouncilData = {
       linkedin: 'http://www.linkedin.com/in/keerti-yaduvanshi-4813b9280',
       github: 'https://github.com/Keerti-12',
       bio: "Known as 'The Orbit Control', Keerti ensures the stability of our flight path. Managing operations with precision, she prevents logistical collisions and keeps all teams synchronized in their respective orbits. Her coordination ensures that the society's daily rotations proceed without turbulence.",
-      expertise: ['Administration', 'Communication', 'Documentation', 'Team Coordination']
+      expertise: ['Communication', 'Team Coordination', 'Problem Solving', 'Event Management', 'Logical Thinking', 'Circuit Design', 'IoT', 'Azure', 'Java']
     }
   ],
   teamHeads: [
@@ -48,7 +48,7 @@ export const coreCouncilData = {
       linkedin: 'https://www.linkedin.com/in/amrita-singh-308333326/',
       github: 'https://github.com/Amritasingh600',
       bio: "Embodying 'The Neural Nebula', Amrita nurtures the birth of artificial intelligence within the club. Like a vast cloud of creative potential, she fosters complex deep learning structures, guiding the chaotic formation of raw data into intelligent, functioning stars of code and cutting-edge AI projects.",
-      expertise: ['Machine Learning', 'Deep Learning', 'Neural Networks', 'Python', 'Data Science']
+      expertise: ['Python', 'Data Science', 'Machine Learning', 'Full Stack Development', 'Azure', 'Java']
     },
     {
       id: 21,
@@ -59,7 +59,7 @@ export const coreCouncilData = {
       linkedin: 'https://www.linkedin.com/in/anmol-sharma-26a67b324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       github: 'https://github.com/AnmolSharma1711',
       bio: "As 'The Constellation', Anmol is the true heart of TARS, connecting every isolated star to form a magnificent picture. He is the master of Synergy and the key of this whole initiative, managing the delicate balance between technical wizardry and non-technical harmony. Without his gravitational pull and ability to link diverse elements, our sky would just be scattered points of light.",
-      expertise: ['Team Collaboration', 'Cross-functional Coordination', 'Project Integration', 'Communication', 'Partnership Building']
+      expertise: ['Team Collaboration', 'Cross-functional Coordination', 'Project Integration', 'Communication', 'Azure', 'Machine Learning', 'Data Science', 'Python', 'Data Visualization', 'IoT', 'Microcontrollers', 'Azure', 'Java']
     },
     {
       id: 15,
@@ -70,7 +70,7 @@ export const coreCouncilData = {
       linkedin: 'https://www.linkedin.com/in/utkarsh-agrawal-508192326/',
       github: 'https://github.com/Utkarsh45650',
       bio: "As 'The Void Walker', Utkarsh traverses the digital dimensions of gaming. Unafraid of the unknown, he leads the E-Sports path, stepping into virtual voids to build immersive worlds and competitive arenas where reality bends to the rules of the game and AI simulations.",
-      expertise: ['Game Development', 'Unity', 'Gaming Technology', 'Event Organization', 'Competitive Gaming']
+      expertise: ['Gaming Technology', 'Event Organization', 'Competitive Gaming', 'Java', 'Python', 'Data Science', 'Machine Learning', 'Azure']
     },
     {
       id: 16,
@@ -81,7 +81,7 @@ export const coreCouncilData = {
       linkedin: 'https://www.linkedin.com/in/soni-kushal/',
       github: 'https://github.com/kushal-soni01',
       bio: "Living strictly by 'The Light Speed', Kushal pushes algorithms to their absolute limits. In the realm of Competitive Programming, milliseconds matter, and his leadership ensures our logic travels faster than the competition, breaking barriers with optimized velocity and smart automation.",
-      expertise: ['IoT', 'Embedded Systems', 'Arduino', 'Raspberry Pi', 'Sensor Networks', 'Smart Automation']
+      expertise: ['Algorithm Design', 'Problem Solving', 'Data Structures', 'Python', 'C', 'Java','JavaScript', 'Machine Learning', 'Data Science', 'Azure']
     },
     {
       id: 17,
@@ -92,7 +92,7 @@ export const coreCouncilData = {
       linkedin: 'https://www.linkedin.com/in/akshay-kumar-525560322/',
       github: 'https://github.com/AkshayKumar977',
       bio: "Designated as 'The Prototype A', Akshay represents the alpha of innovation. As R&D Lead, he initiates the first iteration of every radical idea, accepting the risks of experimentation to forge the initial mold from which future technologies are cast.",
-      expertise: ['Research & Development', 'Innovation', 'Prototyping', 'Technical Writing', 'Experimental Technologies']
+      expertise: ['Research & Development', 'Innovation', 'Prototyping', 'Technical Writing','Azure', 'Machine Learning', 'Python']
     },
     {
       id: 18,
@@ -103,7 +103,7 @@ export const coreCouncilData = {
       linkedin: 'https://www.linkedin.com/in/madhav-garg-625402307?utm_source=share_via&utm_content=profile&utm_medium=member_android',
       github: 'https://github.com/Madhav2005-Garg',
       bio: "Working in tandem as 'The Prototype B', Madhav refines and iterates upon the raw concepts of research. He represents the crucial evolution of ideas, ensuring that second-stage development serves as the bridge between theoretical possibility and practical reality.",
-      expertise: ['Research Methodologies', 'Technology Innovation', 'Algorithm Development', 'Data Analysis', 'Technical Documentation']
+      expertise: ['Research Methodologies', 'Data Analysis', 'Technical Documentation', 'Backend Development','Azure', 'Machine Learning', 'Python']
     },
     {
       id: 19,
@@ -114,7 +114,7 @@ export const coreCouncilData = {
       linkedin: 'http://www.linkedin.com/in/kushagra-agrawal-87b193326',
       github: 'https://github.com/Kushagra-SethG',
       bio: "Bursting forth as 'The Solar Flare', Kushagra ensures TARS cannot be ignored. His energy reaches far beyond our immediate vicinity, grabbing attention and illuminating our achievements to the outside world with the intensity of a solar event, driving community engagement.",
-      expertise: ['Public Relations', 'Partnership Management', 'Community Building', 'Social Media', 'Event Marketing']
+      expertise: ['Public Relations', 'Partnership Management', 'Community Building', 'Social Media', 'Event Marketing', 'Azure']
     },
     {
       id: 20,
@@ -125,7 +125,7 @@ export const coreCouncilData = {
       linkedin: 'https://www.linkedin.com/in/mr-rudraksha/',
       github: 'https://github.com/rudraksha-sh',
       bio: "Charting a course as 'The Voyager', Rudraksha takes us beyond the surface. In Aeromodelling, he explores the limits of flight, constantly pushing further into the atmosphere and ensuring our drones and aircraft discover new horizons of performance and autonomous systems.",
-      expertise: ['Aeromodelling', 'Drone Technology', 'Aerodynamics', 'Flight Control', 'UAV Systems', 'RC Aircraft']
+      expertise: ['Aeromodelling', 'Drone Technology', 'Aerodynamics', 'Flight Control', 'UAV Systems', 'RC Aircraft', 'Azure']
     },
     {
       id: 22,
@@ -136,7 +136,7 @@ export const coreCouncilData = {
       linkedin: 'https://www.linkedin.com/in/pranavjain2310/',
       github: 'https://github.com/PranavJa1n',
       bio: "Residing in 'The Stratosphere', Pranav operates above the cloud layer. As DevOps Lead, he maintains the high-altitude infrastructure that supports our deployments, ensuring a stable and scalable environment where development meets operations in the upper atmosphere.",
-      expertise: ['Technical Leadership', 'Project Management', 'Team Coordination', 'Innovation']
+      expertise: ['AWS', 'Azure', 'CI/CD Pipelines', 'Containerization', 'Cloud Infrastructure', 'Python', 'Java', 'Machine Learning', 'Data Science']
     },
     {
       id: 23,
@@ -147,7 +147,7 @@ export const coreCouncilData = {
       linkedin: 'https://www.linkedin.com/in/kshitij-singh-829576324/',
       github: 'https://github.com/kshitijp30',
       bio: "Digging deep as 'The Bitminer', Kshitij unearths value from mountains of raw information. As Data Lead, he extracts the precious insights hidden within the bedrock of datasets, refining raw binary into the gold of actionable intelligence for the society's growth.",
-      expertise: ['Technical Leadership', 'Team Development', 'Project Execution', 'Mentorship']
+      expertise: ['Web Development', 'Data Analysis', 'Machine Learning', 'Python', 'JavaScript', 'Azure', 'Data Science']
     }
   ]
 };
