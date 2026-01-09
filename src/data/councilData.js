@@ -53,7 +53,7 @@ export const coreCouncilData = {
     {
       id: 21,
       name: 'Anmol Sharma',
-      role: 'Synergy',
+      role: 'Event Coordinator\n Council Synergy',
       subtitle: 'The Constellation',
       image: '/Council_Member/Anmol_Sharma.png',
       linkedin: 'https://www.linkedin.com/in/anmol-sharma-26a67b324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
