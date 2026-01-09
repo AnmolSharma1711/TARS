@@ -24,7 +24,7 @@ export const coreCouncilData = {
       linkedin: 'https://www.linkedin.com/in/akshat-gupta-88b129325',
       github: 'https://github.com/akshat-gupta-111',
       bio: "Identifying as 'The Nexus Prime', Akshat operates at the central junction of hardware and intelligence. As Vice President and IoT Lead, he connects disparate devices and ideas into a cohesive network, functioning as the primary hub where innovation and execution converge to support the society's mission.",
-      expertise: ['IoT', 'Circuit Design', 'Embedded Systems', 'Microcontrollers', 'Python', 'Data Science', 'Machine Learning', 'Full Stack Development', 'Azure', 'Java']
+      expertise: ['IoT', 'Circuit Design', 'Embedded Systems', 'Microcontrollers', 'Python', 'Data Science', 'Machine Learning', 'Full Stack Development', 'Azure', 'Java', 'Prompt Engineering']
     },
     {
       id: 13,
@@ -59,7 +59,7 @@ export const coreCouncilData = {
       linkedin: 'https://www.linkedin.com/in/anmol-sharma-26a67b324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       github: 'https://github.com/AnmolSharma1711',
       bio: "As 'The Constellation', Anmol is the true heart of TARS, connecting every isolated star to form a magnificent picture. He is the master of Synergy and the key of this whole initiative, managing the delicate balance between technical wizardry and non-technical harmony. Without his gravitational pull and ability to link diverse elements, our sky would just be scattered points of light.",
-      expertise: ['Team Collaboration', 'Cross-functional Coordination', 'Project Integration', 'Communication', 'Azure', 'Machine Learning', 'Data Science', 'Python', 'Data Visualization', 'IoT', 'Microcontrollers', 'Azure', 'Java']
+      expertise: ['Team Collaboration', 'Cross-functional Coordination', 'Project Integration', 'Communication', 'Azure', 'Machine Learning', 'Data Science', 'Python', 'Power BI', 'IoT', 'Microcontrollers', 'Azure', 'Java', 'Prompt Engineering']
     },
     {
       id: 15,
