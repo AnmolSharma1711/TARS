@@ -35,7 +35,7 @@ export const coreCouncilData = {
       linkedin: 'http://www.linkedin.com/in/keerti-yaduvanshi-4813b9280',
       github: 'https://github.com/Keerti-12',
       bio: "Known as 'The Orbit Control', Keerti ensures the stability of our flight path. Managing operations with precision, she prevents logistical collisions and keeps all teams synchronized in their respective orbits. Her coordination ensures that the society's daily rotations proceed without turbulence.",
-      expertise: ['Communication', 'Team Coordination', 'Problem Solving', 'Event Management', 'Logical Thinking', 'Circuit Design', 'IoT', 'Azure', 'Java']
+      expertise: ['Communication', 'Team Coordination', 'Problem Solving', 'Event Management', 'Logical Thinking', 'Circuit Design', 'IoT', 'Azure', 'Java', 'Python', 'Machine Learning', 'Power BI', 'Canva', 'SQL']
     }
   ],
   teamHeads: [
