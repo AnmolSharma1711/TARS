@@ -2,7 +2,7 @@
   "name": "tars-website",
   "version": "2.0.0",
   "description": "TARS - Modern space-themed website with 3D graphics and animations",
-  "homepage": "https://tarsglau.tech",
+  "homepage": "https://starclubglau.me",
   "type": "module",
   "engines": {
     "node": ">=22.0.0"

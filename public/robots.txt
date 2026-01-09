@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://your-domain.com/sitemap.xml
+Sitemap: https://starclubglau.me/sitemap.xml
 
 # Crawl delay (optional)
 Crawl-delay: 10
