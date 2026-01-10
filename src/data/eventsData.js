@@ -8,7 +8,7 @@ export const upcomingEvents = [
     date: 'February 15, 2026',
     time: '10:00 AM - 12:00 PM',
     location: 'Main Auditorium',
-    description: 'Join us for the grand inauguration of TARS - Technical Association for Robotics and Systems. Witness the beginning of an exciting journey into the world of technology and innovation.',
+    description: 'Join us for the grand inauguration of STAR - Technical Association for Robotics and Systems. Witness the beginning of an exciting journey into the world of technology and innovation.',
     attendees: 300,
     image: 'https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=600',
     category: 'Inauguration',

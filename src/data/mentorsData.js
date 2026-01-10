@@ -45,6 +45,6 @@ export const externalMentorData = {
   subtitle: 'The Interstellar Link',
   image: '/Mentors/Vaibhav_Sir.png',
   linkedin: 'https://www.linkedin.com/in/vaibhav-singh-2241b6192/',
-  bio: "Acting as 'The Interstellar Link', Mr. Vaibhav Pratap Singh bridges the gap between the academic galaxy and the vast universe of industry. He facilitates the transmission of professional wisdom and real-world opportunities, connecting our internal potential with external market realities to prepare students for their future voyages.",
-  expertise: ['Industry Practices', 'Professional Development', 'Technical Guidance', 'Mentorship','Data Science','Azure','AWS','Google Cloud']
+  bio: "As 'The Interstellar Link', Mr. Vaibhav Pratap Singh serves as a cosmic conduit between academia and the ever-expanding universe of cloud, data, and Generative AI. With 9+ years of industry experience and global training engagements across organizations like TCS, Capgemini, Accenture, EY, and IIT Roorkee, he transmits real-world technical intelligence from AWS, Azure, and Google Cloud ecosystems. His mission is to equip aspiring explorers with practical skills in data engineering, cloud architecture, and GenAI—ensuring they are future-ready for deep-space industry challenges.",
+  expertise: ['Cloud & Data Engineering','Generative AI & LLMs','AWS, Azure & Google Cloud','Solution Architecture','BI & Analytics','FinOps & Cloud Optimization','Industry-Oriented Training','Technical Mentorship']
 };
