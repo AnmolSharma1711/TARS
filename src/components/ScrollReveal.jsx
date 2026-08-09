@@ -25,7 +25,7 @@ const ScrollReveal = ({
       variants={getVariants()}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: false, amount: 0.1 }}
       transition={{ duration, delay, ease: 'easeOut' }}
       className={className}
     >

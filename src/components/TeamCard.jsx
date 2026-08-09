@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './TeamCard.css'
 import { patronData, mentorsData, externalMentorData } from '../data/mentorsData'
 import { coreCouncilData } from '../data/councilData'
+import ScrollReveal from './ScrollReveal'
 
 function TeamCard() {
   const [selectedMentor, setSelectedMentor] = useState(null);
@@ -28,9 +29,10 @@ function TeamCard() {
     };
   }, [selectedMentor]);
 
-  const renderCard = (member) => (
-    <div 
-      className="identity-terminal"
+  const renderCard = (member, index = 0) => (
+    <ScrollReveal delay={index * 0.1}>
+      <div 
+        className="identity-terminal"
       onClick={() => handleMentorClick(member)}
     >
       <div className="terminal-hud-corners">
@@ -83,17 +85,20 @@ function TeamCard() {
         </div>
       </div>
     </div>
+    </ScrollReveal>
   );
 
   return (
     <section id="team" className="team-section">
       <div className="team-container">
-        <div className="section-header">
-          <div className="telemetry-small">SYSTEM.MEMBERS.QUERY()</div>
-          <h2 className="team-title text-gradient glow">Our Team</h2>
-          <p className="team-description text-gray-400 mt-2">Meet the brilliant minds behind STAR</p>
-          <div className="title-underline glow-border"></div>
-        </div>
+        <ScrollReveal>
+          <div className="section-header">
+            <div className="telemetry-small">SYSTEM.MEMBERS.QUERY()</div>
+            <h2 className="team-title text-gradient glow">Our Team</h2>
+            <p className="team-description text-gray-400 mt-2">Meet the brilliant minds behind STAR</p>
+            <div className="title-underline glow-border"></div>
+          </div>
+        </ScrollReveal>
         
         {/* Mentors Section */}
         <div className="mentors-section" style={{ marginBottom: '4rem' }}>
@@ -110,10 +115,10 @@ function TeamCard() {
             <div className="hierarchy-level">
               <div className="hierarchy-horizontal-line"></div>
               <div className="hierarchy-nodes">
-                {mentorsData.map((mentor) => (
+                {mentorsData.map((mentor, index) => (
                   <div key={mentor.id} className="node-wrapper">
                     <div className="hierarchy-line-up"></div>
-                    {renderCard(mentor)}
+                    {renderCard(mentor, index)}
                   </div>
                 ))}
               </div>
@@ -145,10 +150,10 @@ function TeamCard() {
             <div className="hierarchy-level">
               <div className="hierarchy-horizontal-line wide-line"></div>
               <div className="hierarchy-nodes">
-                {coreCouncilData.vicePresidentAndSecretary.map((member) => (
+                {coreCouncilData.vicePresidentAndSecretary.map((member, index) => (
                   <div key={member.id} className="node-wrapper">
                     <div className="hierarchy-line-up"></div>
-                    {renderCard(member)}
+                    {renderCard(member, index)}
                     <div className="hierarchy-line-down"></div>
                   </div>
                 ))}
@@ -159,10 +164,10 @@ function TeamCard() {
             <div className="hierarchy-level mt-8">
               <div className="hierarchy-horizontal-line wide-line"></div>
               <div className="hierarchy-nodes" style={{ gap: '1rem', justifyContent: 'center' }}>
-                {coreCouncilData.teamHeads.map((member) => (
+                {coreCouncilData.teamHeads.map((member, index) => (
                   <div key={member.id} className="node-wrapper" style={{ flex: '0 1 200px' }}>
                     <div className="hierarchy-line-up"></div>
-                    {renderCard(member)}
+                    {renderCard(member, index)}
                   </div>
                 ))}
               </div>

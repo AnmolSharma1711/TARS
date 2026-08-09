@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react'
 import './EventCards.css'
 import { upcomingEvents, completedEvents } from '../data/eventsData'
 import { motion, AnimatePresence } from 'framer-motion'
+import ScrollReveal from './ScrollReveal'
 
 function EventCards() {
   const [selectedEvent, setSelectedEvent] = useState(null);
 
-  const handleEventClick = (event) => {
-    setSelectedEvent(event);
+  const handleEventClick = (event, isCompleted = false) => {
+    setSelectedEvent({ ...event, isCompleted });
   };
 
   const closePopup = () => {
@@ -33,13 +34,16 @@ function EventCards() {
       <div className="events-container">
         {/* Upcoming Events Section */}
         <div className="events-category">
+        <ScrollReveal>
           <h2 className="events-title text-gradient">Upcoming Events</h2>
           <p className="events-description">Join us in our exciting tech events and workshops</p>
           <div className="title-underline"></div>
+        </ScrollReveal>
 
-          <div className="events-grid">
-            {upcomingEvents.map((event) => (
-              <div key={event.id} className="event-card cursor-pointer" onClick={() => handleEventClick(event)}>
+        <div className="events-grid">
+          {upcomingEvents.map((event, index) => (
+            <ScrollReveal key={event.id} delay={index * 0.1} className="w-full h-full flex justify-center">
+              <div className="event-card cursor-pointer" onClick={() => handleEventClick(event, false)}>
                 <div className="event-card-inner">
                   {/* Front of Card */}
                   <div className="event-front">
@@ -96,19 +100,23 @@ function EventCards() {
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </ScrollReveal>
+          ))}
+        </div>
         </div>
 
         {/* Completed Events Section */}
         <div className="events-category" style={{ marginTop: '80px' }}>
+        <ScrollReveal>
           <h2 className="events-title text-gradient">Completed Events</h2>
           <p className="events-description">Check out our successful past events</p>
           <div className="title-underline"></div>
+        </ScrollReveal>
 
-          <div className="events-grid">
-            {completedEvents.map((event) => (
-              <div key={event.id} className="event-card cursor-pointer" onClick={() => handleEventClick(event)}>
+        <div className="events-grid">
+          {completedEvents.map((event, index) => (
+            <ScrollReveal key={event.id} delay={index * 0.1} className="w-full h-full flex justify-center">
+              <div className="event-card cursor-pointer" onClick={() => handleEventClick(event, true)}>
                 <div className="event-card-inner">
                   {/* Front of Card */}
                   <div className="event-front">
@@ -167,8 +175,9 @@ function EventCards() {
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </ScrollReveal>
+          ))}
+        </div>
         </div>
       </div>
 
@@ -266,7 +275,7 @@ function EventCards() {
                   {selectedEvent.link && (
                     <div className="mt-8">
                       <a href={selectedEvent.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500 text-cyan-500 rounded font-orbitron tracking-wider transition-all duration-300">
-                        {upcomingEvents.some(e => e.id === selectedEvent.id) ? "ESTABLISH CONNECTION" : "REVIEW MEMORY LOG"}
+                        {selectedEvent.isCompleted ? "REVIEW MEMORY LOG" : "ESTABLISH CONNECTION"}
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                       </a>
                     </div>
