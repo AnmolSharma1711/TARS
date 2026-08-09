@@ -94,8 +94,8 @@ function TeamCard() {
         <ScrollReveal>
           <div className="section-header">
             <div className="telemetry-small">SYSTEM.MEMBERS.QUERY()</div>
-            <h2 className="team-title text-gradient glow">Our Team</h2>
-            <p className="team-description text-gray-400 mt-2">Meet the brilliant minds behind STAR</p>
+            <h2 className="team-title text-gradient glow">Command Crew</h2>
+            <p className="team-description text-gray-400 mt-2">Meet the brilliant minds leading STAR Command</p>
             <div className="title-underline glow-border"></div>
           </div>
         </ScrollReveal>
@@ -111,7 +111,7 @@ function TeamCard() {
               </div>
             </div>
             
-            <h3 className="section-subtitle text-cyan-500" style={{ marginTop: '2rem' }}>Faculty Mentors</h3>
+            <h3 className="section-subtitle text-cyan-500" style={{ marginTop: '2rem' }}>Mission Commanders</h3>
             <div className="hierarchy-level">
               <div className="hierarchy-horizontal-line"></div>
               <div className="hierarchy-nodes">
@@ -124,7 +124,7 @@ function TeamCard() {
               </div>
             </div>
 
-            <h3 className="section-subtitle text-cyan-500" style={{ marginTop: '4rem' }}>External Mentor</h3>
+            <h3 className="section-subtitle text-cyan-500" style={{ marginTop: '4rem' }}>Allied Commander</h3>
             <div className="hierarchy-level">
               <div className="node-wrapper">
                 {renderCard(externalMentorData)}
@@ -135,7 +135,7 @@ function TeamCard() {
 
         {/* Core Council Section */}
         <div className="council-section">
-          <h3 className="section-subtitle text-cyan-500 text-center mb-8">Core Council</h3>
+          <h3 className="section-subtitle text-cyan-500 text-center mb-8">Central Command</h3>
           
           <div className="hierarchy-tree">
             {/* President */}

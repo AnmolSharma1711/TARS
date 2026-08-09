@@ -16,13 +16,13 @@ const Sponsors = ({ onNavigate }) => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center gap-2 mb-6">
             <Sparkles className="w-6 h-6 text-sky-300 animate-pulse" />
-            <span className="text-sky-300 font-semibold tracking-wider text-sm uppercase glow">Partnership Opportunities</span>
+            <span className="text-sky-300 font-semibold tracking-wider text-sm uppercase glow font-orbitron">Alliance Protocols</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-gradient leading-tight glow drop-shadow-[0_12px_30px_rgba(14,165,233,0.18)]">
-            Sponsorship Benefits
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-gradient leading-tight glow font-orbitron drop-shadow-[0_12px_30px_rgba(14,165,233,0.18)]">
+            Alliance Tiers
           </h1>
-          <p className="text-lg text-cyan-200/80 max-w-2xl mx-auto">
-            Partner with us to amplify your brand and connect with tomorrow's innovators
+          <p className="text-lg text-cyan-200/80 max-w-2xl mx-auto font-inter">
+            Establish an alliance with STAR Command to amplify your signal and connect with tomorrow's cosmic innovators
           </p>
         </div>
 
@@ -100,17 +100,18 @@ const Sponsors = ({ onNavigate }) => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center bg-transparent backdrop-blur-sm rounded-3xl p-12 border border-white/6">
-          <h2 className="text-4xl font-bold mb-4 text-white">Ready to Make an Impact?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can create a partnership that drives value for both our communities
+        <div className="mt-16 text-center bg-transparent backdrop-blur-sm rounded-3xl p-12 border border-white/6 relative">
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-50"></div>
+          <h2 className="text-4xl font-bold mb-4 text-white font-orbitron">READY TO ESTABLISH AN ALLIANCE?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto font-inter">
+            Open comms to discuss how we can create a coalition that drives value for both our systems
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onClick={() => onNavigate?.('contact')} className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-sky-500 text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-sky-400/40 transition-all duration-300 transform hover:scale-105">
-              Contact Us
+            <button onClick={() => onNavigate?.('contact')} className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-sky-500 text-white font-bold font-orbitron tracking-wider uppercase rounded-xl hover:shadow-2xl hover:shadow-sky-400/40 transition-all duration-300 transform hover:scale-105">
+              Open Comms
             </button>
-            <button className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-xl border-2 border-sky-400/20 hover:bg-white/20 transition-all duration-300">
-              Download Brochure
+            <button className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold font-orbitron tracking-wider uppercase rounded-xl border-2 border-sky-400/20 hover:bg-white/20 transition-all duration-300">
+              Download Dossier
             </button>
           </div>
         </div>

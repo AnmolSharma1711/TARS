@@ -11,7 +11,7 @@ function AboutPage() {
           <div className="font-orbitron telemetry-small mb-4 text-cyan-500 tracking-widest text-sm">SYS.DIR // COSMIC_DIRECTIVE</div>
           <LayoutTextFlip
             text="MISSION PROTOCOL: "
-            words={["INNOVATION 💡", "COLLABORATION 🤝", "EXCELLENCE ⭐", "GROWTH 📈", "VISION 🔭"]}
+            words={["INNOVATION 🚀", "COLLABORATION 🛰️", "EXCELLENCE ⭐", "GROWTH 🌌", "VISION 🔭"]}
             className="text-3xl font-normal tracking-[-0.02em] drop-shadow-sm md:text-5xl md:leading-tight font-orbitron uppercase text-white"
           />
         </motion.div>
@@ -21,8 +21,8 @@ function AboutPage() {
         <div className="max-w-3xl mx-auto px-4 mt-12 relative">
           <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-500/0 via-cyan-500 to-cyan-500/0"></div>
           <p className="text-center text-lg md:text-xl text-gray-400 font-inter leading-relaxed">
-            STAR Command is committed to pushing boundaries, fostering teamwork, achieving excellence, 
-            continuous growth, and maintaining a clear vision for the future of technology, intelligent systems, and robotics.
+            STAR Command is committed to pushing the boundaries of the known universe, fostering stellar teamwork, achieving astronomical excellence, 
+            driving continuous growth, and maintaining a clear vision for the future of interstellar technology, intelligent systems, and robotics.
           </p>
         </div>
       </ScrollReveal>

@@ -13,11 +13,11 @@ function ProjectsPage() {
         <div className="max-w-7xl mx-auto text-center mb-16">
           <div className="font-orbitron telemetry-small mb-2 text-cyan-500 tracking-widest text-sm">SYS.DIR // PROJECTS</div>
           <h2 className="text-3xl md:text-5xl font-orbitron font-bold mb-4 text-gradient">
-            ACCOMPLISHMENTS
+            MISSION ARCHIVES
           </h2>
           <div className="title-underline mx-auto"></div>
           <p className="text-lg md:text-xl text-gray-400 mt-6 max-w-3xl mx-auto font-inter">
-            Explore the innovative accomplishments and cutting-edge technologies developed by STAR Command.
+            Explore the classified mission archives and cutting-edge technologies engineered by STAR Command.
           </p>
         </div>
       </ScrollReveal>
@@ -38,7 +38,7 @@ function ProjectsPage() {
                   translateZ="60"
                   className="text-gray-400 text-sm font-inter mb-4"
                 >
-                  DEVELOPER: <span className="text-cyan-500 font-semibold">{project.developer}</span>
+                  LEAD ENGINEER: <span className="text-cyan-500 font-semibold">{project.developer}</span>
                 </CardItem>
                 <CardItem translateZ="100" className="w-full mt-4 relative">
                   <div className="absolute inset-0 bg-cyan-500/10 opacity-0 group-hover/card:opacity-100 transition-opacity z-10 rounded-xl"></div>
@@ -126,7 +126,7 @@ function ProjectsPage() {
                   {selectedProject.title}
                 </h2>
                 <p className="text-gray-400 font-inter">
-                  LEAD DEVELOPER: <span className="font-semibold text-yellow-400">{selectedProject.developer}</span>
+                  LEAD ENGINEER: <span className="font-semibold text-yellow-400">{selectedProject.developer}</span>
                 </p>
                 {selectedProject.teamMembers && (
                   <div className="mt-4">

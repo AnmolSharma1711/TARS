@@ -30,7 +30,7 @@ function Hero() {
           </button>
           
           <button className="mission-button secondary-mission">
-            <span className="mission-button-text">Join STAR</span>
+            <span className="mission-button-text">Join Starfleet</span>
             <div className="mission-button-sweep"></div>
           </button>
         </div>

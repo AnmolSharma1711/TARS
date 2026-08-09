@@ -35,8 +35,8 @@ function EventCards() {
         {/* Upcoming Events Section */}
         <div className="events-category">
         <ScrollReveal>
-          <h2 className="events-title text-gradient">Upcoming Events</h2>
-          <p className="events-description">Join us in our exciting tech events and workshops</p>
+          <h2 className="events-title text-gradient">Upcoming Missions</h2>
+          <p className="events-description">Join us in our upcoming exploratory missions and technical operations</p>
           <div className="title-underline"></div>
         </ScrollReveal>
 
@@ -93,7 +93,7 @@ function EventCards() {
                           <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                           <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                         </svg>
-                        <span>{event.attendees} attendees expected</span>
+                        <span>{event.attendees} crew members expected</span>
                       </div>
                     </div>
                     <button className="event-register-btn">ESTABLISH CONNECTION</button>
@@ -108,8 +108,8 @@ function EventCards() {
         {/* Completed Events Section */}
         <div className="events-category" style={{ marginTop: '80px' }}>
         <ScrollReveal>
-          <h2 className="events-title text-gradient">Completed Events</h2>
-          <p className="events-description">Check out our successful past events</p>
+          <h2 className="events-title text-gradient">Mission Archives</h2>
+          <p className="events-description">Review the telemetry from our successful past missions</p>
           <div className="title-underline"></div>
         </ScrollReveal>
 
@@ -166,7 +166,7 @@ function EventCards() {
                           <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                           <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                         </svg>
-                        <span>{event.attendees} attendees</span>
+                        <span>{event.attendees} crew members</span>
                       </div>
                     </div>
                     <button className="event-register-btn" style={{ opacity: 0.6, cursor: 'not-allowed' }} disabled>
@@ -259,7 +259,7 @@ function EventCards() {
                         <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                         <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                       </svg>
-                      {selectedEvent.attendees} ATTENDEES
+                      {selectedEvent.attendees} CREW MEMBERS
                     </div>
                   </div>
                 </div>
