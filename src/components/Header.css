@@ -160,14 +160,28 @@
 }
 
 @media (max-width: 900px) {
-  .navbar-menu {
-    gap: 1.5rem;
+  .navbar-cta {
+    display: none;
   }
-}
-
-@media (max-width: 768px) {
-  .navbar-menu, .navbar-cta {
-    display: none; /* Add mobile menu handler later if needed */
+  
+  .navbar-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(11, 11, 11, 0.5);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.3);
+  }
+  
+  .navbar-menu.mobile-open {
+    display: flex;
   }
 }
 
