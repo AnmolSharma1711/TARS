@@ -130,6 +130,13 @@ function TeamCard() {
                 {renderCard(externalMentorData)}
               </div>
             </div>
+
+            <h3 className="section-subtitle text-cyan-500" style={{ marginTop: '4rem', textAlign: 'center' }}>Student Mentor</h3>
+            <div className="hierarchy-level">
+              <div className="node-wrapper">
+                {renderCard(coreCouncilData.studentMentor)}
+              </div>
+            </div>
           </div>
         </div>
 
