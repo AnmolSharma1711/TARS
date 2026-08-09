@@ -95,7 +95,7 @@ function TeamCard() {
           <div className="section-header">
             <div className="telemetry-small">SYSTEM.MEMBERS.QUERY()</div>
             <h2 className="team-title text-gradient glow">Command Crew</h2>
-            <p className="team-description text-gray-400 mt-2">Meet the brilliant minds leading STAR Command</p>
+            <p className="team-description text-gray-400 mt-2 font-orbitron telemetry-small">Meet the brilliant minds leading STAR Command</p>
             <div className="title-underline glow-border"></div>
           </div>
         </ScrollReveal>

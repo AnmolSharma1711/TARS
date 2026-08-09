@@ -10,7 +10,7 @@ export const patronData = {
   image: '/Mentors/Gaurav_Sir.png',
   linkedin: 'https://www.linkedin.com/in/dr-gourav-bathla-b2155913/',
   bio: "Dr. Gourav Bathla serves as 'The Foundation' of STAR, providing the bedrock of stability and visionary leadership required for high-reaching ambitions. He lays the structural groundwork for innovation, deeper research, and academic excellence, ensuring that the society's core principles and strategic direction remain unshakable amidst the evolving landscape of technology.",
-  expertise: ['Academic Leadership', 'Innovation Strategy', 'Technology Education', 'Research Guidance','Algorithms','Deep Learning','Natural Language Processing']
+  expertise: ['Academic Leadership', 'Innovation Strategy', 'Technology Education', 'Research Guidance','Algorithms','Deep Learning','Natural Language Processing','RAG','Agentic AI']
 };
 
 // Mentors - 2 cards displayed below patron
@@ -18,22 +18,32 @@ export const mentorsData = [
   {
     id: 2,
     name: 'Dr. Saurabh Tewari',
-    role: 'Faculty Mentor',
+    role: 'Research Mentor',
     subtitle: 'The Supernova',
     image: '/Mentors/Saurabh_Sir.png',
     linkedin: 'https://www.linkedin.com/in/dr-saurabh-tewari-106597a3/',
     bio: "Radiating intense energy and insight, Dr. Saurabh Tewari embodies 'The Supernova'. His mentorship explodes with transformative ideas that reshape our understanding of robotics and automation. He creates the heavy elements of knowledge necessary for complex creations, guiding students to outshine conventional approaches and burst forth with brilliant, practical solutions.",
-    expertise: ['Robotics', 'Automation', 'Control Systems', 'Mechatronics','Neural Networks','Deep Learning','Natural Language Processing','Image Processing']
+    expertise: ['Automation','Neural Networks','Deep Learning','Natural Language Processing','Image Processing','Data Science','RAG']
   },
   {
     id: 3,
-    name: 'Dr. Shivanshu Upadhyay',
-    role: 'Faculty Mentor',
+    name: 'Mr. Shivanshu Upadhyay',
+    role: 'Project Mentor',
     subtitle: 'The Cosmic Anchor',
     image: '/Mentors/Shivanshu_Sir.png',
     linkedin: 'https://www.linkedin.com/in/shivanshu-upadhyay-752588201/',
     bio: "In the vast and sometimes chaotic universe of emerging tech, Dr. Shivanshu Upadhyay acts as 'The Cosmic Anchor'. He grounds our ambitious IoT and embedded systems projects with reality and precision. His guidance ensures that while student creativity reaches for the stars, the technical execution remains firmly planted on functional, reliable ground.",
-    expertise: ['IoT', 'Embedded Systems', 'Sensor Networks', 'Smart Systems','Natural Language Processing','Deep Learning','Data Science','Microcontrollers']
+    expertise: ['IoT', 'Embedded Systems', 'Deep Neural Networks', 'Smart Systems','Natural Language Processing','Agentic AI','RAG']
+  },
+  {
+    id: 4,
+    name: 'Dr. Rohini Raina',
+    role: 'Event Coordinator',
+    subtitle: 'The Mission Controller',
+    image: '/Mentors/Rohini_Mam.png',
+    linkedin: 'https://www.linkedin.com/in/dr-rohini-raina-9a124614a/',
+    bio: 'Dr. Rohini Raina is the Mission Controller, acts as the operational backbone of STAR, guiding event strategies, coordination processes, and organizational excellence.',
+    experties: ['Artificial Intelligence', 'Machine Learning', 'Design Thinking', 'Higher Education Teaching', 'Academic Administration']
   }
 ];
 

@@ -40,7 +40,7 @@ export default function ContactPage() {
               ESTABLISH LINK
             </h1>
             <div className="title-underline mx-auto"></div>
-            <p className="text-lg md:text-xl text-gray-400 mt-6 max-w-2xl mx-auto font-inter">
+            <p className="text-lg md:text-xl text-gray-400 mt-6 max-w-2xl mx-auto font-orbitron telemetry-small">
               Open a secure communication channel with STAR Command. Have questions or want to collaborate? We'd love to hear from you.
             </p>
           </div>
@@ -65,7 +65,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="text-gray-400 font-orbitron text-xs tracking-widest mb-1 uppercase">Comm Link</h3>
                       <a href="mailto:s.tarsclubgla@gmail.com" className="text-white hover:text-yellow-400 transition-colors font-inter">
-                        s.tarsclubgla@gmail.com
+                        starclub@gla.ac.in
                       </a>
                     </div>
                   </div>
@@ -91,7 +91,7 @@ export default function ContactPage() {
                           LinkedIn
                         </a>
                         <span className="text-gray-600">/</span>
-                        <a href="https://www.instagram.com/tars.club_glau?igsh=dWo1ajVnOWtqNXJ4" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-colors">
+                        <a href="www.linkedin.com/in/star-club-glau" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-colors">
                           Instagram
                         </a>
                       </div>
@@ -108,8 +108,7 @@ export default function ContactPage() {
                 <div className="font-inter text-gray-300 space-y-2 text-sm">
                   <p><span className="text-cyan-500 font-bold mr-2">BASE:</span> AB-12, 5018, GLA University Campus</p>
                   <div className="h-px bg-white/10 my-3"></div>
-                  <div className="flex justify-between"><span>MON-FRI:</span> <span>0900 - 1800</span></div>
-                  <div className="flex justify-between"><span>SAT:</span> <span>1000 - 1600</span></div>
+                  <div className="flex justify-between"><span>MON-FRI:</span> <span>10:00 - 4:00</span></div>
                 </div>
               </div>
             </ScrollReveal>

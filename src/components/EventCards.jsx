@@ -36,7 +36,7 @@ function EventCards() {
         <div className="events-category">
         <ScrollReveal>
           <h2 className="events-title text-gradient">Upcoming Missions</h2>
-          <p className="events-description">Join us in our upcoming exploratory missions and technical operations</p>
+          <p className="events-description font-orbitron telemetry-small">Join us in our upcoming exploratory missions and technical operations</p>
           <div className="title-underline"></div>
         </ScrollReveal>
 

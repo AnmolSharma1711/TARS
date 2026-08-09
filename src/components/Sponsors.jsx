@@ -21,7 +21,7 @@ const Sponsors = ({ onNavigate }) => {
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-gradient leading-tight glow font-orbitron drop-shadow-[0_12px_30px_rgba(14,165,233,0.18)]">
             Alliance Tiers
           </h1>
-          <p className="text-lg text-cyan-200/80 max-w-2xl mx-auto font-inter">
+          <p className="text-lg text-cyan-200/80 max-w-2xl mx-auto font-orbitron telemetry-small">
             Establish an alliance with STAR Command to amplify your signal and connect with tomorrow's cosmic innovators
           </p>
         </div>
