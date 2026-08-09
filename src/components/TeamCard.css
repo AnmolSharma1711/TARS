@@ -199,18 +199,14 @@
 }
 
 .terminal-role {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.15em;
   margin-bottom: 0.5rem;
   margin-top: 0.25rem;
   text-transform: uppercase;
-  color: #000000;
-  background-color: #00E5FF;
-  display: inline-block;
-  padding: 0.15rem 0.5rem;
-  border-radius: 2px;
-  box-shadow: 0 0 10px rgba(0, 229, 255, 0.6);
+  color: #00E5FF;
+  text-shadow: 0 0 5px rgba(0, 229, 255, 0.8), 0 0 10px rgba(0, 229, 255, 0.5);
   white-space: pre-wrap;
 }
 

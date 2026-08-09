@@ -102,7 +102,7 @@ function TeamCard() {
         
         {/* Mentors Section */}
         <div className="mentors-section" style={{ marginBottom: '4rem' }}>
-          <h3 className="section-subtitle text-cyan-500">Patron</h3>
+          <h3 className="section-subtitle text-cyan-500 glow font-bold">Chief Commander</h3>
           <div className="hierarchy-tree">
             <div className="hierarchy-level">
               <div className="node-wrapper">
@@ -111,7 +111,7 @@ function TeamCard() {
               </div>
             </div>
             
-            <h3 className="section-subtitle text-cyan-500" style={{ marginTop: '2rem' }}>Mission Commanders</h3>
+            <h3 className="section-subtitle text-cyan-500 glow font-bold" style={{ marginTop: '2rem' }}>Mission Commanders</h3>
             <div className="hierarchy-level">
               <div className="hierarchy-horizontal-line"></div>
               <div className="hierarchy-nodes">
@@ -124,14 +124,14 @@ function TeamCard() {
               </div>
             </div>
 
-            <h3 className="section-subtitle text-cyan-500" style={{ marginTop: '4rem' }}>Allied Commander</h3>
+            <h3 className="section-subtitle text-cyan-500 glow font-bold" style={{ marginTop: '4rem' }}>Allied Commander</h3>
             <div className="hierarchy-level">
               <div className="node-wrapper">
                 {renderCard(externalMentorData)}
               </div>
             </div>
 
-            <h3 className="section-subtitle text-cyan-500" style={{ marginTop: '4rem', textAlign: 'center' }}>Student Mentor</h3>
+            <h3 className="section-subtitle text-cyan-500 glow font-bold" style={{ marginTop: '4rem', textAlign: 'center' }}>Vanguard Commander</h3>
             <div className="hierarchy-level">
               <div className="node-wrapper">
                 {renderCard(coreCouncilData.studentMentor)}
@@ -142,7 +142,7 @@ function TeamCard() {
 
         {/* Core Council Section */}
         <div className="council-section">
-          <h3 className="section-subtitle text-cyan-500 text-center mb-8">Central Command</h3>
+          <h3 className="section-subtitle text-cyan-500 glow font-bold text-center mb-8">Central Command</h3>
           
           <div className="hierarchy-tree">
             {/* President */}

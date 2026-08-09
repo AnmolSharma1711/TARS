@@ -20,7 +20,11 @@ function AboutPage() {
       <ScrollReveal direction="up" delay={0.2}>
         <div className="max-w-3xl mx-auto px-4 mt-12 relative">
           <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-500/0 via-cyan-500 to-cyan-500/0"></div>
+<<<<<<< HEAD
           <p className="text-center text-lg md:text-xl text-gray-400 font-orbitron telemetry-small leading-relaxed">
+=======
+          <p className="text-center text-lg md:text-xl text-cyan-50/80 font-orbitron tracking-wide leading-relaxed">
+>>>>>>> e984674fbbf01da92d2a24b65c17845de6c30ab0
             STAR Command is committed to pushing the boundaries of the known universe, fostering stellar teamwork, achieving astronomical excellence, 
             driving continuous growth, and maintaining a clear vision for the future of interstellar technology, intelligent systems, and robotics.
           </p>
