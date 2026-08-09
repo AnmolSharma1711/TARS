@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Phone, Send, User, MessageSquare, CheckCircle } from 'lucide-react';
+import { Mail, MapPin, Phone, MessageSquare, User, Send } from 'lucide-react';
+import ScrollReveal from '../components/ScrollReveal';
 
-const ContactPage = () => {
+export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     subject: '',
@@ -10,20 +11,12 @@ const ContactPage = () => {
   const [showSuccess, setShowSuccess] = useState(false);
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    const emailBody = `Name: ${formData.name}\n\nMessage:\n${formData.message}`;
-    const mailtoLink = `mailto:s.tarsclubgla@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
-    
-    window.location.href = mailtoLink;
-    
+    // Simulate sending transmission
     setTimeout(() => {
       setFormData({ name: '', subject: '', message: '' });
       setShowSuccess(true);
@@ -32,165 +25,173 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden py-20">
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-600/20 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-teal-600/20 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+    <div className="min-h-screen relative overflow-hidden py-20 bg-transparent">
+      {/* Background ambient light */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-600/10 rounded-full mix-blend-screen filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-700/10 rounded-full mix-blend-screen filter blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center gap-2 mb-6">
-            <Mail className="w-6 h-6 text-sky-300 animate-pulse" />
-            <span className="text-sky-300 font-semibold tracking-wider text-sm uppercase glow">Get In Touch</span>
+        <ScrollReveal direction="down">
+          <div className="text-center mb-16">
+            <div className="font-orbitron telemetry-small mb-2 text-cyan-500 tracking-widest text-sm">SYS.DIR // SUBSPACE_LINK</div>
+            <h1 className="text-3xl md:text-5xl font-orbitron font-bold mb-4 text-gradient uppercase">
+              ESTABLISH LINK
+            </h1>
+            <div className="title-underline mx-auto"></div>
+            <p className="text-lg md:text-xl text-gray-400 mt-6 max-w-2xl mx-auto font-inter">
+              Open a secure communication channel with STAR Command. Have questions or want to collaborate? We'd love to hear from you.
+            </p>
           </div>
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-gradient leading-tight glow drop-shadow-[0_12px_30px_rgba(14,165,233,0.18)]">
-            Contact Us
-          </h1>
-          <p className="text-lg text-cyan-200/80 max-w-2xl mx-auto">
-            Have questions or want to collaborate? We'd love to hear from you!
-          </p>
-        </div>
+        </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           <div className="space-y-8">
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
-              <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
-              
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-cyan-300" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-1">Email</h3>
-                    <a href="mailto:s.tarsclubgla@gmail.com" className="text-cyan-300 hover:text-cyan-200 transition-colors">
-                      s.tarsclubgla@gmail.com
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-purple-300" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-1">Location</h3>
-                    <p className="text-gray-300">
-                      GLA University, Mathura<br />
-                      Uttar Pradesh, India
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-teal-500/20 flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-teal-300" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-1">Follow Us</h3>
-                    <div className="flex gap-4 mt-2">
-                      <a href="https://www.linkedin.com/in/tars-tars-club-glau-06398939b/" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 transition-colors">
-                        LinkedIn
+            <ScrollReveal direction="right" delay={0.1}>
+              <div className="bg-black/60 backdrop-blur-md rounded-lg p-8 border border-cyan-500/30 hover:border-cyan-500/60 transition-all duration-300 relative group">
+                <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-cyan-500"></div>
+                <div className="absolute top-0 right-0 w-2 h-2 border-t-2 border-r-2 border-cyan-500"></div>
+                <div className="absolute bottom-0 left-0 w-2 h-2 border-b-2 border-l-2 border-cyan-500"></div>
+                <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-cyan-500"></div>
+                
+                <h2 className="text-2xl font-orbitron font-bold text-white mb-6 uppercase tracking-wide">Contact Matrix</h2>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 border border-cyan-500/40 bg-cyan-500/10 flex items-center justify-center rounded">
+                      <Mail className="w-5 h-5 text-cyan-500" />
+                    </div>
+                    <div>
+                      <h3 className="text-gray-400 font-orbitron text-xs tracking-widest mb-1 uppercase">Comm Link</h3>
+                      <a href="mailto:s.tarsclubgla@gmail.com" className="text-white hover:text-yellow-400 transition-colors font-inter">
+                        s.tarsclubgla@gmail.com
                       </a>
-                      <a href="https://www.instagram.com/tars.club_glau?igsh=dWo1ajVnOWtqNXJ4" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 transition-colors">
-                        Instagram
-                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 border border-cyan-500/40 bg-cyan-500/10 flex items-center justify-center rounded">
+                      <MapPin className="w-5 h-5 text-cyan-500" />
+                    </div>
+                    <div>
+                      <h3 className="text-gray-400 font-orbitron text-xs tracking-widest mb-1 uppercase">Coordinates</h3>
+                      <p className="text-white font-inter">GLA University<br />17km Stone, NH-2, Mathura-Delhi Road<br />PO: Chaumuhan, Mathura-281 406 (UP), India</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 border border-cyan-500/40 bg-cyan-500/10 flex items-center justify-center rounded">
+                      <Phone className="w-5 h-5 text-cyan-500" />
+                    </div>
+                    <div>
+                      <h3 className="text-gray-400 font-orbitron text-xs tracking-widest mb-1 uppercase">External Networks</h3>
+                      <div className="flex flex-wrap gap-4 font-inter">
+                        <a href="https://www.linkedin.com/in/tars-tars-club-glau-06398939b/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-colors">
+                          LinkedIn
+                        </a>
+                        <span className="text-gray-600">/</span>
+                        <a href="https://www.instagram.com/tars.club_glau?igsh=dWo1ajVnOWtqNXJ4" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-colors">
+                          Instagram
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
 
-            <div className="bg-gradient-to-br from-cyan-500/10 to-purple-500/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
-              <h3 className="text-xl font-bold text-white mb-4">Office Hours</h3>
-              <p className="text-gray-300">
-                AB-12, 5018<br />
-                GLA University Campus<br /><br />
-                Monday - Friday: 9:00 AM - 6:00 PM<br />
-                Saturday: 10:00 AM - 4:00 PM<br />
-                Sunday: Closed
-              </p>
-            </div>
+            <ScrollReveal direction="right" delay={0.2}>
+              <div className="bg-black/60 backdrop-blur-md rounded-lg p-8 border border-cyan-500/30 relative">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 to-transparent opacity-50"></div>
+                <h3 className="text-xl font-orbitron font-bold text-white mb-4 uppercase tracking-wide">Active Hours</h3>
+                <div className="font-inter text-gray-300 space-y-2 text-sm">
+                  <p><span className="text-cyan-500 font-bold mr-2">BASE:</span> AB-12, 5018, GLA University Campus</p>
+                  <div className="h-px bg-white/10 my-3"></div>
+                  <div className="flex justify-between"><span>MON-FRI:</span> <span>0900 - 1800</span></div>
+                  <div className="flex justify-between"><span>SAT:</span> <span>1000 - 1600</span></div>
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
 
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                  <div className="flex items-center gap-2">
-                    <User className="w-4 h-4" />
-                    Your Name
+          <ScrollReveal direction="left" delay={0.3}>
+            <div className="bg-black/60 backdrop-blur-md rounded-lg p-8 border border-cyan-500/30 relative">
+              <h3 className="text-2xl font-orbitron font-bold text-white mb-6 uppercase tracking-wide">Transmit Message</h3>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-xs font-orbitron tracking-widest text-gray-400 mb-2 uppercase">
+                    <div className="flex items-center gap-2">
+                      <User className="w-3 h-3 text-cyan-500" />
+                      Operative Name
+                    </div>
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 bg-black border border-white/20 rounded text-white font-inter placeholder-gray-600 focus:outline-none focus:border-cyan-500 focus:shadow-[0_0_15px_rgba(0,122,255,0.3)] transition-all"
+                    placeholder="Enter Name"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="subject" className="block text-xs font-orbitron tracking-widest text-gray-400 mb-2 uppercase">
+                    Mission Code / Subject
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 bg-black border border-white/20 rounded text-white font-inter placeholder-gray-600 focus:outline-none focus:border-cyan-500 focus:shadow-[0_0_15px_rgba(0,122,255,0.3)] transition-all"
+                    placeholder="Mission Objective"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-xs font-orbitron tracking-widest text-gray-400 mb-2 uppercase">
+                    <div className="flex items-center gap-2">
+                      <MessageSquare className="w-3 h-3 text-cyan-500" />
+                      Transmission Content
+                    </div>
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows="5"
+                    className="w-full px-4 py-3 bg-black border border-white/20 rounded text-white font-inter placeholder-gray-600 focus:outline-none focus:border-cyan-500 focus:shadow-[0_0_15px_rgba(0,122,255,0.3)] transition-all resize-none"
+                    placeholder="Enter message details here..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full px-8 py-4 bg-cyan-500/10 border border-cyan-500 text-cyan-500 font-orbitron tracking-widest uppercase font-bold rounded hover:bg-cyan-500 hover:text-white hover:shadow-[0_0_20px_rgba(0,122,255,0.5)] transition-all duration-300 flex items-center justify-center gap-3 group"
+                >
+                  <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  INITIATE TRANSMISSION
+                </button>
+                
+                {showSuccess && (
+                  <div className="mt-4 p-4 bg-cyan-500/10 border border-cyan-500/50 rounded text-cyan-500 font-orbitron text-sm flex items-center gap-2 animate-pulse">
+                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                    TRANSMISSION RECEIVED. STAR COMMAND WILL RESPOND SHORTLY.
                   </div>
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
-                  placeholder="John Doe"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
-                  placeholder="How can we help you?"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                  <div className="flex items-center gap-2">
-                    <MessageSquare className="w-4 h-4" />
-                    Message
-                  </div>
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows="5"
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all resize-none"
-                  placeholder="Tell us more about your inquiry..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full px-8 py-4 bg-gradient-to-r from-cyan-500 to-sky-500 text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-sky-400/40 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2"
-              >
-                <Send className="w-5 h-5" />
-                Send Message
-              </button>
-            </form>
-            
-            {showSuccess && (
-              <div className="mt-6 p-4 bg-green-500/20 border border-green-500/50 rounded-xl flex items-center gap-3 animate-in fade-in slide-in-from-bottom-4 duration-500">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <p className="text-green-300 font-medium">Email client opened! Complete sending from your email app.</p>
-              </div>
-            )}
-          </div>
+                )}
+              </form>
+            </div>
+          </ScrollReveal>
         </div>
       </div>
     </div>
   );
-};
-
-export default ContactPage;
+}

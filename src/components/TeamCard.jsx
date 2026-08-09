@@ -28,18 +28,35 @@ function TeamCard() {
     };
   }, [selectedMentor]);
 
-  const renderCard = (member, isMentor = false) => (
+  const renderCard = (member) => (
     <div 
-      key={member.id} 
-      className="team-card mentor-card"
+      className="identity-terminal"
       onClick={() => handleMentorClick(member)}
-      style={{ cursor: 'pointer' }}
     >
-      <div className="team-card-top">
-        <div className="team-profile-image">
-          <img src={member.image} alt={member.name} />
+      <div className="terminal-hud-corners">
+        <div className="hud-corner hud-corner-tl"></div>
+        <div className="hud-corner hud-corner-tr"></div>
+        <div className="hud-corner hud-corner-bl"></div>
+        <div className="hud-corner hud-corner-br"></div>
+      </div>
+      
+      <div className="terminal-image-wrapper">
+        <div className="terminal-scanline"></div>
+        <img src={member.image} alt={member.name} className="terminal-image" />
+      </div>
+      
+      <div className="terminal-info">
+        <div className="terminal-name">{member.name}</div>
+        <div className="terminal-role">{member.role}</div>
+        {member.subtitle && <div className="terminal-subtitle">{member.subtitle}</div>}
+      </div>
+      
+      <div className="terminal-footer">
+        <div className="terminal-status">
+          <div className="pulse-dot"></div>
+          ACTIVE
         </div>
-        <div className="team-social-media">
+        <div className="terminal-links">
           {member.linkedin && (
             <a
               href={member.linkedin}
@@ -48,11 +65,7 @@ function TeamCard() {
               aria-label="LinkedIn"
               onClick={(e) => e.stopPropagation()}
             >
-              <svg className="team-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg>
+              LI
             </a>
           )}
           {member.github && (
@@ -62,21 +75,11 @@ function TeamCard() {
               rel="noopener noreferrer"
               aria-label="GitHub"
               onClick={(e) => e.stopPropagation()}
+              style={{ marginLeft: '10px' }}
             >
-              <svg className="team-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-              </svg>
+              GH
             </a>
           )}
-        </div>
-      </div>
-      <div className="team-card-bottom">
-        <span className="team-member-name">{member.name}</span>
-        <div className="team-role-row">
-          <div className="team-role-item">
-            <span className="team-role-big">{member.role}</span>
-            {member.subtitle && <span className="team-role-small">{member.subtitle}</span>}
-          </div>
         </div>
       </div>
     </div>
@@ -85,48 +88,85 @@ function TeamCard() {
   return (
     <section id="team" className="team-section">
       <div className="team-container">
-        <h2 className="team-title text-gradient">Our Team</h2>
-        <p className="team-description">Meet the brilliant minds behind STAR</p>
-        <div className="title-underline"></div>
+        <div className="section-header">
+          <div className="telemetry-small">SYSTEM.MEMBERS.QUERY()</div>
+          <h2 className="team-title text-gradient glow">Our Team</h2>
+          <p className="team-description text-gray-400 mt-2">Meet the brilliant minds behind STAR</p>
+          <div className="title-underline glow-border"></div>
+        </div>
         
         {/* Mentors Section */}
-        <div className="mentors-section">
-          {/* Patron - 1 card centered */}
-          <h3 className="section-subtitle">Patron</h3>
-          <div className="patron-row">
-            {renderCard(patronData)}
-          </div>
+        <div className="mentors-section" style={{ marginBottom: '4rem' }}>
+          <h3 className="section-subtitle text-cyan-500">Patron</h3>
+          <div className="hierarchy-tree">
+            <div className="hierarchy-level">
+              <div className="node-wrapper">
+                {renderCard(patronData)}
+                <div className="hierarchy-line-down"></div>
+              </div>
+            </div>
+            
+            <h3 className="section-subtitle text-cyan-500" style={{ marginTop: '2rem' }}>Faculty Mentors</h3>
+            <div className="hierarchy-level">
+              <div className="hierarchy-horizontal-line"></div>
+              <div className="hierarchy-nodes">
+                {mentorsData.map((mentor) => (
+                  <div key={mentor.id} className="node-wrapper">
+                    <div className="hierarchy-line-up"></div>
+                    {renderCard(mentor)}
+                  </div>
+                ))}
+              </div>
+            </div>
 
-          {/* Mentors - 2 cards */}
-          <h3 className="section-subtitle">Faculty Mentors</h3>
-          <div className="mentors-grid">
-            {mentorsData.map((mentor) => renderCard(mentor))}
-          </div>
-
-          {/* External Mentor - 1 card centered */}
-          <h3 className="section-subtitle">External Mentor</h3>
-          <div className="external-mentor-row">
-            {renderCard(externalMentorData)}
+            <h3 className="section-subtitle text-cyan-500" style={{ marginTop: '4rem' }}>External Mentor</h3>
+            <div className="hierarchy-level">
+              <div className="node-wrapper">
+                {renderCard(externalMentorData)}
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Core Council Section */}
         <div className="council-section">
-          <h3 className="section-subtitle">Core Council</h3>
+          <h3 className="section-subtitle text-cyan-500 text-center mb-8">Core Council</h3>
           
-          {/* President */}
-          <div className="council-row president-row">
-            {renderCard(coreCouncilData.president)}
-          </div>
+          <div className="hierarchy-tree">
+            {/* President */}
+            <div className="hierarchy-level">
+              <div className="node-wrapper">
+                {renderCard(coreCouncilData.president)}
+                <div className="hierarchy-line-down"></div>
+              </div>
+            </div>
 
-          {/* Vice President & Secretary */}
-          <div className="council-row vp-secretary-row">
-            {coreCouncilData.vicePresidentAndSecretary.map((member) => renderCard(member))}
-          </div>
+            {/* Vice President & Secretary */}
+            <div className="hierarchy-level">
+              <div className="hierarchy-horizontal-line wide-line"></div>
+              <div className="hierarchy-nodes">
+                {coreCouncilData.vicePresidentAndSecretary.map((member) => (
+                  <div key={member.id} className="node-wrapper">
+                    <div className="hierarchy-line-up"></div>
+                    {renderCard(member)}
+                    <div className="hierarchy-line-down"></div>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-          {/* Team Heads */}
-          <div className="council-row team-heads-row">
-            {coreCouncilData.teamHeads.map((member) => renderCard(member))}
+            {/* Team Heads */}
+            <div className="hierarchy-level mt-8">
+              <div className="hierarchy-horizontal-line wide-line"></div>
+              <div className="hierarchy-nodes" style={{ gap: '1rem', justifyContent: 'center' }}>
+                {coreCouncilData.teamHeads.map((member) => (
+                  <div key={member.id} className="node-wrapper" style={{ flex: '0 1 200px' }}>
+                    <div className="hierarchy-line-up"></div>
+                    {renderCard(member)}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -134,38 +174,43 @@ function TeamCard() {
       {/* Mentor Details Popup */}
       {selectedMentor && (
         <div className="mentor-popup-overlay" onClick={closePopup}>
-          <div className="mentor-popup" onClick={(e) => e.stopPropagation()}>
-            <button className="popup-close" onClick={closePopup}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
-            </button>
+          <div className="briefing-terminal" onClick={(e) => e.stopPropagation()}>
+            <div className="briefing-header">
+              <div className="telemetry-small" style={{ marginBottom: 0 }}>MISSION_FILE // PERSONNEL_DOSSIER</div>
+              <button className="popup-close" onClick={closePopup}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
             
-            <div className="popup-content">
-              <div className="popup-header">
-                <div className="popup-image">
-                  <img src={selectedMentor.image} alt={selectedMentor.name} />
-                </div>
-                <div className="popup-info">
-                  <h3>{selectedMentor.name}</h3>
-                  <p className="popup-role">{selectedMentor.role}</p>
-                  {selectedMentor.subtitle && <p className="popup-subtitle">{selectedMentor.subtitle}</p>}
+            <div className="briefing-content max-h-[80vh] overflow-y-auto no-scrollbar">
+              <div className="briefing-image-col">
+                <div className="terminal-image-wrapper" style={{ margin: '0 auto', maxWidth: '250px' }}>
+                  <div className="terminal-scanline"></div>
+                  <img src={selectedMentor.image} alt={selectedMentor.name} className="terminal-image" style={{ filter: 'grayscale(20%) contrast(110%)' }} />
                 </div>
               </div>
               
-              <div className="popup-body">
+              <div className="briefing-info-col">
+                <div style={{ marginBottom: '2rem' }}>
+                  <h3 className="team-title text-gradient glow" style={{ fontSize: '2.5rem', marginBottom: '0.5rem', lineHeight: '1.2' }}>{selectedMentor.name}</h3>
+                  <div className="terminal-role" style={{ fontSize: '1.1rem', color: '#00E5FF', marginTop: '1rem' }}>{selectedMentor.role}</div>
+                  {selectedMentor.subtitle && <div className="terminal-subtitle" style={{ fontSize: '0.9rem', marginTop: '0.5rem' }}>{selectedMentor.subtitle}</div>}
+                </div>
+                
                 {selectedMentor.bio && (
-                  <div className="popup-section">
-                    <h4>About</h4>
-                    <p>{selectedMentor.bio}</p>
+                  <div className="briefing-section" style={{ marginBottom: '2rem' }}>
+                    <div className="telemetry-small">BACKGROUND_INFO</div>
+                    <p style={{ color: '#C0C0C0', fontSize: '0.95rem', lineHeight: '1.7' }}>{selectedMentor.bio}</p>
                   </div>
                 )}
                 
                 {selectedMentor.expertise && selectedMentor.expertise.length > 0 && (
-                  <div className="popup-section">
-                    <h4>Areas of Expertise</h4>
-                    <div className="expertise-tags">
+                  <div className="briefing-section" style={{ marginBottom: '2rem' }}>
+                    <div className="telemetry-small">CORE_COMPETENCIES</div>
+                    <div className="expertise-tags" style={{ marginTop: '0.5rem' }}>
                       {selectedMentor.expertise.map((skill, index) => (
                         <span key={index} className="expertise-tag">{skill}</span>
                       ))}
@@ -173,33 +218,31 @@ function TeamCard() {
                   </div>
                 )}
                 
-                {selectedMentor.email && (
-                  <div className="popup-section">
-                    <h4>Contact</h4>
-                    <p className="popup-email">{selectedMentor.email}</p>
+                <div className="briefing-section">
+                  <div className="telemetry-small">COMM_CHANNELS</div>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginTop: '1rem' }}>
+                    {selectedMentor.email && (
+                      <a href={`mailto:${selectedMentor.email}`} className="cta-button" style={{ textDecoration: 'none' }}>
+                        EMAIL_LINK
+                        <div className="cta-glow"></div>
+                      </a>
+                    )}
+                    {selectedMentor.linkedin && (
+                      <a href={selectedMentor.linkedin} target="_blank" rel="noopener noreferrer" className="cta-button" style={{ textDecoration: 'none' }}>
+                        LINKEDIN
+                        <div className="cta-glow"></div>
+                      </a>
+                    )}
+                    {selectedMentor.github && (
+                      <a href={selectedMentor.github} target="_blank" rel="noopener noreferrer" className="cta-button" style={{ textDecoration: 'none' }}>
+                        GITHUB
+                        <div className="cta-glow"></div>
+                      </a>
+                    )}
                   </div>
-                )}
-                
-                <div className="popup-social">
-                  {selectedMentor.linkedin && (
-                    <a href={selectedMentor.linkedin} target="_blank" rel="noopener noreferrer">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                        <rect x="2" y="9" width="4" height="12"></rect>
-                        <circle cx="4" cy="4" r="2"></circle>
-                      </svg>
-                      LinkedIn
-                    </a>
-                  )}
-                  {selectedMentor.github && (
-                    <a href={selectedMentor.github} target="_blank" rel="noopener noreferrer">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                      </svg>
-                      GitHub
-                    </a>
-                  )}
                 </div>
+                {/* Spacer to ensure bottom padding doesn't collapse */}
+                <div style={{ height: '2rem' }}></div>
               </div>
             </div>
           </div>

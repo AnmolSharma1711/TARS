@@ -27,10 +27,10 @@ function App() {
     <div className="relative w-full min-h-screen overflow-x-hidden">
       {/* Main Content */}
       {!showIntro && (
-        <div className="relative min-h-screen bg-slate-950 text-white overflow-x-hidden">
+        <div className="relative min-h-screen bg-space-900 text-white overflow-x-hidden font-inter">
           {/* Background Gradient & Grid */}
-          <div className="fixed inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-slate-900 via-slate-950 to-black z-0" />
-          <div className="fixed inset-0 z-0 opacity-10 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:40px_40px]" />
+          <div className="fixed inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-space-800 via-space-900 to-black z-0" />
+          <div className="fixed inset-0 z-0 opacity-20 cyber-grid" />
           
           {/* 3D Background */}
           <div className="fixed inset-0 z-0">

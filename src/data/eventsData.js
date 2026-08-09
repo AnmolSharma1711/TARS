@@ -26,5 +26,6 @@ export const completedEvents = [
     attendees: 85,
     image: 'https://images.pexels.com/photos/8438918/pexels-photo-8438918.jpeg?auto=compress&cs=tinysrgb&w=600',
     category: 'Workshop',
+    link: 'https://github.com'
   },
 ]

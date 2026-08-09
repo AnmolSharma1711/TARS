@@ -107,12 +107,12 @@ export function IntroSequence({ onComplete }) {
         {/* Floating Side Panels (Right) */}
         <div className="side-panel-right hidden md:flex">
              <div className="writing-vertical-rl text-[10px] tracking-widest text-cyan-600 opacity-70">
-                 {progress < 100 ? 'ESTABLISHING_SECURE_CONNECTION' : 'SECURE_CONNECTION_ACTIVE'}
+                 {progress < 100 ? 'ESTABLISHING_ORBITAL_CONNECTION' : 'ORBITAL_CONNECTION_ACTIVE'}
              </div>
              <div className="w-1 h-32 bg-slate-800 relative overflow-hidden">
-                 <div className={`absolute bottom-0 w-full transition-all duration-500 ${progress < 100 ? 'bg-gradient-to-t from-orange-500 to-yellow-300 animate-[bounce_2s_infinite] h-1/2' : 'bg-cyan-500 h-full shadow-[0_0_10px_rgba(6,182,212,0.8)]'}`}></div>
+                 <div className={`absolute bottom-0 w-full transition-all duration-500 ${progress < 100 ? 'bg-cyan-500 animate-[bounce_2s_infinite] h-1/2 shadow-[0_0_10px_rgba(0,229,255,0.5)]' : 'bg-cyan-500 h-full shadow-[0_0_10px_rgba(0,229,255,0.8)]'}`}></div>
              </div>
-             <div className={`text-xs font-mono transition-colors ${progress < 100 ? 'text-orange-400' : 'text-cyan-400'}`}>
+             <div className={`text-xs font-mono transition-colors ${progress < 100 ? 'text-cyan-400' : 'text-yellow-400'}`}>
                 {progress < 100 ? 'BUFFERING' : 'ONLINE'}
              </div>
         </div>
@@ -129,7 +129,7 @@ export function IntroSequence({ onComplete }) {
                 {progress < 100 ? (
                     <>
                         <p className="loading-text">
-                            INITIALIZING SYSTEM... {Math.floor(progress)}%
+                            INITIALIZING ASTRO-SENSORS... {Math.floor(progress)}%
                         </p>
                         <div className="loading-bar-container">
                              <div 
@@ -142,7 +142,7 @@ export function IntroSequence({ onComplete }) {
                     </>
                 ) : (
                     <p className="ready-text">
-                        System Ready
+                        Cosmic Link Established
                     </p>
                 )}
             </div>
@@ -152,7 +152,7 @@ export function IntroSequence({ onComplete }) {
                     onClick={onComplete}
                     className="enter-button"
                 >
-                    <span className="enter-button-text">Enter System</span>
+                    <span className="enter-button-text">Explore Cosmos</span>
                     <div className="enter-button-bg"></div>
                 </button>
             </div>

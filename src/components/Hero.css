@@ -1,210 +1,208 @@
 .hero {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5rem 0.75rem 0 0.75rem;
+  padding: 5rem 1rem 0 1rem;
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
 }
 
-@media (min-width: 640px) {
-  .hero {
-    padding: 0 1rem;
-  }
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
-@media (min-width: 768px) {
-  .hero {
-    padding: 0 2rem;
-  }
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 1;
 }
 
 .hero-content {
   text-align: center;
-  max-width: 56rem;
+  max-width: 1000px;
   width: 100%;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  animation: slowFadeIn 2s ease-out forwards;
 }
 
-.hero-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  letter-spacing: -0.025em;
+@keyframes slowFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.hero-headline {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 229, 255, 0.3);
 }
 
 @media (min-width: 640px) {
-  .hero-title {
+  .hero-headline {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-headline {
     font-size: 4.5rem;
   }
 }
 
-@media (min-width: 768px) {
-  .hero-title {
-    font-size: 6rem;
-  }
-}
-
-.hero-title-animation {
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-.hero-logo {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  display: block;
-  filter: drop-shadow(0 0 20px rgba(34, 211, 238, 0.3));
-}
-
-@media (min-width: 640px) {
-  .hero-logo {
-    max-width: 400px;
-  }
-}
-
-@media (min-width: 768px) {
-  .hero-logo {
-    max-width: 500px;
-  }
-}
-
-.hero-subtitle {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #22d3ee;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  text-shadow: 0 0 10px rgba(34, 211, 238, 0.3);
-}
-
-@media (min-width: 640px) {
-  .hero-subtitle {
-    font-size: 1.25rem;
-    letter-spacing: 0.2em;
-    margin-bottom: 2rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .hero-subtitle {
-    font-size: 1.875rem;
-    margin-bottom: 3rem;
-  }
-}
-
 .hero-description {
-  font-size: 0.9rem;
-  color: #bae6fd;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-  font-weight: 300;
-  padding: 0 0.5rem;
-}
-
-@media (min-width: 640px) {
-  .hero-description {
-    font-size: 1.125rem;
-    line-height: 1.75;
-    margin-bottom: 2.5rem;
-  }
+  font-size: 1rem;
+  color: #F0F0F0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-weight: 400;
+  letter-spacing: 0.05em;
 }
 
 @media (min-width: 768px) {
   .hero-description {
-    font-size: 1.25rem;
-    margin-bottom: 3rem;
-    padding: 0;
+    font-size: 1.15rem;
   }
 }
 
 .hero-buttons {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
 @media (min-width: 640px) {
   .hero-buttons {
     flex-direction: row;
+    gap: 2rem;
   }
 }
 
-.hero-button-primary {
-  padding: 0.625rem 1.25rem;
-  background-color: transparent;
-  border: 1px solid rgba(6, 182, 212, 0.5);
-  border-radius: 9999px;
+/* Mission Button (Launch style) */
+.mission-button {
+  position: relative;
+  padding: 1rem 3rem;
+  border-radius: 4px;
   font-weight: 600;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #22d3ee;
   cursor: pointer;
-  transition: all 0.3s;
-  position: relative;
   overflow: hidden;
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Orbitron', sans-serif;
 }
 
-@media (min-width: 640px) {
-  .hero-button-primary {
-    padding: 0.75rem 2rem;
-    font-size: 0.875rem;
-    letter-spacing: 0.2em;
-  }
+.primary-mission {
+  background: rgba(0, 229, 255, 0.1);
+  border: 1px solid rgba(0, 229, 255, 0.8);
+  color: #00E5FF;
+  box-shadow: inset 0 0 10px rgba(0, 229, 255, 0.2), 0 0 15px rgba(0, 229, 255, 0.2);
 }
 
-.hero-button-primary::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: #06b6d4;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s;
-  z-index: -1;
-  opacity: 0.2;
+.primary-mission:hover {
+  background: rgba(0, 229, 255, 0.25);
+  color: #FFFFFF;
+  border-color: #00E5FF;
+  box-shadow: inset 0 0 20px rgba(0, 229, 255, 0.4), 0 0 30px rgba(0, 229, 255, 0.5);
+  transform: translateY(-2px);
 }
 
-.hero-button-primary:hover {
-  background-color: rgba(6, 182, 212, 0.1);
-  border-color: #22d3ee;
-  color: white;
-}
-
-.hero-button-primary:hover::before {
-  transform: scaleX(1);
-}
-
-.hero-button-secondary {
-  padding: 0.625rem 1.25rem;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 9999px;
-  font-weight: 600;
-  font-size: 0.875rem;
+.secondary-mission {
   background: transparent;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
 }
 
-@media (min-width: 640px) {
-  .hero-button-secondary {
-    padding: 1rem 2rem;
-    font-size: 1.125rem;
+.secondary-mission:hover {
+  border-color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.mission-button-text {
+  position: relative;
+  z-index: 2;
+}
+
+.mission-button-sweep {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: skewX(-25deg);
+  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 1;
+}
+
+.mission-button:hover .mission-button-sweep {
+  left: 200%;
+}
+
+/* Premium Telemetry Details */
+.telemetry {
+  position: absolute;
+  font-size: 0.65rem;
+  color: rgba(0, 229, 255, 0.6);
+  letter-spacing: 0.2em;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.top-left {
+  top: 10%;
+  left: -10%;
+  transform: rotate(-90deg);
+}
+
+.bottom-right {
+  bottom: 0;
+  right: -5%;
+}
+
+@media (min-width: 1024px) {
+  .top-left {
+    top: 20%;
+    left: -20%;
   }
-}
-
-.hero-button-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  .bottom-right {
+    bottom: -10%;
+    right: -10%;
+  }
 }

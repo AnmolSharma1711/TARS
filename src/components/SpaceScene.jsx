@@ -12,13 +12,13 @@ function MovingParticles() {
     const velocities = new Float32Array(particleCount * 3)
     const colors = new Float32Array(particleCount * 3)
     
-    // Light blue color palette
+    // Deep Space Blue and Cosmos Yellow palette
     const colorPalette = [
-      new THREE.Color('#4a90e2'),
-      new THREE.Color('#5da5f5'),
-      new THREE.Color('#80b9ff'),
-      new THREE.Color('#a3d5ff'),
-      new THREE.Color('#ffffff'),
+      new THREE.Color('#00E5FF'),
+      new THREE.Color('#FFD700'),
+      new THREE.Color('#FFA033'),
+      new THREE.Color('#FFFFFF'),
+      new THREE.Color('#888888'),
     ]
     
     for (let i = 0; i < particleCount; i++) {
@@ -27,10 +27,10 @@ function MovingParticles() {
       positions[i * 3 + 1] = (Math.random() - 0.5) * 100
       positions[i * 3 + 2] = (Math.random() - 0.5) * 100
       
-      // Random velocity
-      velocities[i * 3] = (Math.random() - 0.5) * 0.02
-      velocities[i * 3 + 1] = (Math.random() - 0.5) * 0.02
-      velocities[i * 3 + 2] = (Math.random() - 0.5) * 0.02
+      // Random velocity (very slow)
+      velocities[i * 3] = (Math.random() - 0.5) * 0.005
+      velocities[i * 3 + 1] = (Math.random() - 0.5) * 0.005
+      velocities[i * 3 + 2] = (Math.random() - 0.5) * 0.005
       
       // Random color from palette
       const color = colorPalette[Math.floor(Math.random() * colorPalette.length)]
@@ -81,10 +81,10 @@ function MovingParticles() {
         />
       </bufferGeometry>
       <pointsMaterial
-        size={0.15}
+        size={0.12}
         vertexColors
         transparent
-        opacity={0.7}
+        opacity={0.6}
         sizeAttenuation
         blending={THREE.AdditiveBlending}
       />
@@ -100,8 +100,8 @@ function SpaceScene() {
     >
       {/* Lighting */}
       <ambientLight intensity={0.4} />
-      <pointLight position={[10, 10, 10]} intensity={0.8} color="#5da5f5" />
-      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#4a90e2" />
+      <pointLight position={[10, 10, 10]} intensity={0.8} color="#00E5FF" />
+      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#FFA033" />
       
       {/* Moving Particles */}
       <MovingParticles />

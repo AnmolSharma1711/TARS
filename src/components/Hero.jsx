@@ -1,56 +1,43 @@
 import React from 'react'
 import './Hero.css'
-import {
-  TextRevealCard,
-  TextRevealCardDescription,
-  TextRevealCardTitle,
-} from "./ui/text-reveal-card";
 
 function Hero() {
   return (
     <section id="home" className="hero">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="hero-video"
+      >
+        <source src="/spaceTheme.mp4" type="video/mp4" />
+      </video>
       <div className="hero-content">
-        <div className="hero-title hero-title-animation">
-          <img 
-            src="/Star Logo.png" 
-            alt="STAR Logo" 
-            className="hero-logo"
-          />
-        </div>
+        <h1 className="hero-headline font-orbitron">
+          EXPLORE THE <span className="text-gradient glow">COSMOS</span> WITH US
+        </h1>
         
-        <p className="hero-subtitle">
-          Society of Technology and Automation Research
-        </p>
-        
-        <p className="hero-description">
-          Pioneering the future of intelligent systems and automated solutions.
-          Innovating at the intersection of technology, research, and human advancement.
+        <p className="hero-description font-inter">
+          STAR Cosmic Command. Pioneering the future of space exploration, intelligent systems, and automated astrophysics.
+          Innovating at the intersection of universal discovery and human advancement.
         </p>
         
         <div className="hero-buttons">
-          <button 
-            className="hero-button-primary"
-            onClick={() => window.open('https://tars-sage.vercel.app/', '_blank')}
-          >
-            Member Portal
+          <button className="mission-button primary-mission" onClick={() => window.open('https://tars-sage.vercel.app/', '_blank')}>
+            <span className="mission-button-text">Explore Missions</span>
+            <div className="mission-button-sweep"></div>
           </button>
           
-          <button className="hero-button-secondary">
-            Our Research
+          <button className="mission-button secondary-mission">
+            <span className="mission-button-text">Join STAR</span>
+            <div className="mission-button-sweep"></div>
           </button>
         </div>
 
-        <div className="mt-12 max-w-4xl mx-auto">
-          <TextRevealCard
-            text="You bring the Vision"
-            revealText="We build the Version"
-          >
-            <TextRevealCardTitle>
-              <span className="hidden md:inline">Hover over the text to reveal our commitment</span>
-              <span className="md:hidden">Tap on the text to reveal our commitment</span>
-            </TextRevealCardTitle>
-          </TextRevealCard>
-        </div>
+        {/* Floating elements & coordinates */}
+        <div className="telemetry top-left font-orbitron">SYS.ORBITAL.901</div>
+        <div className="telemetry bottom-right font-orbitron">STELLAR.NAV / SEC.4</div>
       </div>
     </section>
   )
