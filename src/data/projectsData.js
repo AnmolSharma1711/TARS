@@ -75,7 +75,7 @@ export const projectsData = [
   {
     id: 6,
     category: "Robotics Competition",
-    title: "echnoxian 9.0",
+    title: "Technoxian 9.0",
     developer: "Team IgnitiaX",
     teamMembers: [
       "Anmol Sharma",

@@ -3,6 +3,7 @@ import './Header.css'
 
 function Header({ onNavigate, currentPage }) {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,8 +13,18 @@ function Header({ onNavigate, currentPage }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    if (window.innerWidth <= 900) {
+      setMobileMenuOpen(!mobileMenuOpen);
+    } else {
+      onNavigate('home');
+    }
+  };
+
   const handleNavClick = (e, page) => {
     e.preventDefault();
+    setMobileMenuOpen(false);
     onNavigate(page);
   };
 
@@ -22,13 +33,13 @@ function Header({ onNavigate, currentPage }) {
       <header className={`top-navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="navbar-container">
           {/* Logo Left */}
-          <div className="navbar-logo" onClick={(e) => handleNavClick(e, 'home')}>
+          <div className="navbar-logo" onClick={handleLogoClick}>
             <img src="/STAR_Logo.png" alt="STAR" className="logo-image" />
             <span className="logo-text font-orbitron text-gradient">STAR</span>
           </div>
 
           {/* Menu Centered */}
-          <nav className="navbar-menu font-inter">
+          <nav className={`navbar-menu font-inter ${mobileMenuOpen ? 'mobile-open' : ''}`}>
             {['home', 'about', 'projects', 'team', 'events', 'sponsors'].map((page) => (
               <a
                 key={page}

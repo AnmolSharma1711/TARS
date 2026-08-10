@@ -25,11 +25,11 @@ export const LayoutTextFlip = ({ text, words, className }) => {
   const { word, emoji } = getCurrentContent();
 
   return (
-    <div className={`flex items-center justify-center ${className || ""}`}>
-      <span className="text-4xl md:text-6xl font-bold text-white">
+    <div className={`flex flex-col md:flex-row items-center justify-center ${className || ""}`}>
+      <span className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white text-center">
         {text}
       </span>
-      <div className="relative inline-block ml-2">
+      <div className="relative inline-block mt-2 md:mt-0 md:ml-2 h-[40px] sm:h-[48px] md:h-[64px] lg:h-[72px] flex items-center">
         <AnimatePresence mode="wait">
           <motion.span
             key={currentWordIndex}
@@ -37,7 +37,7 @@ export const LayoutTextFlip = ({ text, words, className }) => {
             animate={{ rotateX: 0, opacity: 1 }}
             exit={{ rotateX: -90, opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="inline-block text-4xl md:text-6xl font-bold"
+            className="inline-block text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-center"
             style={{
               transformStyle: "preserve-3d",
               transformOrigin: "center center",
