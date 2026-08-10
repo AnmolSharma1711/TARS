@@ -16,7 +16,7 @@ function ProjectsPage() {
             MISSION ARCHIVES
           </h2>
           <div className="title-underline mx-auto"></div>
-          <p className="text-lg md:text-xl text-gray-400 mt-6 max-w-3xl mx-auto font-orbitron telemetry-small">
+          <p className="text-lg md:text-xl text-gray-400 mt-6 max-w-3xl mx-auto font-orbitron telemetry-small" style={{color:'white'}}>
             Explore the classified mission archives and cutting-edge technologies engineered by STAR Command.
           </p>
         </div>

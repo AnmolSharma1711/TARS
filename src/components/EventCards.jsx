@@ -35,8 +35,8 @@ function EventCards() {
         {/* Upcoming Events Section */}
         <div className="events-category">
         <ScrollReveal>
-          <h2 className="events-title text-gradient">Upcoming Missions</h2>
-          <p className="events-description font-orbitron telemetry-small">Join us in our upcoming exploratory missions and technical operations</p>
+          <h2 className="events-title text-gradient" style={{textAlign:'center', fontSize:20}}>Upcoming Missions</h2>
+          <p className="events-description font-orbitron telemetry-small" style={{textAlign:'center', color: 'white', fontSize:15}}>Join us in our upcoming exploratory missions and technical operations</p>
           <div className="title-underline"></div>
         </ScrollReveal>
 
@@ -108,8 +108,8 @@ function EventCards() {
         {/* Completed Events Section */}
         <div className="events-category" style={{ marginTop: '80px' }}>
         <ScrollReveal>
-          <h2 className="events-title text-gradient">Mission Archives</h2>
-          <p className="events-description">Review the telemetry from our successful past missions</p>
+          <h2 className="events-title text-gradient font-orbitron telemetry-small" style={{textAlign:'center', fontSize:20}}>Mission Archives</h2>
+          <p className="events-description font-orbitron telemetry-small" style={{textAlign:'center', color: 'white', fontSize:15}}>Review the telemetry from our successful past missions</p>
           <div className="title-underline"></div>
         </ScrollReveal>
 

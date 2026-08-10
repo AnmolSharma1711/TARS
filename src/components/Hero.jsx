@@ -18,7 +18,7 @@ function Hero() {
           EXPLORE THE <span className="text-gradient glow">COSMOS</span> WITH US
         </h1>
         
-        <p className="hero-description font-inter">
+        <p className="hero-description font-orbitron telemetry-small" style={{color:'white'}}>
           STAR Cosmic Command. Pioneering the future of space exploration, intelligent systems, and automated astrophysics.
           Innovating at the intersection of universal discovery and human advancement.
         </p>
