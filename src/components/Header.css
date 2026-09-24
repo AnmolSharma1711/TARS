@@ -159,7 +159,31 @@
   left: 200%;
 }
 
+.mobile-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(0, 229, 255, 0.4);
+  color: #00E5FF;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 20;
+}
+
+.mobile-toggle:hover {
+  background: rgba(0, 229, 255, 0.15);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+  color: #FFFFFF;
+}
+
 @media (max-width: 900px) {
+  .mobile-toggle {
+    display: flex;
+  }
+
   .navbar-cta {
     display: none;
   }
@@ -170,7 +194,7 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background: rgba(11, 11, 11, 0.5);
+    background: rgba(11, 11, 11, 0.95);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     flex-direction: column;

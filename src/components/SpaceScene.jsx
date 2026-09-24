@@ -9,7 +9,6 @@ function MovingParticles() {
   const particleCount = 1500
   const particles = useMemo(() => {
     const positions = new Float32Array(particleCount * 3)
-    const velocities = new Float32Array(particleCount * 3)
     const colors = new Float32Array(particleCount * 3)
     
     // Deep Space Blue and Cosmos Yellow palette
@@ -27,11 +26,6 @@ function MovingParticles() {
       positions[i * 3 + 1] = (Math.random() - 0.5) * 100
       positions[i * 3 + 2] = (Math.random() - 0.5) * 100
       
-      // Random velocity (very slow)
-      velocities[i * 3] = (Math.random() - 0.5) * 0.005
-      velocities[i * 3 + 1] = (Math.random() - 0.5) * 0.005
-      velocities[i * 3 + 2] = (Math.random() - 0.5) * 0.005
-      
       // Random color from palette
       const color = colorPalette[Math.floor(Math.random() * colorPalette.length)]
       colors[i * 3] = color.r
@@ -39,28 +33,17 @@ function MovingParticles() {
       colors[i * 3 + 2] = color.b
     }
     
-    return { positions, velocities, colors }
-  }, [])
+    return { positions, colors }
+  }, [particleCount])
   
-  useFrame(() => {
+  useFrame((_, delta) => {
+    // Battery & CPU optimization: pause when browser tab is inactive
+    if (document.hidden) return
+    
     if (particlesRef.current) {
-      const positions = particlesRef.current.geometry.attributes.position.array
-      
-      for (let i = 0; i < particleCount; i++) {
-        const i3 = i * 3
-        
-        // Update positions with velocity
-        positions[i3] += particles.velocities[i3]
-        positions[i3 + 1] += particles.velocities[i3 + 1]
-        positions[i3 + 2] += particles.velocities[i3 + 2]
-        
-        // Wrap around if out of bounds
-        if (Math.abs(positions[i3]) > 50) positions[i3] *= -1
-        if (Math.abs(positions[i3 + 1]) > 50) positions[i3 + 1] *= -1
-        if (Math.abs(positions[i3 + 2]) > 50) positions[i3 + 2] *= -1
-      }
-      
-      particlesRef.current.geometry.attributes.position.needsUpdate = true
+      // Smooth GPU-accelerated rotation (0 CPU buffer updates per frame)
+      particlesRef.current.rotation.y += delta * 0.02
+      particlesRef.current.rotation.x += delta * 0.01
     }
   })
   
@@ -84,9 +67,10 @@ function MovingParticles() {
         size={0.12}
         vertexColors
         transparent
-        opacity={0.6}
+        opacity={0.7}
         sizeAttenuation
         blending={THREE.AdditiveBlending}
+        depthWrite={false}
       />
     </points>
   )
@@ -96,7 +80,8 @@ function SpaceScene() {
   return (
     <Canvas
       camera={{ position: [0, 0, 10], fov: 75 }}
-      style={{ background: 'transparent' }}
+      style={{ background: 'transparent', pointerEvents: 'none' }}
+      gl={{ powerPreference: 'high-performance', antialias: false }}
     >
       {/* Lighting */}
       <ambientLight intensity={0.4} />

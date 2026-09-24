@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react'
+import { NavLink, Link, useLocation } from 'react-router-dom'
+import { Menu, X } from 'lucide-react'
 import './Header.css'
 
-function Header({ onNavigate, currentPage }) {
+function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,59 +16,61 @@ function Header({ onNavigate, currentPage }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleLogoClick = (e) => {
-    e.preventDefault();
-    if (window.innerWidth <= 900) {
-      setMobileMenuOpen(!mobileMenuOpen);
-    } else {
-      onNavigate('home');
-    }
-  };
-
-  const handleNavClick = (e, page) => {
-    e.preventDefault();
+  // Close mobile menu whenever location changes
+  useEffect(() => {
     setMobileMenuOpen(false);
-    onNavigate(page);
-  };
+  }, [location.pathname]);
+
+  const navItems = [
+    { label: 'HOME', path: '/' },
+    { label: 'ABOUT', path: '/about' },
+    { label: 'PROJECTS', path: '/projects' },
+    { label: 'TEAM', path: '/team' },
+    { label: 'EVENTS', path: '/events' },
+    { label: 'SPONSORS', path: '/sponsors' },
+    { label: 'CONTACT', path: '/contact' },
+  ];
 
   return (
     <>
       <header className={`top-navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="navbar-container">
           {/* Logo Left */}
-          <div className="navbar-logo" onClick={handleLogoClick}>
-            <img src="/STAR_Logo.png" alt="STAR" className="logo-image" />
+          <Link to="/" className="navbar-logo">
+            <img src="/STAR_Logo.png" alt="STAR Logo" className="logo-image" />
             <span className="logo-text font-orbitron text-gradient">STAR</span>
-          </div>
+          </Link>
 
           {/* Menu Centered */}
           <nav className={`navbar-menu font-inter ${mobileMenuOpen ? 'mobile-open' : ''}`}>
-            {['home', 'about', 'projects', 'team', 'events', 'sponsors'].map((page) => (
-              <a
-                key={page}
-                href={`#${page}`}
-                className={`nav-link ${currentPage === page ? 'active' : ''}`}
-                onClick={(e) => handleNavClick(e, page)}
+            {navItems.map((item) => (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                end={item.path === '/'}
+                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
               >
-                {page.toUpperCase()}
-              </a>
+                {item.label}
+              </NavLink>
             ))}
           </nav>
 
-          {/* CTA Right */}
-          <div className="navbar-cta">
-            {/* 
-            <button className="cta-button font-orbitron">
-              <span className="cta-text">COMMAND_LOGIN</span>
-              <div className="cta-glow"></div>
-            </button> 
-            */}
-          </div>
+          {/* Mobile Menu Toggle Button */}
+          <button
+            type="button"
+            className="mobile-toggle"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
+            aria-expanded={mobileMenuOpen}
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
       </header>
 
-      {/* GLA Logo in top right corner - only on home page */}
-      {currentPage === 'home' && (
+      {/* GLA Logo in bottom right corner - only on home page */}
+      {location.pathname === '/' && (
         <div className="gla-logo-container">
           <img src="/GLA_Logo.png" alt="GLA Logo" className="gla-logo" />
         </div>
@@ -75,4 +80,3 @@ function Header({ onNavigate, currentPage }) {
 }
 
 export default Header
-
