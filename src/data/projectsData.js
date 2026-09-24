@@ -14,11 +14,11 @@ export const projectsData = [
     ],
     description: "Mindo RoboDog is an AI-powered quadruped robot designed for autonomous inspection and exploration in challenging environments. It enables safe navigation, obstacle detection, and remote monitoring where human access is limited.",
     technologies: "Robotics, ESP32, Sensors, 3D Designing and Modelling, Kinematics, Circuit Designing",
-    image: "accomplishments/Mindo_Logo.png",
-    additionalImages:[
-      "accomplishments/Mindo-Robodog.jpeg",
-      "accomplishments/Mindo.jpeg",
-      "accomplishments/Mindo2.jpeg"
+    image: "/accomplishments/Mindo_Logo.png",
+    additionalImages: [
+      "/accomplishments/Mindo-Robodog.jpeg",
+      "/accomplishments/Mindo.jpeg",
+      "/accomplishments/Mindo2.jpeg"
     ]
   },
   {
@@ -30,7 +30,7 @@ export const projectsData = [
     technologies: "Computer Vision, Ultrasonic, Deep Learning, Sensor Fusion",
     image: "/accomplishments/auto2.jpg",
     additionalImages: [
-      "accomplishments/Dhruvishya.jpeg",
+      "/accomplishments/Dhruvishya.jpeg",
       "/accomplishments/auto1.jpg",
       "/accomplishments/auto3.jpg"
     ],
@@ -42,25 +42,24 @@ export const projectsData = [
     developer: "Anmol Sharma, Keerti, Akshat Gupta, Utkarsh Agrawal, Kushal Soni, Kushagra Agrawal, Madhav Garg, Pranav Jain, Mradul Khandelwal, Shaurya Pratap Singh",
     description: "AI Future Ready Conclave, Agra brought together ministers, industry leaders, AI experts, and innovators to discuss the future of Artificial Intelligence, emerging technologies, and their impact on society. The event showcased AI innovations and provided a platform for learning, collaboration, and future-ready technology solutions.",
     technologies: "Presentation, Pitching, Startup, Communication, Networking",
-    image: "accomplishments/Mindo-Mantri.jpeg",
+    image: "/accomplishments/Mindo-Mantri.jpeg",
     additionalImages: [
-      "accomplishments/AI-Conclave-1.jpeg",
-      "accomplishments/Mindo-Robodog.jpeg",
-      "accomplishments/AI-Conc.jpeg",
-      "accomplishments/AI-Conclave.jpeg"
+      "/accomplishments/AI-Conclave-1.jpeg",
+      "/accomplishments/Mindo-Robodog.jpeg",
+      "/accomplishments/AI-Conc.jpeg",
+      "/accomplishments/AI-Conclave.jpeg"
     ]
-
   },
   {
     id: 4,
     category: "IoT and Web Development",
-    title: "Ashwini: Smart Healthcare Automation System ",
-    developer: "Anmol Sharma, Keerti, Kushal Soni, Utkarsh Agrawal,",
-    description: "Dhruvishya is an IoT Based Smart Healthcare automation system, mainly built for Tier II/III cities. It cut down a time taking part of Vital Health Parameter capturing between patient and doctor by automating the work, digitaliizing the data with Sanitation and Safety.",
+    title: "Ashwini: Smart Healthcare Automation System",
+    developer: "Anmol Sharma, Keerti, Kushal Soni, Utkarsh Agrawal",
+    description: "Ashwini is an IoT-based Smart Healthcare automation system, mainly built for Tier II/III cities. It cuts down a time-consuming part of Vital Health Parameter capturing between patient and doctor by automating the work, digitalizing data with sanitation and safety.",
     technologies: "ESP32, React, Vercel, Django, Websocket, IoT-Communication, Protocols, Sensors",
-    image: "accomplishments/Ashwini_Logo.png",
+    image: "/accomplishments/Ashwini_Logo.png",
     additionalImages: [
-      "accomplishments/Ashwini.jpeg"
+      "/accomplishments/Ashwini.jpeg"
     ]
   },
   {
@@ -68,9 +67,9 @@ export const projectsData = [
     category: "Robotics",
     title: "Dhruv: The Project Demonstration Robot",
     developer: "Anmol Sharma, Keerti, Akshat Gupta, Utkarsh Agrawal, Kushal Soni, Kushagra Agrawal",
-    description: "Dhruv is a Smart Guiding Robot which can detect the human motion, greet them, receive and act by voice command, navigate to the project you and explains you about the project. It uses IR Navigation for line following, DetectNet from Jetson Inference for Computer Vision and basic Robotics",
+    description: "Dhruv is a Smart Guiding Robot which can detect human motion, greet visitors, receive and act upon voice commands, navigate to designated projects and explain them. It uses IR Navigation for line following, DetectNet from Jetson Inference for Computer Vision, and custom robotics hardware.",
     technologies: "Robotics, Nvidia Jetson, 3D Design and Modelling, Voice Control, Arduino Mega, Arduino UNO, Motor Control, Infrared",
-    image: "accomplishments/Dhruv.jpeg"
+    image: "/accomplishments/Dhruv.jpeg"
   },
   {
     id: 6,
@@ -89,7 +88,7 @@ export const projectsData = [
       "Utkarsh Agrawal",
       "Karan Pal"
     ],
-    description: "From ideas to innovation – our journey to the World Robotics Championship. We created Agribot, a themed agricultural robot that competed on the international stage at Technoxian 9.0. Through countless nights of building, breaking, fixing, and rebuilding, we transformed a sketch on paper into a fully functional competition robot. Every struggle taught us resilience, and every failure pushed us to innovate harder.",
+    description: "From ideas to innovation – our journey to the World Robotics Championship. We created Agribot, a themed agricultural robot that competed on the international stage at Technoxian 9.0. Through countless nights of building, breaking, fixing, and rebuilding, we transformed a sketch on paper into a fully functional competition robot.",
     technologies: "Robotics, Arduino, Sensors, Motor Control, Mechanical Design",
     image: "/accomplishments/technoxian3.jpg",
     additionalImages: [
@@ -102,11 +101,12 @@ export const projectsData = [
     category: "Tech Expo",
     title: "TechNavya",
     developer: "Anmol Sharma, Kushal Soni, Keerti, Madhav Garg",
-    description: "Our project Ashwini : Smart Healthcare Automation System was got 3rd prize in the Tech Expo of GLA University and rewarded with 20,000/- INR",
-    image: "accomplishments/technavya2.jpg",
-    additionalImages:[
-      "accomplishments/technavya1.jpg",
-      "accomplishments/technavya3.jpg"
+    description: "Our project Ashwini: Smart Healthcare Automation System secured 3rd prize in the Tech Expo of GLA University and was rewarded with 20,000/- INR.",
+    technologies: "Smart Healthcare, IoT, Automation, Embedded Systems",
+    image: "/accomplishments/technavya2.jpg",
+    additionalImages: [
+      "/accomplishments/technavya1.jpg",
+      "/accomplishments/technavya3.jpg"
     ]
   },
   {
@@ -141,4 +141,3 @@ export const projectsData = [
     },
   },
 ];
-

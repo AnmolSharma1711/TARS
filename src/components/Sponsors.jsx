@@ -1,8 +1,18 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Sparkles, Check, X } from 'lucide-react';
 import { sponsorBenefits } from '../data/sponsorsData';
 
 const Sponsors = ({ onNavigate }) => {
+  const navigate = useNavigate();
+
+  const handleOpenComms = () => {
+    if (onNavigate) {
+      onNavigate('contact');
+    } else {
+      navigate('/contact');
+    }
+  };
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Subtle accent blobs to match site cyan/aqua theme */}
@@ -107,7 +117,7 @@ const Sponsors = ({ onNavigate }) => {
             Open comms to discuss how we can create a coalition that drives value for both our systems
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onClick={() => onNavigate?.('contact')} className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-sky-500 text-white font-bold font-orbitron tracking-wider uppercase rounded-xl hover:shadow-2xl hover:shadow-sky-400/40 transition-all duration-300 transform hover:scale-105">
+            <button onClick={handleOpenComms} className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-sky-500 text-white font-bold font-orbitron tracking-wider uppercase rounded-xl hover:shadow-2xl hover:shadow-sky-400/40 transition-all duration-300 transform hover:scale-105 cursor-pointer">
               Open Comms
             </button>
             <button className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold font-orbitron tracking-wider uppercase rounded-xl border-2 border-sky-400/20 hover:bg-white/20 transition-all duration-300">

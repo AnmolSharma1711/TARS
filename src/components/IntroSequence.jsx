@@ -45,6 +45,17 @@ export function IntroSequence({ onComplete }) {
     };
   }, []);
 
+  // Listen for ESC key to instantly skip intro sequence
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        onComplete?.();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [onComplete]);
+
   // Calculate automatic rotation (Floating effect)
   // Using sine waves with different frequencies/phases for organic movement
   const rotX = Math.sin(time * 0.5) * 5; 
@@ -55,6 +66,16 @@ export function IntroSequence({ onComplete }) {
       ref={containerRef}
       className={`intro-sequence bg-slate-950 ${mounted ? 'mounted' : ''}`}
     >
+      {/* Skip Button */}
+      <button
+        onClick={onComplete}
+        className="fixed top-6 right-6 z-50 px-4 py-2 bg-slate-900/80 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 hover:border-cyan-400 rounded-md font-mono text-xs tracking-wider transition-all duration-300 backdrop-blur-md flex items-center gap-2 group cursor-pointer shadow-[0_0_15px_rgba(0,229,255,0.2)]"
+        aria-label="Skip Intro"
+      >
+        <span>SKIP INTRO</span>
+        <span className="px-1.5 py-0.5 text-[10px] bg-cyan-950 border border-cyan-500/50 rounded group-hover:border-cyan-400 text-cyan-300">ESC</span>
+      </button>
+
       {/* Background Gradient & Grid */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-slate-900 via-slate-950 to-black z-0" />
       <div className="intro-grid" />

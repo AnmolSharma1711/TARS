@@ -4,7 +4,7 @@ export const orbitCarouselItems = [
     id: '1',
     title: 'AI Future Ready Conclave',
     description: 'AI Future Ready Conclave, Agra brought together ministers, industry leaders, AI experts, and innovators to discuss the future of Artificial Intelligence, emerging technologies, and their impact on society. The event showcased AI innovations and provided a platform for learning, collaboration, and future-ready technology solutions.',
-    imageUrl: 'accomplishments/Mindo-Mantri.jpeg'
+    imageUrl: '/accomplishments/Mindo-Mantri.jpeg'
   },
   {
     id: '2',
@@ -16,6 +16,6 @@ export const orbitCarouselItems = [
     id: '3',
     title: 'TechNavya',
     description: 'Our project Ashwini : Smart Healthcare Automation System was got 3rd prize in the Tech Expo of GLA University and rewarded with 20,000/- INR',
-    imageUrl: 'accomplishments/technavya2.jpg'
+    imageUrl: '/accomplishments/technavya2.jpg'
   }
 ];

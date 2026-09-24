@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Hero.css'
 
 function Hero() {
@@ -9,6 +10,7 @@ function Hero() {
         loop
         muted
         playsInline
+        preload="metadata"
         className="hero-video"
       >
         <source src="/spaceTheme.mp4" type="video/mp4" />
@@ -24,15 +26,15 @@ function Hero() {
         </p>
         
         <div className="hero-buttons">
-          <button className="mission-button primary-mission" onClick={() => window.open('https://tars-sage.vercel.app/', '_blank')}>
+          <Link to="/projects" className="mission-button primary-mission">
             <span className="mission-button-text">Explore Missions</span>
             <div className="mission-button-sweep"></div>
-          </button>
+          </Link>
           
-          <button className="mission-button secondary-mission">
+          <Link to="/contact" className="mission-button secondary-mission">
             <span className="mission-button-text">Join Starfleet</span>
             <div className="mission-button-sweep"></div>
-          </button>
+          </Link>
         </div>
 
         {/* Floating elements & coordinates */}
